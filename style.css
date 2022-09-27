@@ -1,0 +1,17 @@
+.land
+{
+    fill: #cfcaca;
+    fill-opacity: 1;
+    stroke:white;
+    stroke-opacity: 1;
+    stroke-width:0.5;
+    transition: 1s ease-in-out;
+}
+
+#FR-ARA:hover{
+    fill: #c90a0a;
+    fill-opacity: 1;
+    stroke:#c90a0a;
+    stroke-opacity: 1;
+    stroke-width:0.5;
+}
