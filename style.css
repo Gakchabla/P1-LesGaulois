@@ -23,7 +23,7 @@ header h1{
     padding-left: 5px;
 }
 
-main{
+body{
     background-color: #B6CDE8;
 }
 
@@ -60,8 +60,16 @@ main h1{
 }
 
 .elements.left{
-    visibility: hidden;
-    display: block;
+    /*display: none;*/
+    padding-top: 3em;
+    background-color: #2F4558;
+    width: 100vh;
+    position:absolute;
+}
+
+li{
+    display: flex;
+    
 }
 
 .caroussel h1:nth-child(1) {
