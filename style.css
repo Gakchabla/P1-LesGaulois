@@ -26,6 +26,7 @@ header .logo {
 .description {
     display: flex;
     justify-content: center;
+    width: 100vw;
     margin-top: 50px;
 }
 
@@ -33,10 +34,10 @@ header .logo {
     background-color: #2F4558;
     color: white;
     text-align: center;
+    width: 60%;
 }
 
 .bloc1 {
-    width: 900px;
     font-size: 1.2rem;
 }
 

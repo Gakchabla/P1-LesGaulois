@@ -12,7 +12,7 @@ let maxItem = carouselItem.length - 1
 
 nextItem.addEventListener("click", function () {
     if (currentItem === maxItem) {
-        curentItem = 0
+        currentItem = 0
     }
     else {
         currentItem++;
