@@ -43,3 +43,25 @@ const questions = [{
     isCorrect: 0
 }]
 
+const menuAsideAppears = document.querySelector(".burgermenu");
+const menuAside = document.querySelector(".left")
+const main = document.querySelector("main")
+const mapFrench = document.querySelector(".land")
+
+menuAsideAppears.addEventListener("click", () => {
+    if (menuAside.style.translate == ("2000px")){
+        menuAside.style.translate = ("-2000px");
+    } else {
+        menuAside.style.translate = ("2000px");
+    }
+event.preventDefault();
+})
+
+menuAsideAppears.addEventListener("click", () => {
+    if (menuAside.style.translate == ("2000px")){
+        main.style.backgroundColor = "rgba(0,0,0,0.5)";
+    } else {
+        main.style.backgroundColor = "rgba(0,0,0,0)";
+    }
+event.preventDefault();
+})

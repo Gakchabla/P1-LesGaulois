@@ -28,6 +28,10 @@ header .logo {
     height: 50px;
 }
 
+main{
+    transition:all 0.3s;
+}
+
 .description {
     display: flex;
     justify-content: center;
@@ -48,13 +52,11 @@ header .logo {
 
 .carte h1 {
     color: black;
-    padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 1.1rem;
     text-align: center;
     margin-bottom: 0px;
-    vertical-align: middle;
 }
 
 body {
@@ -107,7 +109,7 @@ main h1 {
 }
 
 .elements.left {
-    padding: 2em 1.5em;
+    padding: 1.5em 1.5em;
     margin-top: 2em;
     background-color: #2F4558;
     width: 100vh;
@@ -117,18 +119,23 @@ main h1 {
     color: #F6B12D;
     font-size: 1.2rem;
     transform: translate(-2000px);
+    transition: all 0.3s;
+    z-index: 11;
 }
-
 
 .left ul {
     list-style: none;
-    line-height: 2em;
+    line-height: 1.9em;
 }
 
 .caroussel h1:nth-child(1) {
     margin-top: 0;
     padding-top: 0.5em;
     color: white;
+}
+
+.bloc1{
+    max-width: 35ch;
 }
 
 .land {
