@@ -7,7 +7,8 @@
 header {
     background-color: #2F4558;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 10px;
     padding: 15px 10px 5px;
     align-items: center;
 }
@@ -17,10 +18,16 @@ header h1 {
 
 }
 
-
 .carte h1 {
-    color: #F6B12D;
+    color: black;
+    ;
     padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 0px;
+    vertical-align: middle;
 }
 
 body {
@@ -32,47 +39,65 @@ main h1 {
 }
 
 .burgermenu {
-    padding-top: 20px;
+    padding: 15px 15px 15px 5px;
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    left: 10px;
 }
 
 .burgermenu span:nth-child(1) {
     width: 30px;
     height: 2px;
-    background-color: rgb(255, 220, 65);
+    background-color: black;
     border-radius: 4px;
     display: block;
+    position: relative;
+    bottom: 7px;
+
 }
 
 .burgermenu span:nth-child(2) {
     width: 30px;
-    height: 1px;
-    background-color: rgb(255, 220, 65);
+    height: 2px;
+    background-color: black;
     border-radius: 4px;
     display: block;
+    position: relative;
+
 }
 
 .burgermenu span:nth-child(3) {
     width: 30px;
     height: 2px;
-    background-color: rgb(255, 220, 65);
+    background-color: black;
     border-radius: 4px;
     display: block;
+    position: relative;
+    top: 7px;
+
 }
 
 .elements.left {
-    /*display: none;*/
-    padding-top: 3em;
+    padding: 2em 1.5em;
+    margin-top: 2em;
     background-color: #2F4558;
     width: 100vh;
     position: absolute;
+    width: auto;
+    height: 100vh;
+    color: #F6B12D;
+    font-size: 1.2rem;
+    transform: translate(-2000px);
 }
 
-li {
-    display: flex;
 
+.left ul {
+    list-style: none;
+    line-height: 2em;
 }
 
-.carteSVG h1:nth-child(1) {
+.caroussel h1:nth-child(1) {
     margin-top: 0;
     padding-top: 0.5em;
     color: white;
@@ -96,8 +121,57 @@ li {
 }
 
 svg {
+    padding-top: 30px;
     min-height: 300px;
     min-width: 100vw;
+}
+
+.quiz {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    max-width: 80%;
+    background-color: #2F4558;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #F6B12D;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+#question-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#question {
+    font-size: 30px;
+    color: white;
 }
 
 .carouselContainer {

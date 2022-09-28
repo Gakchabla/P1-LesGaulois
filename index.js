@@ -21,3 +21,9 @@ nextItem.addEventListener("click", function () {
         item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
     });
 });
+const questions = [{
+    question: "Quelle est cette ville ?",
+    answer: ["Lyon", "Marseille", "Paris", "Toulouse"],
+    isCorrect: 0
+}]
+

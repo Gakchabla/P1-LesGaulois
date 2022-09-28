@@ -11,15 +11,17 @@
 
 <body>
     <header>
-        <h1>REGIOQUIZ</h1>
         <img class="logo" alt="logo" src="">
+        <h1>REGIOQUIZ</h1>
     </header>
     <main>
-        <div class="burgermenu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <a href="">
+            <div class="burgermenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
         <aside class="elements left">
             <ul class="regionliste">
                 <li>Auvergne-Rhône-Alpes</li>
@@ -41,7 +43,7 @@
             <section class="carte">
                 <h1>Clique sur une région pour jouer !!</h1>
             </section>
-            <section class="carteSVG">
+            <section class="caroussel">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap"
                         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="50vh" width="100vw"
@@ -104,19 +106,22 @@
                 </div>
             </section>
 
-            <div id="quiz">
-                <p class="quizQuestion">My question</p>
-                <div class="button-container">
-                    <button class="option" onclick="" id="op1">option1</button>
-                    <button class="option" onclick="" id="op2">option2</button>
-                    <button class="option" onclick="" id="op3">option3</button>
-                    <button class="option" onclick="" id="op4">option4</button>
+            <section class="quiz">
+                <div class="container">
+                    <div id="question-container">
+                        <div id="question">Question</div>
+                        <div id="answer-buttons" class="buttons-grid">
+                            <button class="btn">Answer 1</button>
+                            <button class="btn">Answer 2</button>
+                            <button class="btn">Answer 3</button>
+                            <button class="btn">Answer 4</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
     </main>
 
     <footer></footer>
-
     <script src="index.js"></script>
 </body>
 
