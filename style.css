@@ -1,10 +1,10 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header{
+header {
     background-color: #2F4558;
     display: flex;
     justify-content: space-between;
@@ -12,30 +12,30 @@ header{
     align-items: center;
 }
 
-header h1{
+header h1 {
     color: #F6B12D;
 
 }
 
 
-.carte h1{
-    color:#F6B12D;
+.carte h1 {
+    color: #F6B12D;
     padding-left: 5px;
 }
 
-body{
+body {
     background-color: #B6CDE8;
 }
 
-main h1{
-    color:#F6B12D;
+main h1 {
+    color: #F6B12D;
 }
 
-.burgermenu{
+.burgermenu {
     padding-top: 20px;
 }
 
-.burgermenu span:nth-child(1){
+.burgermenu span:nth-child(1) {
     width: 30px;
     height: 2px;
     background-color: rgb(255, 220, 65);
@@ -43,7 +43,7 @@ main h1{
     display: block;
 }
 
-.burgermenu span:nth-child(2){
+.burgermenu span:nth-child(2) {
     width: 30px;
     height: 1px;
     background-color: rgb(255, 220, 65);
@@ -51,7 +51,7 @@ main h1{
     display: block;
 }
 
-.burgermenu span:nth-child(3){
+.burgermenu span:nth-child(3) {
     width: 30px;
     height: 2px;
     background-color: rgb(255, 220, 65);
@@ -59,44 +59,43 @@ main h1{
     display: block;
 }
 
-.elements.left{
+.elements.left {
     /*display: none;*/
     padding-top: 3em;
     background-color: #2F4558;
     width: 100vh;
-    position:absolute;
+    position: absolute;
 }
 
-li{
+li {
     display: flex;
-    
+
 }
 
-.caroussel h1:nth-child(1) {
+.carteSVG h1:nth-child(1) {
     margin-top: 0;
     padding-top: 0.5em;
     color: white;
 }
 
-.land
-{
+.land {
     fill: #F6B12D;
     fill-opacity: 1;
-    stroke:#2F4558;
+    stroke: #2F4558;
     stroke-opacity: 1;
-    stroke-width:0.5;
+    stroke-width: 0.5;
     transition: 0.5s ease-in-out;
 }
 
-#FR-ARA:hover{
+#FR-ARA:hover {
     fill: #2F4558;
     fill-opacity: 1;
-    stroke:#2F4558;
+    stroke: #2F4558;
     stroke-opacity: 1;
-    stroke-width:0.5;
+    stroke-width: 0.5;
 }
 
-    svg {
-        min-height: 300px ;
-        min-width: 100vw;
-    }
+svg {
+    min-height: 300px;
+    min-width: 100vw;
+}
