@@ -1,10 +1,10 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header{
+header {
     background-color: #2F4558;
     display: flex;
     justify-content: start;
@@ -13,13 +13,14 @@ header{
     align-items: center;
 }
 
-header h1{
+header h1 {
     color: #F6B12D;
 
 }
 
-.carte h1{
-    color: black;;
+.carte h1 {
+    color: black;
+    ;
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -29,23 +30,23 @@ header h1{
     vertical-align: middle;
 }
 
-body{
+body {
     background-color: #B6CDE8;
 }
 
-main h1{
-    color:#F6B12D;
+main h1 {
+    color: #F6B12D;
 }
 
-.burgermenu{
+.burgermenu {
     padding: 15px 15px 15px 5px;
     display: inline-block;
     position: relative;
     top: 40px;
-    left: 10px;    
+    left: 10px;
 }
 
-.burgermenu span:nth-child(1){
+.burgermenu span:nth-child(1) {
     width: 30px;
     height: 2px;
     background-color: black;
@@ -56,7 +57,7 @@ main h1{
 
 }
 
-.burgermenu span:nth-child(2){
+.burgermenu span:nth-child(2) {
     width: 30px;
     height: 2px;
     background-color: black;
@@ -66,23 +67,23 @@ main h1{
 
 }
 
-.burgermenu span:nth-child(3){
+.burgermenu span:nth-child(3) {
     width: 30px;
     height: 2px;
-    background-color:black;
+    background-color: black;
     border-radius: 4px;
     display: block;
     position: relative;
-    top:7px;
-    
+    top: 7px;
+
 }
 
-.elements.left{
+.elements.left {
     padding: 2em 1.5em;
     margin-top: 2em;
     background-color: #2F4558;
     width: 100vh;
-    position:absolute;
+    position: absolute;
     width: auto;
     height: 100vh;
     color: #F6B12D;
@@ -102,29 +103,28 @@ main h1{
     color: white;
 }
 
-.land
-{
+.land {
     fill: #F6B12D;
     fill-opacity: 1;
-    stroke:#2F4558;
+    stroke: #2F4558;
     stroke-opacity: 1;
-    stroke-width:0.5;
+    stroke-width: 0.5;
     transition: 0.5s ease-in-out;
 }
 
-#FR-ARA:hover{
+#FR-ARA:hover {
     fill: #2F4558;
     fill-opacity: 1;
-    stroke:#2F4558;
+    stroke: #2F4558;
     stroke-opacity: 1;
-    stroke-width:0.5;
+    stroke-width: 0.5;
 }
 
 svg {
     padding-top: 30px;
-    min-height: 300px ;
+    min-height: 300px;
     min-width: 100vw;
-    }
+}
 
 .quiz {
     padding: 0;
@@ -172,4 +172,56 @@ svg {
 #question {
     font-size: 30px;
     color: white;
+}
+
+.carouselContainer {
+    display: grid;
+    height: 50vh;
+    place-items: center;
+}
+
+.carousel {
+    width: 80vw;
+    height: 100vh;
+    position: relative;
+}
+
+.carouselItem {
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+}
+
+.carouselItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+.buttonPrev {
+    top: 40%;
+    left: 2%;
+}
+
+.buttonNext {
+    top: 40%;
+    right: 2%;
 }
