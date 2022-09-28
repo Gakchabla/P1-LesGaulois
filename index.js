@@ -1,3 +1,5 @@
+//**********************Carousel******************************
+
 const carouselItem = document.querySelectorAll(".carouselItem");
 
 carouselItem.forEach((item, indx) => {
@@ -36,6 +38,7 @@ prevItem.addEventListener("click", function () {
     });
 });
 
+// **************************Quiz****************************
 
 const questions = [{
     question: "Quelle est cette ville ?",
