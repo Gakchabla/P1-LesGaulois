@@ -12,14 +12,36 @@ header {
     align-items: center;
 }
 
+
 header h1 {
     color: #F6B12D;
 
 }
 
+header .logo {
+    width: 50px;
+    height: 50px;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.history {
+    background-color: #2F4558;
+    color: white;
+    text-align: center;
+}
+
+.bloc1 {
+    width: 900px;
+    font-size: 1.2rem;
+}
+
 
 .carte h1 {
-    color: #F6B12D;
     padding-left: 5px;
 }
 
@@ -29,7 +51,9 @@ body {
 
 main h1 {
     color: #F6B12D;
+    font-size: 2rem;
 }
+
 
 .burgermenu {
     padding-top: 20px;
@@ -69,6 +93,7 @@ main h1 {
 
 li {
     display: flex;
+    color: #F6B12D;
 
 }
 
