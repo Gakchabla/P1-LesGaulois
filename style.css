@@ -205,7 +205,7 @@ svg {
 
 .carousel {
     width: 80vw;
-    height: 100vh;
+    height: 50vh;
     position: relative;
     overflow: hidden;
 }
@@ -236,8 +236,13 @@ svg {
     object-fit: cover;
 }
 
-.btn:active {
+.button:active {
     transform: scale(1.1);
+}
+
+.button:hover {
+    background-color: rgba(107, 107, 107, 0.507);
+
 }
 
 .buttonPrev {
