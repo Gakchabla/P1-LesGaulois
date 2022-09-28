@@ -1,3 +1,5 @@
+//**********************Carousel******************************
+
 const carouselItem = document.querySelectorAll(".carouselItem");
 
 carouselItem.forEach((item, indx) => {
@@ -36,12 +38,16 @@ prevItem.addEventListener("click", function () {
     });
 });
 
+// **************************Quiz****************************
 
 const questions = [{
     question: "Quelle est cette ville ?",
     answer: ["Lyon", "Marseille", "Paris", "Toulouse"],
     isCorrect: 0
 }]
+
+// **************************Sidebar****************************
+
 
 const menuAsideAppears = document.querySelector(".burgermenu");
 const menuAside = document.querySelector(".left")

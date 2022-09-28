@@ -35,6 +35,7 @@ main{
 .description {
     display: flex;
     justify-content: center;
+    width: 100vw;
     margin-top: 50px;
 }
 
@@ -42,11 +43,13 @@ main{
     background-color: #2F4558;
     color: white;
     text-align: center;
+    width: 80%;
 }
 
-.bloc1 {
-    width: 900px;
+.bloctexte {
     font-size: 1.2rem;
+    margin-inline: 50px;
+    line-height: 30px;
 }
 
 
