@@ -99,3 +99,50 @@ svg {
     min-height: 300px;
     min-width: 100vw;
 }
+
+.quiz {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    max-width: 80%;
+    background-color: #2F4558;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #F6B12D;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+#question-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#question {
+    font-size: 30px;
+    color: white;
+}
