@@ -183,6 +183,7 @@ svg {
     width: 80vw;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 .carouselItem {
