@@ -1,104 +1,130 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header {
+header{
     background-color: #2F4558;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 10px;
     padding: 15px 10px 5px;
     align-items: center;
 }
 
-header h1 {
+header h1{
     color: #F6B12D;
 
 }
 
-
-.carte h1 {
-    color: #F6B12D;
+.carte h1{
+    color: black;;
     padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 0px;
+    vertical-align: middle;
 }
 
-body {
+body{
     background-color: #B6CDE8;
 }
 
-main h1 {
-    color: #F6B12D;
+main h1{
+    color:#F6B12D;
 }
 
-.burgermenu {
-    padding-top: 20px;
+.burgermenu{
+    padding: 15px 15px 15px 5px;
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    left: 10px;    
 }
 
-.burgermenu span:nth-child(1) {
+.burgermenu span:nth-child(1){
     width: 30px;
     height: 2px;
-    background-color: rgb(255, 220, 65);
+    background-color: black;
     border-radius: 4px;
     display: block;
+    position: relative;
+    bottom: 7px;
+
 }
 
-.burgermenu span:nth-child(2) {
-    width: 30px;
-    height: 1px;
-    background-color: rgb(255, 220, 65);
-    border-radius: 4px;
-    display: block;
-}
-
-.burgermenu span:nth-child(3) {
+.burgermenu span:nth-child(2){
     width: 30px;
     height: 2px;
-    background-color: rgb(255, 220, 65);
+    background-color: black;
     border-radius: 4px;
     display: block;
+    position: relative;
+
 }
 
-.elements.left {
-    /*display: none;*/
-    padding-top: 3em;
+.burgermenu span:nth-child(3){
+    width: 30px;
+    height: 2px;
+    background-color:black;
+    border-radius: 4px;
+    display: block;
+    position: relative;
+    top:7px;
+    
+}
+
+.elements.left{
+    padding: 2em 1.5em;
+    margin-top: 2em;
     background-color: #2F4558;
     width: 100vh;
-    position: absolute;
+    position:absolute;
+    width: auto;
+    height: 100vh;
+    color: #F6B12D;
+    font-size: 1.2rem;
+    transform: translate(-2000px);
 }
 
-li {
-    display: flex;
 
+.left ul {
+    list-style: none;
+    line-height: 2em;
 }
 
-.carteSVG h1:nth-child(1) {
+.caroussel h1:nth-child(1) {
     margin-top: 0;
     padding-top: 0.5em;
     color: white;
 }
 
-.land {
+.land
+{
     fill: #F6B12D;
     fill-opacity: 1;
-    stroke: #2F4558;
+    stroke:#2F4558;
     stroke-opacity: 1;
-    stroke-width: 0.5;
+    stroke-width:0.5;
     transition: 0.5s ease-in-out;
 }
 
-#FR-ARA:hover {
+#FR-ARA:hover{
     fill: #2F4558;
     fill-opacity: 1;
-    stroke: #2F4558;
+    stroke:#2F4558;
     stroke-opacity: 1;
-    stroke-width: 0.5;
+    stroke-width:0.5;
 }
 
 svg {
-    min-height: 300px;
+    padding-top: 30px;
+    min-height: 300px ;
     min-width: 100vw;
-}
+    }
 
 .quiz {
     padding: 0;
