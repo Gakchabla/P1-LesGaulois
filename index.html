@@ -15,15 +15,36 @@
         <img class="logo" alt="logo" src="">
     </header>
     <main>
+        <div class="burgermenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <aside class="elements left">
-            <!-- menu hamburger -->
+            <ul class="regionliste">
+                <li>Auvergne-Rhône-Alpes</li>
+                <li>Bourgogne-Franche-Comté</li>
+                <li>Bretagne</li>
+                <li>Centre-Val de Loire</li>
+                <li>Corse</li>
+                <li>Grand Est</li>
+                <li>Hauts-de-France</li>
+                <li>Île-de-France</li>
+                <li>Provence-Alpes-Côte</li>
+                <li>Nouvelle-Aquitaine</li>
+                <li>Normendie</li>
+                <li>Occitanie</li>
+                <li>Pays de la Loire</li>
+            </ul>
         </aside>
         <div class="elements right">
-            <section class="caroussel">
+            <section class="carte">
                 <h1>Clique sur une région pour jouer !!</h1>
+            </section>
+            <section class="carteSVG">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="100vh" width="100vw"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="50vh" width="100vw"
                         viewBox="0 0 680 590">
                         <defs>
                             <amcharts:ammap projection="mercator" leftLongitude="-4.778054" topLatitude="51.089278"
@@ -64,17 +85,24 @@
                 </div>
             </section>
         </div>
+        <section class="description"></section>
+<section class="carousel"></section>
+
+        
+
+        <div id="quiz">
+            <p class="quizQuestion">My question</p>
+            <div class="button-container">
+                <button class="option" onclick="" id="op1">option1</button>
+                <button class="option" onclick="" id="op2">option2</button>
+                <button class="option" onclick="" id="op3">option3</button>
+                <button class="option" onclick="" id="op4">option4</button>
+            </div>
+
+        </div>
     </main>
 
-    <div id="quiz">
-        <p class="quizQuestion">My question</p>
-        <div class="button-container">
-            <button class="option" onclick="" id="opt1">option1</button>
-            <button class="option" onclick="" id="opt2">option2</button>
-            <button class="option" onclick="" id="opt3">option3</button>
-            <button class="option" onclick="" id="opt4">option4</button>
-        </div>
-    </div>
+    <footer></footer>
 
     <script src="index.js"></script>
 </body>
