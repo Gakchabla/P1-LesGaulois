@@ -14,17 +14,17 @@
         <img class="logo" alt="logo" src="assets/logo.png">
         <h1>REGIOQUIZ</h1>
     </header>
+    <a href="">
+        <div class="burgermenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </a>
     <main>
-        <a href="">
-            <div class="burgermenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </a>
         <aside class="elements left">
             <ul class="regionliste">
-                <li>Auvergne-Rhône-Alpes</li>
+                <li><a href="#question-container">Auvergne-Rhône-Alpes</a></li>
                 <li>Bourgogne-Franche-Comté</li>
                 <li>Bretagne</li>
                 <li>Centre-Val de Loire</li>
@@ -86,7 +86,6 @@
                     </svg>
                 </div>
             </section>
-        </div>
         <section class="description">
             <div class="history">
                 <h1>Connaissez-vous vos régions ?</h1>
@@ -109,10 +108,6 @@
                 </div>
             </div>
         </section>
-        </div>
-
-
-
         <section class="carouselContainer">
             <div class="carousel">
                 <div class="carouselTitle">Région</div>
@@ -134,22 +129,26 @@
                 </div>
             </div>
         </section>
-
         <section class="quiz">
             <div class="container">
                 <div id="question-container">
-                    <div id="question">Question</div>
-                    <div id="answer-buttons" class="buttons-grid">
+                    <div id="question" class="hide">Question</div>
+                    <div id="answer-buttons" class="buttons-grid hide">
                         <button class="btn">Answer 1</button>
                         <button class="btn">Answer 2</button>
                         <button class="btn">Answer 3</button>
                         <button class="btn">Answer 4</button>
                     </div>
+                    <div class="control-quiz">
+                        <button id="start-btn" class="start-btn btn">Start</button>
+                        <button id="next-btn" class="next-btn btn hide">Next</button>
+                    </div>
                 </div>
+
             </div>
         </section>
+        </div>
     </main>
-
     <footer></footer>
     <script src="index.js"></script>
 </body>

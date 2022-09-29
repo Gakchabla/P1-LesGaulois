@@ -13,6 +13,11 @@ header {
     align-items: center;
 }
 
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
 header h1 {
     color: #F6B12D;
 
@@ -21,6 +26,10 @@ header h1 {
 header .logo {
     width: 50px;
     height: 50px;
+}
+
+main{
+    transition:all 0.3s;
 }
 
 .description {
@@ -46,13 +55,11 @@ header .logo {
 
 .carte h1 {
     color: black;
-    padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 1.1rem;
     text-align: center;
     margin-bottom: 0px;
-    vertical-align: middle;
 }
 
 body {
@@ -105,7 +112,7 @@ main h1 {
 }
 
 .elements.left {
-    padding: 2em 1.5em;
+    padding: 1.5em 1.5em;
     margin-top: 2em;
     background-color: #2F4558;
     width: 100vh;
@@ -115,18 +122,39 @@ main h1 {
     color: #F6B12D;
     font-size: 1.2rem;
     transform: translate(-2000px);
+    transition: all 0.3s;
+    z-index: 11;
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.44)
+    ;
 }
-
 
 .left ul {
     list-style: none;
-    line-height: 2em;
+    line-height: 1.9em;
+}
+
+
+li:link {
+    text-decoration: none;
+}
+
+li:visited {
+    text-decoration: none;
+}
+
+li:hover {
+    color: #B6CDE8;
+
 }
 
 .caroussel h1:nth-child(1) {
     margin-top: 0;
     padding-top: 0.5em;
     color: white;
+}
+
+.bloc1{
+    max-width: 35ch;
 }
 
 .land {
@@ -182,6 +210,10 @@ svg {
     margin: 20px 0;
 }
 
+#answer-buttons {
+    margin: 0;
+}
+
 .btn {
     background-color: #F6B12D;
     border: 1px solid black;
@@ -190,10 +222,15 @@ svg {
     outline: none;
 }
 
+.btn:hover {
+    border-color: black;
+}
+
 #question-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #question {
@@ -201,9 +238,26 @@ svg {
     color: white;
 }
 
+.start-btn,
+.next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10 px 20px;
+}
+
+.controls-quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .carouselContainer {
     display: flex;
     justify-content: center;
+}
+
+.hide {
+    display: none;
 }
 
 .carousel {
