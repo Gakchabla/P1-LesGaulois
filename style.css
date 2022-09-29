@@ -192,6 +192,7 @@ svg {
     border-radius: 5px;
     padding: 5px 10px;
     outline: none;
+    cursor: pointer;
 }
 
 #question-container {
