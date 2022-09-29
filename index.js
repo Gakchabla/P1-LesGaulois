@@ -42,31 +42,32 @@ prevItem.addEventListener("click", function () {
 
 const questions = [{
     question: "Quelle est cette ville ?",
-    answer: ["Lyon", "Marseille", "Paris", "Toulouse"],
-    isCorrect: 0
+    answer: [
+        { text: 'Lyon', correct: true },
+        { text: 'Marseille', correct: false },
+        { text: 'Paris', correct: false },
+        { text: 'Bordeaux', correct: false }]
 }]
 
 const startButton = document.getElementById('start-btn')
-const questionText = document.getElementById('question')
 const button = document.querySelector('.buttons-grid')
-// const secondButton = document.querySelector('btn2')
-// const thirdButton = document.querySelector('btn3')
-// const forthButton = document.querySelector('btn4')
-
+const questionElement = document.getElementById('question')
+const answerButtonElement = document.getElementById('answer-buttons')
 
 startButton.addEventListener('click', startGame)
 
 function startGame() {
     startButton.classList.add('hide')
-    questionText.classList.remove('hide')
+    questionElement.classList.remove('hide')
     button.classList.remove('hide')
-    // secondButton.classList.remove('hide')
-    // thirdButton.classList.remove('hide')
-    // forthButton.classList.remove('hide')
-
+    startQuestion()
 }
 function startQuestion() {
+    showQuestion()
+}
 
+function showQuestion(question) {
+    questionElement.innerText = question.question
 }
 
 function selectAnswer() {
