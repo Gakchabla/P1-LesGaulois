@@ -90,19 +90,22 @@ dotSwitch();
 
 // **************************Quiz****************************
 
-const questions = [{
+const questions = {
     question: "Quelle est cette ville ?",
     answer: [
         { text: 'Lyon', correct: true },
         { text: 'Marseille', correct: false },
         { text: 'Paris', correct: false },
         { text: 'Bordeaux', correct: false }]
-}]
+}
 
 const startButton = document.getElementById('start-btn')
 const button = document.querySelector('.buttons-grid')
 const questionElement = document.getElementById('question')
-const answerButtonElement = document.getElementById('answer-buttons')
+const answerButtonElement1 = document.getElementById('btn1')
+const answerButtonElement2 = document.getElementById('btn2')
+const answerButtonElement3 = document.getElementById('btn3')
+const answerButtonElement4 = document.getElementById('btn4')
 
 startButton.addEventListener('click', startGame)
 
@@ -114,14 +117,18 @@ function startGame() {
 }
 function startQuestion() {
     showQuestion()
+    showAnswer()
 }
 
 function showQuestion(question) {
-    questionElement.innerText = question.question
+    questionElement.innerText = questions.question
 }
 
-function selectAnswer() {
-
+function showAnswer() {
+    answerButtonElement1.innerText = questions.answer
+    answerButtonElement2.innerText = questions.answer
+    answerButtonElement3.innerText = questions.answer
+    answerButtonElement4.innerText = questions.answer
 }
 // **************************Sidebar****************************
 
@@ -132,25 +139,25 @@ const body = document.querySelector("body")
 const main = document.querySelector("main")
 
 burgermenu.addEventListener("click", () => {
-    if (menuAside.style.translate == ("2000px")){
+    if (menuAside.style.translate == ("2000px")) {
         menuAside.style.translate = ("-2000px");
     } else {
         menuAside.style.translate = ("2000px");
     }
-event.preventDefault();
+    event.preventDefault();
 })
 
 burgermenu.addEventListener("click", () => {
-    if (menuAside.style.translate == ("2000px")){
+    if (menuAside.style.translate == ("2000px")) {
         body.style.backgroundColor = "rgba(0,0,0,0.6)";
     } else {
         body.style.backgroundColor = "#B6CDE8";
     }
-event.preventDefault();
+    event.preventDefault();
 })
 
 main.addEventListener("click", () => {
-    if (menuAside.style.translate == ("2000px")){
+    if (menuAside.style.translate == ("2000px")) {
         menuAside.style.translate = ("-2000px");
         body.style.backgroundColor = "#B6CDE8";
     }
