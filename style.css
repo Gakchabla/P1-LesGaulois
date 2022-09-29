@@ -252,8 +252,8 @@ svg {
 }
 
 .carouselContainer {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .hide {
@@ -262,9 +262,12 @@ svg {
 
 .carousel {
     width: 80vw;
-    height: 100vh;
+    height: 50vh;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .carouselItem {
@@ -279,11 +282,10 @@ svg {
     width: 30px;
     height: 30px;
     padding: 0px;
-    border: none;
     border-radius: 50%;
     z-index: 10;
     cursor: pointer;
-    background-color: #fff;
+    background-color: rgba(131, 131, 131, 0.479);
     font-size: 18px;
 }
 
@@ -293,8 +295,13 @@ svg {
     object-fit: cover;
 }
 
-.btn:active {
+.button:active {
     transform: scale(1.1);
+}
+
+.button:hover {
+    background-color: rgba(211, 211, 211, 0.767);
+
 }
 
 .buttonPrev {
@@ -305,4 +312,21 @@ svg {
 .buttonNext {
     top: 40%;
     right: 2%;
+}
+
+.dotButton {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    width: 5rem;
+    height: 2rem;
+}
+
+.dotStyle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(211, 211, 211, 0.39);
 }
