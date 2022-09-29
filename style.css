@@ -182,6 +182,10 @@ svg {
     margin: 20px 0;
 }
 
+#answer-buttons {
+    margin: 0;
+}
+
 .btn {
     background-color: #F6B12D;
     border: 1px solid black;
@@ -190,10 +194,15 @@ svg {
     outline: none;
 }
 
+.btn:hover {
+    border-color: black;
+}
+
 #question-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #question {
@@ -201,9 +210,26 @@ svg {
     color: white;
 }
 
+.start-btn,
+.next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10 px 20px;
+}
+
+.controls-quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .carouselContainer {
     display: grid;
     place-items: center;
+}
+
+.hide {
+    display: none;
 }
 
 .carousel {
