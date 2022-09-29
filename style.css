@@ -37,10 +37,17 @@ header .logo {
     width: 80%;
 }
 
+.history h1 {
+    color: #F6B12D;
+    font-size: 2rem;
+    margin: 10px;
+}
+
 .bloctexte {
     font-size: 1.2rem;
     margin-inline: 50px;
     line-height: 30px;
+    margin-bottom: 30px;
 }
 
 
@@ -59,10 +66,7 @@ body {
     background-color: #B6CDE8;
 }
 
-main h1 {
-    color: #F6B12D;
-    font-size: 2rem;
-}
+main h1 {}
 
 .burgermenu {
     padding: 15px 15px 15px 5px;
