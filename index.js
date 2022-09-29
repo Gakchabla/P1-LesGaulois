@@ -162,3 +162,16 @@ main.addEventListener("click", () => {
         body.style.backgroundColor = "#B6CDE8";
     }
 })
+
+const quiz = document.querySelector(".quiz");
+
+const textReponse = function () {
+    const explication = document.createElement('div')
+    explication.classList.add('explication')
+    explication.classList.add('container')
+    explication.innerHTML = "La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région";
+    quiz.appendChild(explication);
+}
+const textDelete = function () {
+    quiz.removeChild(document.querySelector(".explication"));
+}
