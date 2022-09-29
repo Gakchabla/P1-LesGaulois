@@ -28,6 +28,12 @@ const dotSwitch = function () {
     }
 }
 
+const slideItem = function () {
+    carouselItem.forEach((item, indx) => {
+        item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
+    })
+};
+
 
 nextItem.addEventListener("click", function () {
     if (currentItem === maxItem) {
@@ -35,10 +41,8 @@ nextItem.addEventListener("click", function () {
     }
     else {
         currentItem++;
-    }
-    carouselItem.forEach((item, indx) => {
-        item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
-    });
+    };
+    slideItem();
     dotSwitch();
 });
 
@@ -51,18 +55,14 @@ prevItem.addEventListener("click", function () {
     else {
         currentItem--;
     }
-    carouselItem.forEach((item, indx) => {
-        item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
-    });
+    slideItem();
     dotSwitch();
 });
 const dotUn = document.getElementById("dot1")
 
 dotUn.addEventListener("click", function () {
     currentItem = 0;
-    carouselItem.forEach((item, indx) => {
-        item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
-    });
+    slideItem();
     dotSwitch();
 });
 
@@ -70,9 +70,7 @@ const dotDeux = document.getElementById("dot2")
 
 dotDeux.addEventListener("click", function () {
     currentItem = 1;
-    carouselItem.forEach((item, indx) => {
-        item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
-    });
+    slideItem()
     dotSwitch();
 });
 
@@ -80,9 +78,7 @@ const dotTrois = document.getElementById("dot3")
 
 dotTrois.addEventListener("click", function () {
     currentItem = 2;
-    carouselItem.forEach((item, indx) => {
-        item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
-    });
+    slideItem();
     dotSwitch();
 });
 dotSwitch();
@@ -162,3 +158,18 @@ main.addEventListener("click", () => {
         body.style.backgroundColor = "#B6CDE8";
     }
 })
+
+const quiz = document.querySelector(".quiz");
+
+const textReponse = function () {
+    const explication = document.createElement('div')
+    explication.classList.add('explication')
+    explication.classList.add('container')
+    explication.innerHTML = "La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région";
+    quiz.appendChild(explication);
+}
+const textDelete = function () {
+    if (document.querySelector(".explication") != null) {
+        quiz.removeChild(document.querySelector(".explication"));
+    }
+}
