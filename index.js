@@ -49,12 +49,12 @@ const questions = [{
 // **************************Sidebar****************************
 
 
-const menuAsideAppears = document.querySelector(".burgermenu");
+const burgermenu = document.querySelector(".burgermenu");
 const menuAside = document.querySelector(".left")
+const body = document.querySelector("body")
 const main = document.querySelector("main")
-const mapFrench = document.querySelector(".land")
 
-menuAsideAppears.addEventListener("click", () => {
+burgermenu.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")){
         menuAside.style.translate = ("-2000px");
     } else {
@@ -63,11 +63,18 @@ menuAsideAppears.addEventListener("click", () => {
 event.preventDefault();
 })
 
-menuAsideAppears.addEventListener("click", () => {
+burgermenu.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")){
-        main.style.backgroundColor = "rgba(0,0,0,0.5)";
+        body.style.backgroundColor = "rgba(0,0,0,0.6)";
     } else {
-        main.style.backgroundColor = "rgba(0,0,0,0)";
+        body.style.backgroundColor = "#B6CDE8";
     }
 event.preventDefault();
+})
+
+main.addEventListener("click", () => {
+    if (menuAside.style.translate == ("2000px")){
+        menuAside.style.translate = ("-2000px");
+        body.style.backgroundColor = "#B6CDE8";
+    }
 })
