@@ -102,10 +102,10 @@ const questions = {
 const startButton = document.getElementById('start-btn')
 const button = document.querySelector('.buttons-grid')
 const questionElement = document.getElementById('question')
-const answerButtonElement1 = document.getElementById('btn1')
-const answerButtonElement2 = document.getElementById('btn2')
-const answerButtonElement3 = document.getElementById('btn3')
-const answerButtonElement4 = document.getElementById('btn4')
+const answerButtonElement1 = document.querySelector('.btn1')
+const answerButtonElement2 = document.querySelector('.btn2')
+const answerButtonElement3 = document.querySelector('.btn3')
+const answerButtonElement4 = document.querySelector('.btn4')
 
 startButton.addEventListener('click', startGame)
 
@@ -125,10 +125,10 @@ function showQuestion(question) {
 }
 
 function showAnswer() {
-    answerButtonElement1.innerText = questions.answer
-    answerButtonElement2.innerText = questions.answer
-    answerButtonElement3.innerText = questions.answer
-    answerButtonElement4.innerText = questions.answer
+    answerButtonElement1.innerText = questions.answer[0].text
+    answerButtonElement2.innerText = questions.answer[1].text
+    answerButtonElement3.innerText = questions.answer[2].text
+    answerButtonElement4.innerText = questions.answer[3].text
 }
 // **************************Sidebar****************************
 
