@@ -46,6 +46,32 @@ const questions = [{
     isCorrect: 0
 }]
 
+const startButton = document.getElementById('start-btn')
+const questionText = document.getElementById('question')
+const button = document.querySelector('.buttons-grid')
+// const secondButton = document.querySelector('btn2')
+// const thirdButton = document.querySelector('btn3')
+// const forthButton = document.querySelector('btn4')
+
+
+startButton.addEventListener('click', startGame)
+
+function startGame() {
+    startButton.classList.add('hide')
+    questionText.classList.remove('hide')
+    button.classList.remove('hide')
+    // secondButton.classList.remove('hide')
+    // thirdButton.classList.remove('hide')
+    // forthButton.classList.remove('hide')
+
+}
+function startQuestion() {
+
+}
+
+function selectAnswer() {
+
+}
 // **************************Sidebar****************************
 
 
