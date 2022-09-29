@@ -173,5 +173,7 @@ const textReponse = function () {
     quiz.appendChild(explication);
 }
 const textDelete = function () {
-    quiz.removeChild(document.querySelector(".explication"));
+    if (document.querySelector(".explication") != null) {
+        quiz.removeChild(document.querySelector(".explication"));
+    }
 }
