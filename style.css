@@ -1,3 +1,5 @@
+/****************** Layout Part ***********************/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -171,9 +173,9 @@ li:hover {
 #FR-ARA:hover {
     fill: #2F4558;
     fill-opacity: 1;
-    stroke: #2F4558;
+    stroke: #ffffff;
     stroke-opacity: 1;
-    stroke-width: 0.5;
+    stroke-width: 2;
 }
 
 svg {
@@ -209,7 +211,7 @@ svg {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
-    margin: 20px 0;
+    margin: 50px 0;
 }
 
 #answer-buttons {
@@ -222,11 +224,18 @@ svg {
     border-radius: 5px;
     padding: 5px 10px;
     outline: none;
+    cursor: pointer;
 }
 
 .btn:hover {
     border-color: black;
+    background-color: white;
 }
+
+.btn:active {
+    transform: scale(1.1);
+}
+
 
 #question-container {
     display: flex;
@@ -245,6 +254,15 @@ svg {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10 px 20px;
+}
+
+.reset-btn {
+    background-color: white;
+    margin-top: 1rem;
+}
+
+.reset-btn:hover {
+    background-color: grey;
 }
 
 .controls-quiz {

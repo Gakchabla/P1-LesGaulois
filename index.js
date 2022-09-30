@@ -110,6 +110,7 @@ function startGame() {
     startButton.classList.add('hide')
     questionElement.classList.remove('hide')
     button.classList.remove('hide')
+    resetButton.classList.remove('hide')
     startQuestion()
 }
 function startQuestion() {
@@ -127,6 +128,27 @@ function showAnswer() {
     answerButtonElement3.innerText = questions.answer[2].text
     answerButtonElement4.innerText = questions.answer[3].text
 }
+
+/*************************Reset Quizz **********************/
+
+const resetButton = document.querySelector('.reset-btn')
+
+answerButtonElement1.addEventListener('click', colorsAnswer)
+
+function colorsAnswer() {
+    answerButtonElement1.style.backgroundColor = 'green';
+    answerButtonElement2.style.backgroundColor = 'red';
+    answerButtonElement3.style.backgroundColor = 'red';
+    answerButtonElement4.style.backgroundColor = 'red';
+}
+
+
+resetButton.removeEventListener('click', resetColorsAnswer)
+
+function resetColorsAnswer() {
+}
+
+
 // **************************Sidebar****************************
 
 
