@@ -1,3 +1,26 @@
+const answerButtons = document.querySelectorAll('.answerButton');
+
+
+const textReponse = function () {
+    const explication = document.createElement('div')
+    explication.classList.add('explication')
+    explication.classList.add('container')
+    explication.innerHTML = "La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région";
+    quiz.appendChild(explication);
+}
+const textDelete = function () {
+    if (document.querySelector(".explication") != null) {
+        quiz.removeChild(document.querySelector(".explication"));
+    }
+}
+
+for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].addEventListener('click', function () {
+        textDelete();
+        textReponse();
+    });
+}
+
 //**********************Carousel******************************
 
 const carouselItem = document.querySelectorAll(".carouselItem");
@@ -26,6 +49,7 @@ const dotSwitch = function () {
         dotDeux.style.backgroundColor = "rgba(211, 211, 211, 0.39)";
         dotTrois.style.backgroundColor = "white";
     }
+    textDelete();
 }
 
 
@@ -55,6 +79,7 @@ prevItem.addEventListener("click", function () {
         item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
     });
     dotSwitch();
+
 });
 const dotUn = document.getElementById("dot1")
 
@@ -64,6 +89,7 @@ dotUn.addEventListener("click", function () {
         item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
     });
     dotSwitch();
+
 });
 
 const dotDeux = document.getElementById("dot2")
@@ -74,6 +100,7 @@ dotDeux.addEventListener("click", function () {
         item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
     });
     dotSwitch();
+
 });
 
 const dotTrois = document.getElementById("dot3")
@@ -84,6 +111,7 @@ dotTrois.addEventListener("click", function () {
         item.style.transform = `translateX(${100 * (indx - currentItem)}%)`;
     });
     dotSwitch();
+
 });
 dotSwitch();
 
@@ -187,15 +215,3 @@ main.addEventListener("click", () => {
 
 const quiz = document.querySelector(".quiz");
 
-const textReponse = function () {
-    const explication = document.createElement('div')
-    explication.classList.add('explication')
-    explication.classList.add('container')
-    explication.innerHTML = "La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région";
-    quiz.appendChild(explication);
-}
-const textDelete = function () {
-    if (document.querySelector(".explication") != null) {
-        quiz.removeChild(document.querySelector(".explication"));
-    }
-}
