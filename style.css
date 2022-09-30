@@ -208,7 +208,7 @@ svg {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
-    margin: 20px 0;
+    margin: 50px 0;
 }
 
 #answer-buttons {
@@ -251,6 +251,15 @@ svg {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10 px 20px;
+}
+
+.reset-btn {
+    background-color: white;
+    margin-top: 1rem;
+}
+
+.reset-btn:hover {
+    background-color: grey;
 }
 
 .controls-quiz {
