@@ -1,3 +1,26 @@
+const answerButtons = document.querySelectorAll('.answerButton');
+
+
+const textReponse = function () {
+    const explication = document.createElement('div')
+    explication.classList.add('explication')
+    explication.classList.add('container')
+    explication.innerHTML = "La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région";
+    quiz.appendChild(explication);
+}
+const textDelete = function () {
+    if (document.querySelector(".explication") != null) {
+        quiz.removeChild(document.querySelector(".explication"));
+    }
+}
+
+for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].addEventListener('click', function () {
+        textDelete();
+        textReponse();
+    });
+}
+
 //**********************Carousel******************************
 
 const carouselItem = document.querySelectorAll(".carouselItem"); // selecting all items in the carousel into an array
@@ -27,6 +50,7 @@ const dotSwitch = function () {
         dotDeux.style.backgroundColor = "rgba(211, 211, 211, 0.39)";
         dotTrois.style.backgroundColor = "white";
     }
+    textDelete();
 } // a function that checks what the current item is shown and lighten the right navigation dot
 
 const slideItem = function () {
@@ -184,15 +208,3 @@ main.addEventListener("click", () => {
 
 const quiz = document.querySelector(".quiz");
 
-const textReponse = function () {
-    const explication = document.createElement('div')
-    explication.classList.add('explication')
-    explication.classList.add('container')
-    explication.innerHTML = "La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région";
-    quiz.appendChild(explication);
-}
-const textDelete = function () {
-    if (document.querySelector(".explication") != null) {
-        quiz.removeChild(document.querySelector(".explication"));
-    }
-}
