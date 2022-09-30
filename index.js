@@ -123,6 +123,7 @@ const questions = {
 }
 
 const startButton = document.getElementById('start-btn')
+const nextButton = document.getElementById('next-btn')
 const button = document.querySelector('.buttons-grid')
 const questionElement = document.getElementById('question')
 const answerButtonElement1 = document.querySelector('.btn1')
@@ -142,11 +143,28 @@ function startGame() {
 function startQuestion() {
     showQuestion()
     showAnswer()
+    getAnswer()
 }
 
 function showQuestion(question) {
     questionElement.innerText = questions.question
 }
+
+
+function getAnswer() {
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].addEventListener('click', function () {
+            if (questions.answer[i].correct === true)
+                nextButton.classList.remove('hide')
+            else {
+                console.log("try again")
+            }
+
+        });
+    }
+
+}
+
 
 function showAnswer() {
     answerButtonElement1.innerText = questions.answer[0].text
