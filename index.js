@@ -107,13 +107,15 @@ const answerButtonElement2 = document.querySelector('.btn2')
 const answerButtonElement3 = document.querySelector('.btn3')
 const answerButtonElement4 = document.querySelector('.btn4')
 
+
 startButton.addEventListener('click', startGame)
 
 function startGame() {
     startButton.classList.add('hide')
     questionElement.classList.remove('hide')
     button.classList.remove('hide')
-    resetButton.classList.remove('hide')
+    // resetButton.classList.remove('hide')
+    nextButton.classList.remove('hide')
     startQuestion()
 }
 function startQuestion() {
@@ -132,9 +134,10 @@ function showAnswer() {
     answerButtonElement4.innerText = questions.answer[3].text
 }
 
-/*************************Reset Quizz **********************/
+/************************* Color & Next Quizz **********************/
 
-const resetButton = document.querySelector('.reset-btn')
+// const resetButton = document.querySelector('.reset-btn')
+const nextButton = document.querySelector('.next-btn')
 
 answerButtonElement1.addEventListener('click', colorsAnswer)
 
@@ -144,6 +147,7 @@ function colorsAnswer() {
     answerButtonElement3.style.backgroundColor = 'red';
     answerButtonElement4.style.backgroundColor = 'red';
 }
+
 
 
 resetButton.removeEventListener('click', resetColorsAnswer)
