@@ -47,7 +47,8 @@ main {
     background-color: #2F4558;
     color: white;
     text-align: center;
-    width: 80%;
+    width: 100%;
+    margin-bottom: 50px;
 }
 
 .bloctexte {
@@ -61,7 +62,7 @@ main {
     color: black;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     text-align: center;
     margin-bottom: 0px;
 }
@@ -74,6 +75,15 @@ main h1 {
     color: #F6B12D;
     font-size: 2rem;
 }
+
+footer {
+    background-color: #2F4558;
+    gap: 10px;
+    padding: 30px;
+    top: 0px;
+}
+
+/****************** Burger Menu ***********************/
 
 .burgermenu {
     padding: 15px 15px 15px 5px;
@@ -147,18 +157,14 @@ li:visited {
 
 li:hover {
     color: #B6CDE8;
-
-}
-
-.caroussel h1:nth-child(1) {
-    margin-top: 0;
-    padding-top: 0.5em;
-    color: white;
+    cursor: pointer;
 }
 
 .bloc1 {
     max-width: 35ch;
 }
+
+/****************** Map ***********************/
 
 .land {
     fill: #F6B12D;
@@ -179,9 +185,11 @@ li:hover {
 
 svg {
     padding-top: 30px;
-    min-height: 300px;
+    min-height: 400px;
     min-width: 100vw;
 }
+
+/****************** Quiz ***********************/
 
 .quiz {
     padding: 0;
@@ -192,6 +200,8 @@ svg {
     height: fit-content;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
@@ -270,13 +280,21 @@ svg {
     align-items: center;
 }
 
+.hide {
+    display: none;
+}
+
+/****************** Carousel Capital ***********************/
+
+.caroussel h1:nth-child(1) {
+    margin-top: 0;
+    padding-top: 0.5em;
+    color: white;
+}
+
 .carouselContainer {
     display: flex;
     justify-content: center;
-}
-
-.hide {
-    display: none;
 }
 
 .carousel {
