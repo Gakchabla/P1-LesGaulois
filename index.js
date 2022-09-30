@@ -126,10 +126,7 @@ const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const button = document.querySelector('.buttons-grid')
 const questionElement = document.getElementById('question')
-const answerButtonElement1 = document.querySelector('.btn1')
-const answerButtonElement2 = document.querySelector('.btn2')
-const answerButtonElement3 = document.querySelector('.btn3')
-const answerButtonElement4 = document.querySelector('.btn4')
+
 
 startButton.addEventListener('click', startGame)
 
@@ -137,7 +134,6 @@ function startGame() {
     startButton.classList.add('hide')
     questionElement.classList.remove('hide')
     button.classList.remove('hide')
-    resetButton.classList.remove('hide')
     startQuestion()
 }
 function startQuestion() {
@@ -154,44 +150,23 @@ function showQuestion(question) {
 function getAnswer() {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].addEventListener('click', function () {
-            if (questions.answer[i].correct === true)
+            if (questions.answer[i].correct === true) {
                 nextButton.classList.remove('hide')
+                answerButtons[i].style.backgroundColor = 'green'
+            }
             else {
                 console.log("try again")
+                answerButtons[i].style.backgroundColor = 'red';
             }
-
         });
     }
-
 }
-
 
 function showAnswer() {
-    answerButtonElement1.innerText = questions.answer[0].text
-    answerButtonElement2.innerText = questions.answer[1].text
-    answerButtonElement3.innerText = questions.answer[2].text
-    answerButtonElement4.innerText = questions.answer[3].text
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].innerText = questions.answer[i].text
+    }
 }
-
-/*************************Reset Quizz **********************/
-
-const resetButton = document.querySelector('.reset-btn')
-
-answerButtonElement1.addEventListener('click', colorsAnswer)
-
-function colorsAnswer() {
-    answerButtonElement1.style.backgroundColor = 'green';
-    answerButtonElement2.style.backgroundColor = 'red';
-    answerButtonElement3.style.backgroundColor = 'red';
-    answerButtonElement4.style.backgroundColor = 'red';
-}
-
-
-resetButton.removeEventListener('click', resetColorsAnswer)
-
-function resetColorsAnswer() {
-}
-
 
 // **************************Sidebar****************************
 
