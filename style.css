@@ -13,6 +13,8 @@ header {
     gap: 10px;
     padding: 15px 10px 5px;
     align-items: center;
+    position: sticky;
+    top: 0px;
 }
 
 .logo {
@@ -346,4 +348,8 @@ svg {
     border-radius: 50%;
     cursor: pointer;
     background-color: rgba(211, 211, 211, 0.39);
+}
+
+.explication {
+    color: white;
 }
