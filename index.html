@@ -120,9 +120,6 @@
                             <li>Wallis-et-Futuna</li>
                         </ul>
                         <br>
-
-
-
                     </div>
                 </div>
             </section>
@@ -163,13 +160,19 @@
                             <button id="reset-btn" class="reset-btn btn hide ">Reset</button>
                         </div>
                     </div>
-
                 </div>
-            </section>
+                <form action="traitement.php" method="POST" id="myForm">
+                    <label for="username">Nom et Prénom</label>
+                    <input type="text" name="username" id="username">
+                    <br>
+                    <span id="error"></span>
+                    <br>
+                    <button type="submit" id="submit">S'enregistrer</button>
+                </form>
         </div>
     </main>
     <footer></footer>
-    <script src="index.js"></script>
+    <script src=" index.js"></script>
 </body>
 
 </html>
