@@ -1,3 +1,4 @@
+"use strict";
 //**********************Quiz description******************************/
 
 const answerButtons = document.querySelectorAll('.answerButton');
@@ -113,22 +114,32 @@ dotSwitch(); //initialize the dots
 
 // **************************Quiz****************************
 
-const questions = {
+const questions = [{
     question: "Quelle est cette ville ?",
     answer: [
         { text: 'Lyon', correct: true },
         { text: 'Marseille', correct: false },
         { text: 'Paris', correct: false },
         { text: 'Bordeaux', correct: false }]
-}
+},
+{
+    question: "Comment se nomme ce bâtiment ? ",
+    answer: [
+        { text: 'Hôtel de Ville', correct: false },
+        { text: 'Palais de la Bourse', correct: true },
+        { text: 'Cour D appel', correct: false },
+        { text: 'Préfecture du Rhône', correct: false }]
+}]
 
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const button = document.querySelector('.buttons-grid')
-const questionElement = document.getElementById('question')
+
+const startButton = document.getElementById('start-btn');
+const nextButton = document.getElementById('next-btn');
+const button = document.querySelector('.buttons-grid');
+const questionElement = document.getElementById('question');
 
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', startGame);
 
 function startGame() {
     startButton.classList.add('hide')
@@ -152,7 +163,7 @@ function getAnswer() {
         answerButtons[i].addEventListener('click', function () {
             if (questions.answer[i].correct === true) {
                 nextButton.classList.remove('hide')
-                answerButtons[i].style.backgroundColor = 'green'
+                answerButtons[i].style.backgroundColor = 'green';
             }
             else {
                 console.log("try again")
