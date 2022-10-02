@@ -207,7 +207,7 @@ const quiz = document.querySelector(".quiz");
 
 let myForm = document.getElementById('myForm');
 
-myForm.addEventListener('submit', function (e) {
+myForm.addEventListener('submit', function (event) {
     let myInput = document.getElementById('username');
     let myRegex = /^[a-zA-Z-\s]+$/;
 
@@ -215,12 +215,12 @@ myForm.addEventListener('submit', function (e) {
         let myError = document.getElementById('error');
         myError.innerHTML = "le champ username est requis";
         myError.style.color = 'red';
-        e.preventDefault();
+        event.preventDefault();
     } else if (myRegex.test(myInput.value) == false) {
         let myError = document.getElementById('error');
         myError.innerHTML = 'Le champ ne doit comporter que des lettres et des tirets uniquement.';
         myError.style.color = 'red';
-        e.preventDefault();
+        event.preventDefault();
     }
 
 });

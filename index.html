@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Permet d'importer sa bibliotheque d'icones -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -123,6 +127,8 @@
                     </div>
                 </div>
             </section>
+
+            <!--------------------------------------Carousel---------------------------------------->
             <section class="carouselContainer">
                 <div class="carousel">
                     <div class="carouselTitle">Région</div>
@@ -144,6 +150,8 @@
                     </div>
                 </div>
             </section>
+
+            <!----------------------------------Quiz ---------------------------------------------------->
             <section class="quiz">
                 <div class="container">
                     <div id="question-container">
@@ -161,14 +169,65 @@
                         </div>
                     </div>
                 </div>
-                <form action="traitement.php" method="POST" id="myForm">
+            </section>
+            <!--
+            <form action="traitement.php" method="POST" id="myForm">
+                <div class="containerForm">
                     <label for="username">Nom et Prénom</label>
                     <input type="text" name="username" id="username">
                     <br>
                     <span id="error"></span>
                     <br>
-                    <button type="submit" id="submit">S'enregistrer</button>
-                </form>
+                    <button type="submit" id="submit">Envoyer</button>
+                </div>
+            </form>
+            -->
+
+            <!---------------------------------- Formulaire ---------------------------------------------------->
+
+
+            <form>
+                <h1>Contactez-nous !</h1>
+                <div class="separator"></div>
+                <p>Une remarque ? Une suggestion ? N'hésitez pas à nous écrire</p>
+                <div class="body-form">
+                    <div class="left-form">
+                        <div class="group">
+                            <label>Nom et Prénom</label>
+                            <input type="text">
+                            <i class="fa-solid fa-user"></i>
+                            <!--icone récupéré -->
+                        </div>
+                        <div class="group">
+                            <label>Adresse e-mail</label>
+                            <input type="text">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="group">
+                            <label>Numéro de téléphone</label>
+                            <input type="text">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                    </div>
+
+                    <div class="right-form">
+                        <div class="group">
+                            <label>Message</label>
+                            <textarea placeholder="Saisissez votre message ici..."></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="foot-form">
+                    <button>Envoyer le message</button>
+                </div>
+            </form>
+
+
+
+
+
         </div>
     </main>
     <footer></footer>
