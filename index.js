@@ -116,7 +116,7 @@ dotSwitch(); //initialize the dots
 
 const questions = [{
     question: "Quelle est cette ville ?",
-    answer: [
+    answers: [
         { text: 'Lyon', correct: true },
         { text: 'Marseille', correct: false },
         { text: 'Paris', correct: false },
@@ -124,7 +124,7 @@ const questions = [{
 },
 {
     question: "Comment se nomme ce bâtiment ? ",
-    answer: [
+    answers: [
         { text: 'Hôtel de Ville', correct: false },
         { text: 'Palais de la Bourse', correct: true },
         { text: 'Cour D appel', correct: false },
@@ -137,45 +137,72 @@ const nextButton = document.getElementById('next-btn');
 const button = document.querySelector('.buttons-grid');
 const questionElement = document.getElementById('question');
 
+let curentQuestionIndex = 0;
+
 
 startButton.addEventListener('click', startGame);
-nextButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', function () {
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].classList.remove('good-answer');
+        answerButtons[i].classList.remove('wrong-answer');
+    }
+    curentQuestionIndex++;
+    nextButton.classList.add('hide')
+
+
+    startQuestion(curentQuestionIndex);
+});
 
 function startGame() {
     startButton.classList.add('hide')
     questionElement.classList.remove('hide')
     button.classList.remove('hide')
-    startQuestion()
+    startQuestion(curentQuestionIndex)
 }
-function startQuestion() {
-    showQuestion()
-    showAnswer()
-    getAnswer()
+function startQuestion(questionIndex) {
+    const questionObject = questions[questionIndex];
+    // showQuestion({
+    //     question: "Quelle est cette ville ?",
+    //     answers: [
+    //         { text: 'Lyon', correct: true },
+    //         { text: 'Marseille', correct: false },
+    //         { text: 'Paris', correct: false },
+    //         { text: 'Bordeaux', correct: false }]
+    // })
+    showQuestion(questionObject);
+    // showAnswer([
+    //     { text: 'Lyon', correct: true },
+    //     { text: 'Marseille', correct: false },
+    //     { text: 'Paris', correct: false },
+    //     { text: 'Bordeaux', correct: false }])
+    showAnswer(questionObject.answers);
+    checkAnswer(questionObject.answers);
 }
 
-function showQuestion(question) {
-    questionElement.innerText = questions.question
+function showQuestion(questionObject) {
+    questionElement.innerText = questionObject.question;
 }
 
 
-function getAnswer() {
+function checkAnswer(questionAnswers) {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].addEventListener('click', function () {
-            if (questions.answer[i].correct === true) {
+            if (questionAnswers[i].correct === true) {
                 nextButton.classList.remove('hide')
-                answerButtons[i].style.backgroundColor = 'green';
+                answerButtons[i].classList.add('good-answer')
             }
             else {
                 console.log("try again")
-                answerButtons[i].style.backgroundColor = 'red';
+                answerButtons[i].classList.add('wrong-answer')
+
             }
         });
     }
 }
 
-function showAnswer() {
+function showAnswer(questionAnswers) {
     for (let i = 0; i < answerButtons.length; i++) {
-        answerButtons[i].innerText = questions.answer[i].text
+        answerButtons[i].innerText = questionAnswers[i].text;
     }
 }
 

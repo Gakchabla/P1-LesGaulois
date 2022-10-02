@@ -255,6 +255,14 @@ svg {
     padding: 10 px 20px;
 }
 
+.wrong-answer {
+    background-color: red;
+}
+
+.good-answer {
+    background-color: green;
+}
+
 .reset-btn {
     background-color: white;
     margin-top: 1rem;
