@@ -72,6 +72,7 @@ nextItem.addEventListener("click", function () {
     };
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 }); // checks if the currentItem isn't the last and then shitf it it by one to the left
 
 const prevItem = document.querySelector(".buttonPrev");
@@ -85,6 +86,7 @@ prevItem.addEventListener("click", function () {
     }
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 });// checks if the currentItem isn't the last and then shitf it it by one to the right
 const dotUn = document.getElementById("dot1")
 
@@ -92,6 +94,7 @@ dotUn.addEventListener("click", function () {
     currentItem = 0;
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 });//when clicking on a dot put the item shown to the right index
 
 const dotDeux = document.getElementById("dot2")
@@ -100,6 +103,7 @@ dotDeux.addEventListener("click", function () {
     currentItem = 1;
     slideItem()
     dotSwitch();
+    startQuestion(currentItem);
 });//when clicking on a dot put the item shown to the right index
 
 const dotTrois = document.getElementById("dot3")
@@ -108,6 +112,7 @@ dotTrois.addEventListener("click", function () {
     currentItem = 2;
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 }); //when clicking on a dot put the item shown to the right index
 dotSwitch(); //initialize the dots
 
@@ -154,18 +159,20 @@ nextButton.addEventListener('click', function () {
         answerButtons[i].classList.remove('good-answer');
         answerButtons[i].classList.remove('wrong-answer');
     }
-    curentQuestionIndex++;
+    currentItem++;
+
     nextButton.classList.add('hide')
 
 
-    startQuestion(curentQuestionIndex);
+    startQuestion(currentItem);
+    slideItem();
 });
 
 function startGame() {
     startButton.classList.add('hide')
     questionElement.classList.remove('hide')
     button.classList.remove('hide')
-    startQuestion(curentQuestionIndex)
+    startQuestion(currentItem)
 }
 function startQuestion(questionIndex) {
     const questionObject = questions[questionIndex];
@@ -199,8 +206,9 @@ function checkAnswer(questionAnswers) {
                 nextButton.classList.remove('hide')
                 answerButtons[i].classList.add('good-answer')
             }
-            else {
+            else if (questionAnswers[i].correct === false) {
                 console.log("try again")
+                answerButtons[i].classList.remove('good-answer')
                 answerButtons[i].classList.add('wrong-answer')
 
             }
@@ -250,10 +258,29 @@ rightElements.addEventListener("click", () => {
 })
 
 listRegion.forEach((liste) => {
-    liste.addEventListener("click", () =>{
-    startGame();
+    liste.addEventListener("click", () => {
+        startGame();
     })
 })
 
 const quiz = document.querySelector(".quiz");
 
+const images = [["assets/Lyon.jpg", "https://source.unsplash.com/random?landscape,night", "https://source.unsplash.com/random?landscape,city"],
+["assets/bourgogne1.jpg", "assets/bourgogne2.jpg", "assets/bourgogne3.jpg"], ["assets/grandEst1.png", "assets/grandEst2.jpg", "assets/grandEst3.jpg"],
+["assets/nouvelleAquitaine.png", "assets/nouvelleAquitaine2.jpg", "assets/nouvelleAquitaine3.jpg"]]
+
+
+
+const links = document.querySelectorAll(".link");
+const image1 = document.getElementById("image1");
+const image2 = document.getElementById("image2");
+const image3 = document.getElementById("image3");
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () {
+        image1.src = images[i][0];
+        image2.src = images[i][1];
+        image3.src = images[i][2];
+    }
+    )
+}
