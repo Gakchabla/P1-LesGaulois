@@ -139,12 +139,16 @@ main h1 {
 
 
 .left ul li {
-    cursor :pointer;
+    cursor: pointer;
 }
 
 li:hover {
     color: #B6CDE8;
 
+}
+
+.logo {
+    cursor: pointer;
 }
 
 .caroussel h1:nth-child(1) {

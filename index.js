@@ -284,3 +284,10 @@ for (let i = 0; i < links.length; i++) {
     }
     )
 }
+
+const logo = document.querySelector('.logo');
+
+logo.addEventListener('click', function () { location.reload() });
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
