@@ -220,7 +220,9 @@ function showAnswer(questionAnswers) {
 const burgermenu = document.querySelector(".burgermenu");
 const menuAside = document.querySelector(".left")
 const body = document.querySelector("body")
-const main = document.querySelector("main")
+const rightElements = document.querySelector(".right")
+const listRegion = document.querySelectorAll(".linkQuestion")
+const mapRegion = document.querySelectorAll(".mapQuestion")
 
 burgermenu.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
@@ -240,11 +242,17 @@ burgermenu.addEventListener("click", () => {
     event.preventDefault();
 })
 
-main.addEventListener("click", () => {
+rightElements.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
         menuAside.style.translate = ("-2000px");
         body.style.backgroundColor = "#B6CDE8";
     }
+})
+
+listRegion.forEach((liste) => {
+    liste.addEventListener("click", () =>{
+    startGame();
+    })
 })
 
 const quiz = document.querySelector(".quiz");
