@@ -123,12 +123,20 @@ const questions = [{
         { text: 'Bordeaux', correct: false }]
 },
 {
-    question: "Comment se nomme ce bâtiment ? ",
+    question: "Laquelle de ces spécialités culinaires est originaire de cette région?",
     answers: [
-        { text: 'Hôtel de Ville', correct: false },
-        { text: 'Palais de la Bourse', correct: true },
-        { text: 'Cour D appel', correct: false },
-        { text: 'Préfecture du Rhône', correct: false }]
+        { text: 'Les galettes de froment', correct: false },
+        { text: 'La bouillabaisse', correct: false },
+        { text: 'Les quenelles', correct: true },
+        { text: 'Les trippes', correct: false }],
+},
+{
+    question: "Dans quelle ville d'Auvergne-Rhone-Alpes peut on célebrer la fête du roi de l'Oiseau?",
+    answers: [
+        { text: 'Lyon', correct: false },
+        { text: 'Clermont Ferrand', correct: false },
+        { text: 'Oyonnax', correct: false },
+        { text: 'Le Puy en Velay', correct: true }]
 }]
 
 
