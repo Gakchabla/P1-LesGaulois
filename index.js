@@ -72,6 +72,7 @@ nextItem.addEventListener("click", function () {
     };
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 }); // checks if the currentItem isn't the last and then shitf it it by one to the left
 
 const prevItem = document.querySelector(".buttonPrev");
@@ -85,6 +86,7 @@ prevItem.addEventListener("click", function () {
     }
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 });// checks if the currentItem isn't the last and then shitf it it by one to the right
 const dotUn = document.getElementById("dot1")
 
@@ -92,6 +94,7 @@ dotUn.addEventListener("click", function () {
     currentItem = 0;
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 });//when clicking on a dot put the item shown to the right index
 
 const dotDeux = document.getElementById("dot2")
@@ -100,6 +103,7 @@ dotDeux.addEventListener("click", function () {
     currentItem = 1;
     slideItem()
     dotSwitch();
+    startQuestion(currentItem);
 });//when clicking on a dot put the item shown to the right index
 
 const dotTrois = document.getElementById("dot3")
@@ -108,6 +112,7 @@ dotTrois.addEventListener("click", function () {
     currentItem = 2;
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 }); //when clicking on a dot put the item shown to the right index
 dotSwitch(); //initialize the dots
 
@@ -154,18 +159,20 @@ nextButton.addEventListener('click', function () {
         answerButtons[i].classList.remove('good-answer');
         answerButtons[i].classList.remove('wrong-answer');
     }
-    curentQuestionIndex++;
+    currentItem++;
+
     nextButton.classList.add('hide')
 
 
-    startQuestion(curentQuestionIndex);
+    startQuestion(currentItem);
+    slideItem();
 });
 
 function startGame() {
     startButton.classList.add('hide')
     questionElement.classList.remove('hide')
     button.classList.remove('hide')
-    startQuestion(curentQuestionIndex)
+    startQuestion(currentItem)
 }
 function startQuestion(questionIndex) {
     const questionObject = questions[questionIndex];
@@ -199,8 +206,9 @@ function checkAnswer(questionAnswers) {
                 nextButton.classList.remove('hide')
                 answerButtons[i].classList.add('good-answer')
             }
-            else {
+            else if (questionAnswers[i].correct === false) {
                 console.log("try again")
+                answerButtons[i].classList.remove('good-answer')
                 answerButtons[i].classList.add('wrong-answer')
 
             }
