@@ -139,10 +139,13 @@ main h1 {
 
 li:link {
     text-decoration: none;
+    color: red;
 }
 
 li:visited {
     text-decoration: none;
+    color: red;
+
 }
 
 li:hover {
