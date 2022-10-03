@@ -216,6 +216,7 @@ myForm.addEventListener('submit', function (event) {
         myError.innerHTML = "le champ username est requis";
         myError.style.color = 'red';
         event.preventDefault();
+
     } else if (myRegex.test(myInput.value) == false) {
         let myError = document.getElementById('error');
         myError.innerHTML = 'Le champ ne doit comporter que des lettres et des tirets uniquement.';

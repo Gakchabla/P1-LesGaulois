@@ -443,6 +443,7 @@ form .body-form .right-form {
 
 form .body-form .right-form .group {
     height: 100%;
+    width: 300px;
 }
 
 form .body-form .right-form .group textarea {
@@ -475,7 +476,7 @@ form .foot-form button:hover {
     /* Permet d'avoir une effet grossi ou rétréci de l'élement */
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 575px) {
     form .body-form .right-form {
         margin-left: 0px;
     }
