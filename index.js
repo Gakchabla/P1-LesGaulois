@@ -221,6 +221,8 @@ const burgermenu = document.querySelector(".burgermenu");
 const menuAside = document.querySelector(".left")
 const body = document.querySelector("body")
 const rightElements = document.querySelector(".right")
+const listRegion = document.querySelectorAll(".linkQuestion")
+const mapRegion = document.querySelectorAll(".mapQuestion")
 
 burgermenu.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
@@ -245,6 +247,12 @@ rightElements.addEventListener("click", () => {
         menuAside.style.translate = ("-2000px");
         body.style.backgroundColor = "#B6CDE8";
     }
+})
+
+listRegion.forEach((liste) => {
+    liste.addEventListener("click", () =>{
+    startGame();
+    })
 })
 
 const quiz = document.querySelector(".quiz");

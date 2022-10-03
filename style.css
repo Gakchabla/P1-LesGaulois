@@ -59,7 +59,7 @@ main {
 
 .carte h1 {
     color: black;
-    padding-top: 5px;
+    padding-top: 15px;
     padding-bottom: 5px;
     font-size: 1.1rem;
     text-align: center;
@@ -68,6 +68,7 @@ main {
 
 body {
     background-color: #B6CDE8;
+    transition: background-color 0.3s ease;
 }
 
 main h1 {
@@ -78,9 +79,10 @@ main h1 {
 .burgermenu {
     padding: 15px 15px 15px 5px;
     display: inline-block;
-    position: relative;
-    top: 40px;
+    top: 80px;
     left: 10px;
+    position: fixed;
+    z-index: 12;
 }
 
 .burgermenu span:nth-child(1) {
@@ -116,13 +118,12 @@ main h1 {
 }
 
 .elements.left {
-    padding: 1.5em 1.5em;
-    margin-top: 2em;
+    padding: 2.5em 1.5em;
+    margin-top: 0px;
     background-color: #2F4558;
-    width: 100vh;
-    position: absolute;
+    position: fixed;
     width: auto;
-    height: 100vh;
+    height: 100%;
     color: #F6B12D;
     font-size: 1.2rem;
     transform: translate(-2000px);
@@ -137,15 +138,8 @@ main h1 {
 }
 
 
-li:link {
-    text-decoration: none;
-    color: red;
-}
-
-li:visited {
-    text-decoration: none;
-    color: red;
-
+.left ul li {
+    cursor :pointer;
 }
 
 li:hover {
@@ -170,9 +164,10 @@ li:hover {
     stroke-opacity: 1;
     stroke-width: 0.5;
     transition: 0.5s ease-in-out;
+    cursor: pointer;
 }
 
-#FR-ARA:hover {
+.land:hover {
     fill: #2F4558;
     fill-opacity: 1;
     stroke: #ffffff;
