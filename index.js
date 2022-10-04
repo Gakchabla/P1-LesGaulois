@@ -1,3 +1,4 @@
+"use strict";
 //**********************Quiz description******************************/
 
 const answerButtons = document.querySelectorAll('.answerButton');
@@ -71,6 +72,7 @@ nextItem.addEventListener("click", function () {
     };
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 }); // checks if the currentItem isn't the last and then shitf it it by one to the left
 
 const prevItem = document.querySelector(".buttonPrev");
@@ -84,6 +86,7 @@ prevItem.addEventListener("click", function () {
     }
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 });// checks if the currentItem isn't the last and then shitf it it by one to the right
 const dotUn = document.getElementById("dot1")
 
@@ -91,6 +94,7 @@ dotUn.addEventListener("click", function () {
     currentItem = 0;
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 });//when clicking on a dot put the item shown to the right index
 
 const dotDeux = document.getElementById("dot2")
@@ -99,6 +103,7 @@ dotDeux.addEventListener("click", function () {
     currentItem = 1;
     slideItem()
     dotSwitch();
+    startQuestion(currentItem);
 });//when clicking on a dot put the item shown to the right index
 
 const dotTrois = document.getElementById("dot3")
@@ -107,64 +112,113 @@ dotTrois.addEventListener("click", function () {
     currentItem = 2;
     slideItem();
     dotSwitch();
+    startQuestion(currentItem);
 }); //when clicking on a dot put the item shown to the right index
 dotSwitch(); //initialize the dots
 
 
 // **************************Quiz****************************
 
-const questions = {
+const questions = [{
     question: "Quelle est cette ville ?",
-    answer: [
+    answers: [
         { text: 'Lyon', correct: true },
         { text: 'Marseille', correct: false },
         { text: 'Paris', correct: false },
         { text: 'Bordeaux', correct: false }]
-}
+},
+{
+    question: "Laquelle de ces spécialités culinaires est originaire de cette région?",
+    answers: [
+        { text: 'Les galettes de froment', correct: false },
+        { text: 'La bouillabaisse', correct: false },
+        { text: 'Les quenelles', correct: true },
+        { text: 'Les trippes', correct: false }],
+},
+{
+    question: "Dans quelle ville d'Auvergne-Rhone-Alpes peut on célebrer la fête du roi de l'Oiseau?",
+    answers: [
+        { text: 'Lyon', correct: false },
+        { text: 'Clermont Ferrand', correct: false },
+        { text: 'Oyonnax', correct: false },
+        { text: 'Le Puy en Velay', correct: true }]
+}]
 
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const button = document.querySelector('.buttons-grid')
-const questionElement = document.getElementById('question')
+
+const startButton = document.getElementById('start-btn');
+const nextButton = document.getElementById('next-btn');
+const button = document.querySelector('.buttons-grid');
+const questionElement = document.getElementById('question');
+
+let curentQuestionIndex = 0;
 
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', function () {
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].classList.remove('good-answer');
+        answerButtons[i].classList.remove('wrong-answer');
+    }
+    currentItem++;
+
+    nextButton.classList.add('hide')
+
+
+    startQuestion(currentItem);
+    slideItem();
+});
 
 function startGame() {
     startButton.classList.add('hide')
     questionElement.classList.remove('hide')
     button.classList.remove('hide')
-    startQuestion()
+    startQuestion(currentItem)
 }
-function startQuestion() {
-    showQuestion()
-    showAnswer()
-    getAnswer()
+function startQuestion(questionIndex) {
+    const questionObject = questions[questionIndex];
+    // showQuestion({
+    //     question: "Quelle est cette ville ?",
+    //     answers: [
+    //         { text: 'Lyon', correct: true },
+    //         { text: 'Marseille', correct: false },
+    //         { text: 'Paris', correct: false },
+    //         { text: 'Bordeaux', correct: false }]
+    // })
+    showQuestion(questionObject);
+    // showAnswer([
+    //     { text: 'Lyon', correct: true },
+    //     { text: 'Marseille', correct: false },
+    //     { text: 'Paris', correct: false },
+    //     { text: 'Bordeaux', correct: false }])
+    showAnswer(questionObject.answers);
+    checkAnswer(questionObject.answers);
 }
 
-function showQuestion(question) {
-    questionElement.innerText = questions.question
+function showQuestion(questionObject) {
+    questionElement.innerText = questionObject.question;
 }
 
 
-function getAnswer() {
+function checkAnswer(questionAnswers) {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].addEventListener('click', function () {
-            if (questions.answer[i].correct === true) {
+            if (questionAnswers[i].correct === true) {
                 nextButton.classList.remove('hide')
-                answerButtons[i].style.backgroundColor = 'green'
+                answerButtons[i].classList.add('good-answer')
             }
-            else {
+            else if (questionAnswers[i].correct === false) {
                 console.log("try again")
-                answerButtons[i].style.backgroundColor = 'red';
+                answerButtons[i].classList.remove('good-answer')
+                answerButtons[i].classList.add('wrong-answer')
+
             }
         });
     }
 }
 
-function showAnswer() {
+function showAnswer(questionAnswers) {
     for (let i = 0; i < answerButtons.length; i++) {
-        answerButtons[i].innerText = questions.answer[i].text
+        answerButtons[i].innerText = questionAnswers[i].text;
     }
 }
 
@@ -174,7 +228,9 @@ function showAnswer() {
 const burgermenu = document.querySelector(".burgermenu");
 const menuAside = document.querySelector(".left")
 const body = document.querySelector("body")
-const main = document.querySelector("main")
+const rightElements = document.querySelector(".right")
+const listRegion = document.querySelectorAll(".linkQuestion")
+const mapRegion = document.querySelectorAll(".mapQuestion")
 
 burgermenu.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
@@ -194,11 +250,17 @@ burgermenu.addEventListener("click", () => {
     event.preventDefault();
 })
 
-main.addEventListener("click", () => {
+rightElements.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
         menuAside.style.translate = ("-2000px");
         body.style.backgroundColor = "#B6CDE8";
     }
+})
+
+listRegion.forEach((liste) => {
+    liste.addEventListener("click", () => {
+        startGame();
+    })
 })
 
 const quiz = document.querySelector(".quiz");
@@ -287,3 +349,29 @@ myForm.addEventListener('submit', function (event) {
 
 });
 
+const images = [["assets/Lyon.jpg", "https://source.unsplash.com/random?landscape,night", "https://source.unsplash.com/random?landscape,city"],
+["assets/bourgogne1.jpg", "assets/bourgogne2.jpg", "assets/bourgogne3.jpg"], ["assets/grandEst1.png", "assets/grandEst2.jpg", "assets/grandEst3.jpg"],
+["assets/nouvelleAquitaine.png", "assets/nouvelleAquitaine2.jpg", "assets/nouvelleAquitaine3.jpg"]]
+
+
+
+const links = document.querySelectorAll(".link");
+const image1 = document.getElementById("image1");
+const image2 = document.getElementById("image2");
+const image3 = document.getElementById("image3");
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () {
+        image1.src = images[i][0];
+        image2.src = images[i][1];
+        image3.src = images[i][2];
+    }
+    )
+}
+
+const logo = document.querySelector('.logo');
+
+logo.addEventListener('click', function () { location.reload() });
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
