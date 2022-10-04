@@ -476,6 +476,10 @@ form .foot-form button:hover {
     /* Permet d'avoir une effet grossi ou rétréci de l'élement */
 }
 
+form .foot-form button:active {
+    transform: scale(1.5);
+}
+
 @media screen and (max-width: 575px) {
     form .body-form .right-form {
         margin-left: 0px;

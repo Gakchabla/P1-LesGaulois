@@ -170,23 +170,11 @@
                     </div>
                 </div>
             </section>
-            <!--
-            <form action="traitement.php" method="POST" id="myForm">
-                <div class="containerForm">
-                    <label for="username">Nom et Prénom</label>
-                    <input type="text" name="username" id="username">
-                    <br>
-                    <span id="error"></span>
-                    <br>
-                    <button type="submit" id="submit">Envoyer</button>
-                </div>
-            </form>
-            -->
 
             <!---------------------------------- Formulaire ---------------------------------------------------->
 
 
-            <form action="traitement.php" method="POST" id="myForm">
+            <form action="traitement.php" method="post" id="myForm">
                 <h1>Contactez-nous !</h1>
                 <div class="separator"></div>
                 <p>Une remarque ? Une suggestion ? N'hésitez pas à nous écrire</p>
@@ -201,7 +189,7 @@
                         </div>
                         <div class="group">
                             <label>Adresse e-mail</label>
-                            <input type="text" id="mail">
+                            <input type="email" id="email">
                             <span id="errorMail"></span>
                             <i class="fa-solid fa-envelope"></i>
                         </div>
@@ -216,7 +204,7 @@
                     <div class="right-form">
                         <div class="group">
                             <label>Message</label>
-                            <textarea placeholder="Saisissez votre message ici..."></textarea>
+                            <textarea placeholder="Saisissez votre message ici..." id="message"></textarea>
                             <span id="errorMessage"></span>
                         </div>
 
@@ -225,13 +213,9 @@
 
                 <div class="foot-form">
                     <button type='submit' id="submit">Envoyer le message</button>
+                    <p id="erreur"></p>
                 </div>
             </form>
-
-
-
-
-
         </div>
     </main>
     <footer></footer>
