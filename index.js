@@ -325,3 +325,19 @@ const quiz = document.querySelector(".quiz");
 
 
 
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () {
+        image1.src = images[i][0];
+        image2.src = images[i][1];
+        image3.src = images[i][2];
+    }
+    )
+}
+
+const logo = document.querySelector('.logo');
+
+logo.addEventListener('click', function () { location.reload() });
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
