@@ -15,6 +15,7 @@ header {
     align-items: center;
     position: sticky;
     top: 0px;
+    z-index: 12;
 }
 
 .logo {
@@ -67,7 +68,7 @@ main {
 }
 
 body {
-    background-color: #B6CDE8;
+    background-color:#e0e0e0;
     transition: background-color 0.3s ease;
 }
 
@@ -135,16 +136,24 @@ main h1 {
 .left ul {
     list-style: none;
     line-height: 1.9em;
+    color:#F6B12D;
 }
 
+li:link{
+    color: #F6B12D;
+}
 
-.left ul li {
-    cursor :pointer;
+li:active{
+    color: #0011ff;
+}
+
+li:visited {
+    color: #d700f3;
+
 }
 
 li:hover {
-    color: #B6CDE8;
-
+    color: #e0e0e0;
 }
 
 .caroussel h1:nth-child(1) {
@@ -162,8 +171,8 @@ li:hover {
     fill-opacity: 1;
     stroke: #2F4558;
     stroke-opacity: 1;
-    stroke-width: 0.5;
-    transition: 0.5s ease-in-out;
+    stroke-width: 0.3;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -179,7 +188,11 @@ svg {
     padding-top: 30px;
     min-height: 300px;
     min-width: 100vw;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+
 }
+
+
 
 .quiz {
     padding: 0;

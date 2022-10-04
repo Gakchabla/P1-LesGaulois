@@ -114,7 +114,7 @@ dotSwitch(); //initialize the dots
 
 // **************************Quiz****************************
 
-const questions = [{
+const questions = [[{
     question: "Quelle est cette ville ?",
     answers: [
         { text: 'Lyon', correct: true },
@@ -137,7 +137,32 @@ const questions = [{
         { text: 'Clermont Ferrand', correct: false },
         { text: 'Oyonnax', correct: false },
         { text: 'Le Puy en Velay', correct: true }]
-}]
+}],
+[{
+    question: "Quelle est cette ville ?",
+    answers: [
+        { text: 'Dijon', correct: true },
+        { text: 'Nantes', correct: false },
+        { text: 'Reims', correct: false },
+        { text: 'Nancy', correct: false }]
+},
+{
+    question: "Lequel de ces fromages est originaire de cette région?",
+    answers: [
+        { text: 'Le Saint-Felicien', correct: false },
+        { text: 'Brillat-Savarin', correct: true },
+        { text: 'Munster', correct: false },
+        { text: 'Rocamadour', correct: false }],
+},
+{
+    question: "Laquelle de ces appelations de vins sont originaire de cette région?",
+    answers: [
+        { text: 'Blaye', correct: false },
+        { text: 'Chinon', correct: false },
+        { text: "Pays d'Oc", correct: false },
+        { text: 'Chablis', correct: true }]
+}],
+]
 
 
 const startButton = document.getElementById('start-btn');
@@ -237,7 +262,7 @@ burgermenu.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
         body.style.backgroundColor = "rgba(0,0,0,0.6)";
     } else {
-        body.style.backgroundColor = "#B6CDE8";
+        body.style.backgroundColor = "#e0e0e0";
     }
     event.preventDefault();
 })
@@ -245,7 +270,7 @@ burgermenu.addEventListener("click", () => {
 rightElements.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
         menuAside.style.translate = ("-2000px");
-        body.style.backgroundColor = "#B6CDE8";
+        body.style.backgroundColor = "#e0e0e0";
     }
 })
 
