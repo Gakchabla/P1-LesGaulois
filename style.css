@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 header {
@@ -47,7 +48,8 @@ main {
     background-color: #2F4558;
     color: white;
     text-align: center;
-    width: 80%;
+    width: 100%;
+    margin-bottom: 50px;
 }
 
 .bloctexte {
@@ -56,12 +58,16 @@ main {
     line-height: 30px;
 }
 
+.history ul li {
+    list-style: none;
+}
+
 
 .carte h1 {
     color: black;
     padding-top: 15px;
     padding-bottom: 5px;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     text-align: center;
     margin-bottom: 0px;
 }
@@ -75,6 +81,15 @@ main h1 {
     color: #F6B12D;
     font-size: 2rem;
 }
+
+footer {
+    background-color: #2F4558;
+    gap: 10px;
+    padding: 30px;
+    top: 0px;
+}
+
+/****************** Burger Menu ***********************/
 
 .burgermenu {
     padding: 15px 15px 15px 5px;
@@ -161,6 +176,8 @@ li:hover {
     max-width: 35ch;
 }
 
+/****************** Map ***********************/
+
 .land {
     fill: #F6B12D;
     fill-opacity: 1;
@@ -181,9 +198,11 @@ li:hover {
 
 svg {
     padding-top: 30px;
-    min-height: 300px;
+    min-height: 400px;
     min-width: 100vw;
 }
+
+/****************** Quiz ***********************/
 
 .quiz {
     padding: 0;
@@ -194,6 +213,8 @@ svg {
     height: fit-content;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 
@@ -281,13 +302,21 @@ svg {
     align-items: center;
 }
 
+.hide {
+    display: none;
+}
+
+/****************** Carousel Capital ***********************/
+
+.caroussel h1:nth-child(1) {
+    margin-top: 0;
+    padding-top: 0.5em;
+    color: white;
+}
+
 .carouselContainer {
     display: flex;
     justify-content: center;
-}
-
-.hide {
-    display: none;
 }
 
 .carousel {
@@ -364,3 +393,114 @@ svg {
 .explication {
     color: white;
 }
+
+/****************** Form ***********************/
+
+form {
+    font-weight: bold;
+    background-color: #e1e6ec;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+form h1 {
+    font-size: 25px;
+    color: black;
+}
+
+form .separator {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    z-index: 25;
+}
+
+form p {
+    margin: 15px 0 10px 0;
+}
+
+form .body-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+form .body-form .group {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form .body-form .left-form .group input {
+    margin-top: 5px;
+    padding: 10px 5px 10px 30px;
+    /* 30px à gauche pour intégrer l'icone à l'intérieur*/
+    border: 1px solid black;
+    outline-color: #2F4558;
+    border-radius: 5px;
+}
+
+form .body-form .left-form .group i {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    padding: 9px 8px;
+    color: #2F4558;
+    /* 9px au dessus et en dessous; 8px a gauche et a droite */
+}
+
+form .body-form .right-form {
+    margin-left: 40px;
+}
+
+form .body-form .right-form .group {
+    height: 100%;
+    width: 300px;
+}
+
+form .body-form .right-form .group textarea {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 2px solid #2F4558;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+    /* Pour éviter de pouvoir redimensionner le text area */
+    height: 72%;
+}
+
+form .foot-form button {
+    margin-top: 10px;
+    background-color: #F6B12D;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    /* délai d'apparition de la propriété transform */
+}
+
+form .foot-form button:hover {
+    transform: scale(1.05);
+    /* Permet d'avoir une effet grossi ou rétréci de l'élement */
+}
+
+form .foot-form button:active {
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 575px) {
+    form .body-form .right-form {
+        margin-left: 0px;
+    }
+}
+
+/* If screen width < 920px, apply properties, else no apply /*

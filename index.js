@@ -291,3 +291,87 @@ logo.addEventListener('click', function () { location.reload() });
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
+
+// ************************** Form ****************************
+
+// ******* Username**********
+
+let myForm = document.getElementById('myForm');
+
+myForm.addEventListener('submit', function (event) {
+    let myInput = document.getElementById('username');
+    let myRegex = /^[a-zA-Z-\s]+$/;         // \s autorise les espaces, +$ pour répéter plusieurs fois
+
+    if (myInput.value.trim() == "") {
+        let myError = document.getElementById('errorUsername');
+        myError.innerHTML = "Le champ username est requis";
+        myError.style.color = 'red';
+        event.preventDefault();
+
+    } else if (myRegex.test(myInput.value) == false) {
+        let myError = document.getElementById('errorUsername');
+        myError.innerHTML = 'Le champ ne doit comporter que des lettres et des tirets uniquement.';
+        myError.style.color = 'red';
+        event.preventDefault();
+    }
+
+});
+
+// ******* Mail ***********
+
+myForm.addEventListener('submit', function (event) {
+    let myInput = document.getElementById('email');
+    let myRegex = /^[@]+$/;
+
+    if (myInput.value.trim() == "") {
+        let myError = document.getElementById('errorMail');
+        myError.innerHTML = "Le champ mail n'est pas complété";
+        myError.style.color = 'red';
+        event.preventDefault();
+
+    }
+    else if (myRegex.test(myInput.value) == true) {
+        let myError = document.getElementById('errorMail');
+        myError.innerText = 'Le mail nest pas au bon format';
+        myError.style.color = 'red';
+        event.preventDefault();
+    }
+
+});
+
+// ******* Number ***********
+
+myForm.addEventListener('submit', function (event) {
+    let myInput = document.getElementById('number');      //Les chaînes de caractères sont définies entre guillemets ('),
+    let myRegex = /^[0-9]+$/;                      //les regex ou expressions régulières sont entre des slashs (/)
+
+    if (myInput.value.trim() == "") {
+        let myError = document.getElementById('errorNumber');
+        myError.innerHTML = "Le numéro n'est pas complété";
+        myError.style.color = 'red';
+        event.preventDefault();
+
+    } else if (myRegex.test(myInput.value) == false) {
+        let myError = document.getElementById('errorNumber');
+        myError.innerText = 'Le numéro est invalide';
+        myError.style.color = 'red';
+        event.preventDefault();
+    }
+
+});
+
+// ******* Message ***********
+
+myForm.addEventListener('submit', function (event) {
+    let myInput = document.getElementById('message');
+    let myRegex = /^[a-zA-Z0-9]+$/;
+
+    if (myInput.value.trim() == "") {
+        let myError = document.getElementById('errorMessage');
+        myError.innerHTML = "Veuillez écrire votre message";
+        myError.style.color = 'red';
+        event.preventDefault();
+    }
+
+
+});
