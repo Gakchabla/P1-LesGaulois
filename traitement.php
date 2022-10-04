@@ -1,3 +1,4 @@
 <?php
 
-echo 'Traitement';
+echo ('Traitement');
+?>

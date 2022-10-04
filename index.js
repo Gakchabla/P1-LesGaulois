@@ -246,8 +246,43 @@ myForm.addEventListener('submit', function (event) {
         event.preventDefault();
     }
 
+});
 
+myForm.addEventListener('submit', function (event) {
+    let myInput = document.getElementById('mail');
+    let myRegex = /^[@]+$/;
+
+    if (myInput.value.trim() == "") {
+        let myError = document.getElementById('errorMail');
+        myError.innerHTML = "Le champ n'est pas complété";
+        myError.style.color = 'red';
+        event.preventDefault();
+
+    } else if (myRegex.test(myInput.value) == false) {
+        let myError = document.getElementById('errorMail');
+        myError.innerText = 'Le mail doit comporter un format avec @';
+        myError.style.color = 'red';
+        event.preventDefault();
+    }
 
 });
 
+myForm.addEventListener('submit', function (event) {
+    let myInput = document.getElementById('number');      //Les chaînes de caractères sont définies entre guillemets ('),
+    let myRegex = /^[0123456789]+$/;                      //les regex ou expressions régulières sont entre des slashs (/)
+
+    if (myInput.value.trim() == "") {
+        let myError = document.getElementById('errorNumber');
+        myError.innerHTML = "Le numéro n'est pas complété";
+        myError.style.color = 'red';
+        event.preventDefault();
+
+    } else if (myRegex.test(myInput.value) == false) {
+        let myError = document.getElementById('errorNumber');
+        myError.innerText = 'Le numéro est invalide';
+        myError.style.color = 'red';
+        event.preventDefault();
+    }
+
+});
 
