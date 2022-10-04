@@ -245,7 +245,7 @@ burgermenu.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
         body.style.backgroundColor = "rgba(0,0,0,0.6)";
     } else {
-        body.style.backgroundColor = "#B6CDE8";
+        body.style.backgroundColor = "#dddddd";
     }
     event.preventDefault();
 })
@@ -253,7 +253,7 @@ burgermenu.addEventListener("click", () => {
 rightElements.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
         menuAside.style.translate = ("-2000px");
-        body.style.backgroundColor = "#B6CDE8";
+        body.style.backgroundColor = "#dddddd";
     }
 })
 

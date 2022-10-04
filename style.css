@@ -4,6 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
+
 }
 
 header {
@@ -15,6 +17,7 @@ header {
     align-items: center;
     position: sticky;
     top: 0px;
+    z-index: 12;
 }
 
 .logo {
@@ -48,6 +51,7 @@ main {
     color: white;
     text-align: center;
     width: 80%;
+    border-radius: 20px;
 }
 
 .bloctexte {
@@ -67,7 +71,7 @@ main {
 }
 
 body {
-    background-color: #B6CDE8;
+    background-color: #dddddd;
     transition: background-color 0.3s ease;
 }
 
@@ -142,10 +146,43 @@ main h1 {
     cursor: pointer;
 }
 
-li:hover {
-    color: #B6CDE8;
-
+li a:link {
+    color: #F6B12D;
+    text-decoration: none;
 }
+
+li a:active {
+    color: #F6B12D;
+    text-decoration: none;
+}
+
+li a:visited {
+    color: #F6B12D;
+    text-decoration: none;
+}
+
+.linkQuestion::before{
+    position: absolute;
+    content:"";
+    translate: 0 26px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    width: 0;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.linkQuestion:hover::before{
+    content:"";
+    translate: 0 26px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    position: absolute;
+    box-sizing: border-box;
+    width: 85%;
+}
+
 
 .logo {
     cursor: pointer;
@@ -167,7 +204,7 @@ li:hover {
     stroke: #2F4558;
     stroke-opacity: 1;
     stroke-width: 0.5;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -183,6 +220,7 @@ svg {
     padding-top: 30px;
     min-height: 300px;
     min-width: 100vw;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 .quiz {
@@ -227,15 +265,17 @@ svg {
     padding: 5px 10px;
     outline: none;
     cursor: pointer;
+
 }
 
 .btn:hover {
     border-color: black;
-    background-color: white;
+    background: radial-gradient(circle, rgba(246,177,45,1) 0%, rgba(246,177,45,1) 20%, rgba(255,208,118,1) 100%);
 }
 
 .btn:active {
     transform: scale(1.1);
+    
 }
 
 
@@ -259,11 +299,11 @@ svg {
 }
 
 .wrong-answer {
-    background-color: red;
+    background: radial-gradient(circle, rgba(246,45,45,1) 0%, rgba(246,45,45,1) 20%, rgba(255,73,73,1) 100%);
 }
 
 .good-answer {
-    background-color: green;
+    background: radial-gradient(circle, rgba(0,255,50,1) 0%, rgba(0,255,50,1) 20%, rgba(61,255,99,1) 100%);
 }
 
 .reset-btn {
