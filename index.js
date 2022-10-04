@@ -4,25 +4,7 @@
 const answerButtons = document.querySelectorAll('.answerButton');
 
 
-const textReponse = function () {
-    const explication = document.createElement('div')
-    explication.classList.add('explication')
-    explication.classList.add('container')
-    explication.innerHTML = "La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région";
-    quiz.appendChild(explication);
-}
-const textDelete = function () {
-    if (document.querySelector(".explication") != null) {
-        quiz.removeChild(document.querySelector(".explication"));
-    }
-}
 
-for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].addEventListener('click', function () {
-        textDelete();
-        textReponse();
-    });
-}
 
 
 //**********************Tableau Images******************************
@@ -78,17 +60,38 @@ const questions = [[{
         { text: '3', correct: true },
         { text: '4', correct: false }]
 }]]
+let question = questions[0];
 
 //**********************Talbeau explications******************************
 
-const explanations = [["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La "]]
+const explanations = [["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "]]
+let explanation = explanations[0];
 
+
+const textReponse = function () {
+    const explication = document.createElement('div')
+    explication.classList.add('explication')
+    explication.classList.add('container')
+    explication.innerHTML = explanation[currentItem];
+    quiz.appendChild(explication);
+}
+const textDelete = function () {
+    if (document.querySelector(".explication") != null) {
+        quiz.removeChild(document.querySelector(".explication"));
+    }
+}
+
+for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].addEventListener('click', function () {
+        textDelete();
+        textReponse();
+    });
+}
 
 const links = document.querySelectorAll(".link");
 const image1 = document.getElementById("image1");
 const image2 = document.getElementById("image2");
 const image3 = document.getElementById("image3");
-let question = questions[0];
 
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function () {
@@ -96,6 +99,7 @@ for (let i = 0; i < links.length; i++) {
         image2.src = images[i][1];
         image3.src = images[i][2];
         question = questions[i];
+        explanation = explanations[i];
     }
     )
 }
@@ -191,6 +195,9 @@ dotUn.addEventListener("click", function () {
 
 const dotDeux = document.getElementById("dot2")
 
+
+
+
 dotDeux.addEventListener("click", function () {
     currentItem = 1;
     slideItem()
@@ -267,7 +274,7 @@ function startGame() {
     startQuestion(currentItem)
 }
 function startQuestion(questionIndex) {
-    const questionObject = question[questionIndex]; //here question is questions[i], with the index being the region clicked at the start
+    const questionObject = question[questionIndex]; //here question is questions[i], with the index being the index of the region clicked in links
     // showQuestion({
     //     question: "Quelle est cette ville ?",
     //     answers: [
@@ -302,7 +309,6 @@ function checkAnswer(questionAnswers) {
                 console.log("try again")
                 answerButtons[i].classList.remove('good-answer')
                 answerButtons[i].classList.add('wrong-answer')
-
             }
         });
     }
