@@ -159,7 +159,13 @@ nextButton.addEventListener('click', function () {
         answerButtons[i].classList.remove('good-answer');
         answerButtons[i].classList.remove('wrong-answer');
     }
-    currentItem++;
+
+    if (currentItem === maxItem) {
+        currentItem = 0
+    } //if the item is the last, goes back to the first
+    else {
+        currentItem++;
+    };
 
     nextButton.classList.add('hide')
 
@@ -265,7 +271,7 @@ listRegion.forEach((liste) => {
 
 const quiz = document.querySelector(".quiz");
 
-const images = [["assets/Lyon.jpg", "https://source.unsplash.com/random?landscape,night", "https://source.unsplash.com/random?landscape,city"],
+const images = [["assets/Lyon.jpg", "assets/Lyon2.jpg", "assets/Lyon3.jpg"],
 ["assets/bourgogne1.jpg", "assets/bourgogne2.jpg", "assets/bourgogne3.jpg"], ["assets/grandEst1.png", "assets/grandEst2.jpg", "assets/grandEst3.jpg"],
 ["assets/nouvelleAquitaine.png", "assets/nouvelleAquitaine2.jpg", "assets/nouvelleAquitaine3.jpg"]]
 

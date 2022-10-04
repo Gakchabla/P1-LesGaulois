@@ -139,7 +139,7 @@ main h1 {
 
 
 .left ul li {
-    cursor :pointer;
+    cursor: pointer;
 }
 
 li:hover {
@@ -280,6 +280,7 @@ svg {
 .carouselContainer {
     display: flex;
     justify-content: center;
+
 }
 
 .hide {
@@ -287,8 +288,8 @@ svg {
 }
 
 .carousel {
-    width: 80vw;
-    height: 50vh;
+    width: 400px;
+    height: 500px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -298,7 +299,7 @@ svg {
 
 .carouselItem {
     width: 100%;
-    height: 80vh;
+    height: 100%;
     position: absolute;
     transition: all 0.5s;
 }
@@ -318,7 +319,7 @@ svg {
 .carouselItem img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: none;
 }
 
 .button:active {
