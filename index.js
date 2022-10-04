@@ -265,6 +265,33 @@ listRegion.forEach((liste) => {
 
 const quiz = document.querySelector(".quiz");
 
+const images = [["assets/Lyon.jpg", "https://source.unsplash.com/random?landscape,night", "https://source.unsplash.com/random?landscape,city"],
+["assets/bourgogne1.jpg", "assets/bourgogne2.jpg", "assets/bourgogne3.jpg"], ["assets/grandEst1.png", "assets/grandEst2.jpg", "assets/grandEst3.jpg"],
+["assets/nouvelleAquitaine.png", "assets/nouvelleAquitaine2.jpg", "assets/nouvelleAquitaine3.jpg"]]
+
+
+
+const links = document.querySelectorAll(".link");
+const image1 = document.getElementById("image1");
+const image2 = document.getElementById("image2");
+const image3 = document.getElementById("image3");
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () {
+        image1.src = images[i][0];
+        image2.src = images[i][1];
+        image3.src = images[i][2];
+    }
+    )
+}
+
+const logo = document.querySelector('.logo');
+
+logo.addEventListener('click', function () { location.reload() });
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
 // ************************** Form ****************************
 
 // ******* Username**********
@@ -277,7 +304,7 @@ myForm.addEventListener('submit', function (event) {
 
     if (myInput.value.trim() == "") {
         let myError = document.getElementById('errorUsername');
-        myError.innerHTML = "le champ username est requis";
+        myError.innerHTML = "Le champ username est requis";
         myError.style.color = 'red';
         event.preventDefault();
 
@@ -298,7 +325,7 @@ myForm.addEventListener('submit', function (event) {
 
     if (myInput.value.trim() == "") {
         let myError = document.getElementById('errorMail');
-        myError.innerHTML = "Le champ n'est pas complété";
+        myError.innerHTML = "Le champ mail n'est pas complété";
         myError.style.color = 'red';
         event.preventDefault();
 
@@ -348,30 +375,3 @@ myForm.addEventListener('submit', function (event) {
 
 
 });
-
-const images = [["assets/Lyon.jpg", "https://source.unsplash.com/random?landscape,night", "https://source.unsplash.com/random?landscape,city"],
-["assets/bourgogne1.jpg", "assets/bourgogne2.jpg", "assets/bourgogne3.jpg"], ["assets/grandEst1.png", "assets/grandEst2.jpg", "assets/grandEst3.jpg"],
-["assets/nouvelleAquitaine.png", "assets/nouvelleAquitaine2.jpg", "assets/nouvelleAquitaine3.jpg"]]
-
-
-
-const links = document.querySelectorAll(".link");
-const image1 = document.getElementById("image1");
-const image2 = document.getElementById("image2");
-const image3 = document.getElementById("image3");
-
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function () {
-        image1.src = images[i][0];
-        image2.src = images[i][1];
-        image3.src = images[i][2];
-    }
-    )
-}
-
-const logo = document.querySelector('.logo');
-
-logo.addEventListener('click', function () { location.reload() });
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-};
