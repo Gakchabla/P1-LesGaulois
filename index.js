@@ -205,6 +205,28 @@ const quiz = document.querySelector(".quiz");
 
 // ************************** Form ****************************
 
+// let myForm = document.getElementById('myForm');
+
+// myForm.addEventListener('submit', function (event) {
+//     let myInput = document.getElementById('username');
+//     let myRegex = /^[a-zA-Z-\s]+$/;
+
+//     if (myInput.value.trim() == "") {
+//         let myError = document.getElementById('error');
+//         myError.innerHTML = "le champ username est requis";
+//         myError.style.color = 'red';
+//         event.preventDefault();
+
+//     } else if (myRegex.test(myInput.value) == false) {
+//         let myError = document.getElementById('error');
+//         myError.innerHTML = 'Le champ ne doit comporter que des lettres et des tirets uniquement.';
+//         myError.style.color = 'red';
+//         event.preventDefault();
+//     }
+
+// });
+
+
 let myForm = document.getElementById('myForm');
 
 myForm.addEventListener('submit', function (event) {
@@ -212,17 +234,19 @@ myForm.addEventListener('submit', function (event) {
     let myRegex = /^[a-zA-Z-\s]+$/;
 
     if (myInput.value.trim() == "") {
-        let myError = document.getElementById('error');
-        myError.innerHTML = "le champ username est requis";
+        let myError = document.getElementById('errorUsername');
+        myError.innerHTML = "Le champ username est requis";
         myError.style.color = 'red';
         event.preventDefault();
 
     } else if (myRegex.test(myInput.value) == false) {
-        let myError = document.getElementById('error');
-        myError.innerHTML = 'Le champ ne doit comporter que des lettres et des tirets uniquement.';
+        let myError = document.getElementById('errorUsername');
+        myError.innerText = 'Le champ ne doit comporter que des lettres et des tirets uniquement.';
         myError.style.color = 'red';
         event.preventDefault();
     }
+
+
 
 });
 
