@@ -26,9 +26,10 @@ for (let i = 0; i < answerButtons.length; i++) {
 
 
 //**********************Tableau Images******************************
-const images = [["assets/Lyon.jpg", "assets/Lyon2.jpg", "assets/Lyon3.jpg"],
-["assets/bourgogne1.jpg", "assets/bourgogne2.jpg", "assets/bourgogne3.jpg"], ["assets/grandEst1.png", "assets/grandEst2.jpg", "assets/grandEst3.jpg"],
-["assets/nouvelleAquitaine.png", "assets/nouvelleAquitaine2.jpg", "assets/nouvelleAquitaine3.jpg"]]
+const images = [["assets/Images/Carousel/Lyon", "assets/Images/Carousel/Lyon2.jpg", "assets/Images/Carousel/Lyon3.jpg"],
+["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
+["assets/Images/Carousel/grandEst1.png", "assets/Images/Carousel/grandEst2.jpg", "assets/Images/Carousel/grandEst3.jpg"],
+["assets/Images/Carousel/nouvelleAquitaine.png", "assets/Images/Carousel/nouvelleAquitaine2.jpg", "assets/Images/Carousel/nouvelleAquitaine3.jpg"]]
 
 //**********************Talbeau questions******************************
 
@@ -77,6 +78,11 @@ const questions = [[{
         { text: '3', correct: true },
         { text: '4', correct: false }]
 }]]
+
+//**********************Talbeau explications******************************
+
+const explanations = [["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La "]]
+
 
 const links = document.querySelectorAll(".link");
 const image1 = document.getElementById("image1");
@@ -147,6 +153,10 @@ nextItem.addEventListener("click", function () {
     slideItem();
     dotSwitch();
     startQuestion(currentItem);
+    resetAnswerButtons()
+    textDelete();
+
+
 }); // checks if the currentItem isn't the last and then shitf it it by one to the left
 
 const prevItem = document.querySelector(".buttonPrev");
@@ -161,6 +171,10 @@ prevItem.addEventListener("click", function () {
     slideItem();
     dotSwitch();
     startQuestion(currentItem);
+    resetAnswerButtons()
+    textDelete();
+
+
 });// checks if the currentItem isn't the last and then shitf it it by one to the right
 const dotUn = document.getElementById("dot1")
 
@@ -169,6 +183,10 @@ dotUn.addEventListener("click", function () {
     slideItem();
     dotSwitch();
     startQuestion(currentItem);
+    resetAnswerButtons()
+    textDelete();
+
+
 });//when clicking on a dot put the item shown to the right index
 
 const dotDeux = document.getElementById("dot2")
@@ -178,6 +196,10 @@ dotDeux.addEventListener("click", function () {
     slideItem()
     dotSwitch();
     startQuestion(currentItem);
+    resetAnswerButtons()
+    textDelete();
+
+
 });//when clicking on a dot put the item shown to the right index
 
 const dotTrois = document.getElementById("dot3")
@@ -187,6 +209,10 @@ dotTrois.addEventListener("click", function () {
     slideItem();
     dotSwitch();
     startQuestion(currentItem);
+    resetAnswerButtons()
+    textDelete();
+
+
 }); //when clicking on a dot put the item shown to the right index
 dotSwitch(); //initialize the dots
 
@@ -203,26 +229,35 @@ const questionElement = document.getElementById('question');
 
 let curentQuestionIndex = 0;
 
-
-startButton.addEventListener('click', startGame);
-nextButton.addEventListener('click', function () {
+const resetAnswerButtons = function () {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].classList.remove('good-answer');
         answerButtons[i].classList.remove('wrong-answer');
-    }
 
+    }
+}
+
+
+
+
+
+startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', function () {
+    resetAnswerButtons()
     if (currentItem === maxItem) {
         currentItem = 0
     } //if the item is the last, goes back to the first
     else {
         currentItem++;
     };
-
     nextButton.classList.add('hide')
 
 
     startQuestion(currentItem);
     slideItem();
+    textDelete();
+    dotSwitch();
+
 });
 
 function startGame() {
@@ -232,7 +267,7 @@ function startGame() {
     startQuestion(currentItem)
 }
 function startQuestion(questionIndex) {
-    const questionObject = question[questionIndex];
+    const questionObject = question[questionIndex]; //here question is questions[i], with the index being the region clicked at the start
     // showQuestion({
     //     question: "Quelle est cette ville ?",
     //     answers: [
