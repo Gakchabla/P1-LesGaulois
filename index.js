@@ -24,6 +24,80 @@ for (let i = 0; i < answerButtons.length; i++) {
     });
 }
 
+
+//**********************Tableau Images******************************
+const images = [["assets/Lyon.jpg", "assets/Lyon2.jpg", "assets/Lyon3.jpg"],
+["assets/bourgogne1.jpg", "assets/bourgogne2.jpg", "assets/bourgogne3.jpg"], ["assets/grandEst1.png", "assets/grandEst2.jpg", "assets/grandEst3.jpg"],
+["assets/nouvelleAquitaine.png", "assets/nouvelleAquitaine2.jpg", "assets/nouvelleAquitaine3.jpg"]]
+
+//**********************Talbeau questions******************************
+
+const questions = [[{
+    question: "Quelle est cette ville ?",
+    answers: [
+        { text: 'Lyon', correct: true },
+        { text: 'Marseille', correct: false },
+        { text: 'Paris', correct: false },
+        { text: 'Bordeaux', correct: false }]
+},
+{
+    question: "Laquelle de ces spécialités culinaires est originaire de cette région?",
+    answers: [
+        { text: 'Les galettes de froment', correct: false },
+        { text: 'La bouillabaisse', correct: false },
+        { text: 'Les quenelles', correct: true },
+        { text: 'Les trippes', correct: false }],
+},
+{
+    question: "Dans quelle ville d'Auvergne-Rhone-Alpes peut on célebrer la fête du roi de l'Oiseau?",
+    answers: [
+        { text: 'Lyon', correct: false },
+        { text: 'Clermont Ferrand', correct: false },
+        { text: 'Oyonnax', correct: false },
+        { text: 'Le Puy en Velay', correct: true }]
+}], [{
+    question: "Bourgogne1 ?",
+    answers: [
+        { text: '1', correct: true },
+        { text: '2', correct: false },
+        { text: '3', correct: false },
+        { text: '4', correct: false }]
+}, {
+    question: "Bourgogne 2?",
+    answers: [
+        { text: '1', correct: false },
+        { text: '2', correct: true },
+        { text: '3', correct: false },
+        { text: '4', correct: false }]
+}, {
+    question: "Bourgogne 3",
+    answers: [
+        { text: '1', correct: false },
+        { text: '2', correct: false },
+        { text: '3', correct: true },
+        { text: '4', correct: false }]
+}]]
+
+const links = document.querySelectorAll(".link");
+const image1 = document.getElementById("image1");
+const image2 = document.getElementById("image2");
+const image3 = document.getElementById("image3");
+let question = questions[0];
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () {
+        image1.src = images[i][0];
+        image2.src = images[i][1];
+        image3.src = images[i][2];
+        question = questions[i];
+    }
+    )
+}
+
+
+
+
+
 //**********************Carousel******************************
 
 const carouselItem = document.querySelectorAll(".carouselItem"); // selecting all items in the carousel into an array
@@ -119,30 +193,7 @@ dotSwitch(); //initialize the dots
 
 // **************************Quiz****************************
 
-const questions = [{
-    question: "Quelle est cette ville ?",
-    answers: [
-        { text: 'Lyon', correct: true },
-        { text: 'Marseille', correct: false },
-        { text: 'Paris', correct: false },
-        { text: 'Bordeaux', correct: false }]
-},
-{
-    question: "Laquelle de ces spécialités culinaires est originaire de cette région?",
-    answers: [
-        { text: 'Les galettes de froment', correct: false },
-        { text: 'La bouillabaisse', correct: false },
-        { text: 'Les quenelles', correct: true },
-        { text: 'Les trippes', correct: false }],
-},
-{
-    question: "Dans quelle ville d'Auvergne-Rhone-Alpes peut on célebrer la fête du roi de l'Oiseau?",
-    answers: [
-        { text: 'Lyon', correct: false },
-        { text: 'Clermont Ferrand', correct: false },
-        { text: 'Oyonnax', correct: false },
-        { text: 'Le Puy en Velay', correct: true }]
-}]
+
 
 
 const startButton = document.getElementById('start-btn');
@@ -181,7 +232,7 @@ function startGame() {
     startQuestion(currentItem)
 }
 function startQuestion(questionIndex) {
-    const questionObject = questions[questionIndex];
+    const questionObject = question[questionIndex];
     // showQuestion({
     //     question: "Quelle est cette ville ?",
     //     answers: [
@@ -271,22 +322,6 @@ listRegion.forEach((liste) => {
 
 const quiz = document.querySelector(".quiz");
 
-const images = [["assets/Lyon.jpg", "assets/Lyon2.jpg", "assets/Lyon3.jpg"],
-["assets/bourgogne1.jpg", "assets/bourgogne2.jpg", "assets/bourgogne3.jpg"], ["assets/grandEst1.png", "assets/grandEst2.jpg", "assets/grandEst3.jpg"],
-["assets/nouvelleAquitaine.png", "assets/nouvelleAquitaine2.jpg", "assets/nouvelleAquitaine3.jpg"]]
 
 
 
-const links = document.querySelectorAll(".link");
-const image1 = document.getElementById("image1");
-const image2 = document.getElementById("image2");
-const image3 = document.getElementById("image3");
-
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function () {
-        image1.src = images[i][0];
-        image2.src = images[i][1];
-        image3.src = images[i][2];
-    }
-    )
-}
