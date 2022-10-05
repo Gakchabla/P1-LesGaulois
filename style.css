@@ -629,7 +629,8 @@ form .foot-form button:active {
     font-weight: bold;
 }
 
-/* If screen width < 575px, apply properties, else no apply /*
+/* If screen width < 575px, apply properties, else no apply */
+
 @media screen and (max-width: 620px) {
     form .body-form .right-form {
         margin-left: 0px;
@@ -656,10 +657,9 @@ form .foot-form button:active {
 
     .container {
         width: 600px;
-        max-width: 80%;
     }
 
-    .buttons-grid {
+    #answer-buttons {
         display: grid;
         grid-template-columns: 1fr 1fr ;
         grid-column-gap: 20px;
@@ -673,4 +673,10 @@ form .foot-form button:active {
 
     form .body-form .right-form {
         margin-left: 0px;
+    }
+
+    svg {
+        min-height: 600px;
+        min-width: 100vw;
+        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     }
