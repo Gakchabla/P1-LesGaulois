@@ -63,6 +63,12 @@ main {
     text-align: center;
 }
 
+.bloctexte ul li:hover {
+    color: #F6B12D;
+    transition: transform 0.5s;
+    transform: scale(1.05);
+}
+
 #presentation {
     font-size: 1.2rem;
     margin-inline: 50px;
@@ -556,6 +562,7 @@ form .body-form .group {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    z-index: 11;
 }
 
 form .body-form .left-form .group input {
@@ -594,7 +601,7 @@ form .body-form .right-form .group textarea {
     border-radius: 5px;
     resize: none;
     /* Pour éviter de pouvoir redimensionner le text area */
-    height: 72%;
+    height: 90%;
 }
 
 form .foot-form button {
@@ -616,10 +623,10 @@ form .foot-form button:hover {
 }
 
 form .foot-form button:active {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
-/* If screen width < 575px, apply properties, else no apply /*
+/* If screen width < 575px, apply properties, else no apply on form */
 @media screen and (max-width: 575px) {
     form .body-form .right-form {
         margin-left: 0px;

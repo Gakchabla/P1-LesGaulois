@@ -396,7 +396,6 @@ nextItem.addEventListener("click", function () {
     resetAnswerButtons();
     textDelete();
 
-
 }); // checks if the currentItem isn't the last and then shitf it it by one to the left
 
 const prevItem = document.querySelector(".buttonPrev");
@@ -647,10 +646,18 @@ myForm.addEventListener('submit', function (event) {
     } else if (myRegex.test(myInput.value) == false) {
         let myError = document.getElementById('errorUsername');
         myError.innerHTML = 'Le champ ne doit comporter que des lettres et des tirets uniquement.';
-        myError.style.color = 'red';
+        myError.style.color = 'green';
         event.preventDefault();
-    }
+    } else if (myRegex.test(myInput.value) == true)
+        myError.style.color = 'yellow'
+    delette
 
+
+    // else if (myRegex.test(myInput.value) == true) {
+    //     delete myError.innerHTML;
+    //     delete myError.style.color;
+    //     myError.style.color = 'green';
+    // }
 });
 
 // ******* Mail ***********
@@ -708,29 +715,45 @@ myForm.addEventListener('submit', function (event) {
         myError.style.color = 'red';
         event.preventDefault();
     }
-
-
 });
 
-//**********************Text présentaion et information***************/
+//**********************Text présentation et information***************/
 
-const infoButton = document.getElementById('information');
-const infoText = document.querySelector('.bloctexte');
-const presentationText = document.getElementById('presentation');
+const infoBouton = document.getElementById('information');
+const present = document.getElementById('presentation');
+const inform = document.querySelector('.bloctexte');
 
-infoButton.addEventListener('click', function () {
-    presentationText.classList.add('hide');
-    infoText.classList.remove('hide');
+infoBouton.addEventListener('click', function () {
+    present.classList.add('hide');
+    inform.classList.remove('hide');
 })
 
 const contactButton = document.getElementById('contact');
-const contactForm = document.getElementById('myForm');
+const formulaire = document.getElementById('myForm');
 const exitButton = document.querySelector('.exitForm')
 
-contactButton.addEventListener('click', function () {
-    contactForm.classList.remove('hide');
+contactButton.addEventListener('click', () => {
+    if (getComputedStyle(formulaire).display != "none") {
+        formulaire.classList.add('hide');
+    } else {
+        formulaire.classList.remove('hide');
+    }
 })
 
+// Autre façon d'écrire l'évent précédent
+
+// contactButton.addEventListener('click', () => {
+//     if (getComputedStyle(formulaire).display != "none") {
+//         formulaire.style.display = 'none';
+//     } else {
+//         formulaire.style.display = "block";
+//     }
+// })
+
 exitButton.addEventListener('click', function () {
-    contactForm.classList.add('hide');
+    formulaire.classList.add('hide');
 })
+
+
+
+
