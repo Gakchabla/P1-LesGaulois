@@ -4,11 +4,75 @@
 const answerButtons = document.querySelectorAll('.answerButton');
 
 
+
+
+
+//**********************Tableau Images******************************
+const images = [["assets/Images/Carousel/Lyon.jpg", "assets/Images/Carousel/Lyon2.jpg", "assets/Images/Carousel/Lyon3.jpg"],
+["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
+["assets/Images/Carousel/grandEst1.png", "assets/Images/Carousel/grandEst2.jpg", "assets/Images/Carousel/grandEst3.jpg"],
+["assets/Images/Carousel/nouvelleAquitaine.png", "assets/Images/Carousel/nouvelleAquitaine2.jpg", "assets/Images/Carousel/nouvelleAquitaine3.jpg"]]
+
+//**********************Talbeau questions******************************
+
+const questions = [[{
+    question: "Quelle est cette ville ?",
+    answers: [
+        { text: 'Lyon', correct: true },
+        { text: 'Marseille', correct: false },
+        { text: 'Paris', correct: false },
+        { text: 'Bordeaux', correct: false }]
+},
+{
+    question: "Laquelle de ces spécialités culinaires est originaire de cette région?",
+    answers: [
+        { text: 'Les galettes de froment', correct: false },
+        { text: 'La bouillabaisse', correct: false },
+        { text: 'Les quenelles', correct: true },
+        { text: 'Les trippes', correct: false }],
+},
+{
+    question: "Dans quelle ville d'Auvergne-Rhone-Alpes peut on célebrer la fête du roi de l'Oiseau?",
+    answers: [
+        { text: 'Lyon', correct: false },
+        { text: 'Clermont Ferrand', correct: false },
+        { text: 'Oyonnax', correct: false },
+        { text: 'Le Puy en Velay', correct: true }]
+}], [{
+    question: "Bourgogne1 ?",
+    answers: [
+        { text: '1', correct: true },
+        { text: '2', correct: false },
+        { text: '3', correct: false },
+        { text: '4', correct: false }]
+}, {
+    question: "Bourgogne 2?",
+    answers: [
+        { text: '1', correct: false },
+        { text: '2', correct: true },
+        { text: '3', correct: false },
+        { text: '4', correct: false }]
+}, {
+    question: "Bourgogne 3",
+    answers: [
+        { text: '1', correct: false },
+        { text: '2', correct: false },
+        { text: '3', correct: true },
+        { text: '4', correct: false }]
+}]]
+let question = questions[0];
+
+//**********************Talbeau explications******************************
+
+const explanations = [["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "]]
+let explanation = explanations[0];
+
+
 const textReponse = function () {
     const explication = document.createElement('div')
     explication.classList.add('explication')
     explication.classList.add('container')
-    explication.innerHTML = "La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région";
+    explication.innerHTML = explanation[currentItem];
     quiz.appendChild(explication);
 }
 const textDelete = function () {
@@ -23,6 +87,26 @@ for (let i = 0; i < answerButtons.length; i++) {
         textReponse();
     });
 }
+
+const links = document.querySelectorAll(".link");
+const image1 = document.getElementById("image1");
+const image2 = document.getElementById("image2");
+const image3 = document.getElementById("image3");
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () {
+        image1.src = images[i][0];
+        image2.src = images[i][1];
+        image3.src = images[i][2];
+        question = questions[i];
+        explanation = explanations[i];
+    }
+    )
+}
+
+
+
+
 
 //**********************Carousel******************************
 
@@ -73,6 +157,10 @@ nextItem.addEventListener("click", function () {
     slideItem();
     dotSwitch();
     startQuestion(currentItem);
+    resetAnswerButtons()
+    textDelete();
+
+
 }); // checks if the currentItem isn't the last and then shitf it it by one to the left
 
 const prevItem = document.querySelector(".buttonPrev");
@@ -87,6 +175,10 @@ prevItem.addEventListener("click", function () {
     slideItem();
     dotSwitch();
     startQuestion(currentItem);
+    resetAnswerButtons()
+    textDelete();
+
+
 });// checks if the currentItem isn't the last and then shitf it it by one to the right
 const dotUn = document.getElementById("dot1")
 
@@ -95,15 +187,26 @@ dotUn.addEventListener("click", function () {
     slideItem();
     dotSwitch();
     startQuestion(currentItem);
+    resetAnswerButtons()
+    textDelete();
+
+
 });//when clicking on a dot put the item shown to the right index
 
 const dotDeux = document.getElementById("dot2")
+
+
+
 
 dotDeux.addEventListener("click", function () {
     currentItem = 1;
     slideItem()
     dotSwitch();
     startQuestion(currentItem);
+    resetAnswerButtons()
+    textDelete();
+
+
 });//when clicking on a dot put the item shown to the right index
 
 const dotTrois = document.getElementById("dot3")
@@ -113,36 +216,17 @@ dotTrois.addEventListener("click", function () {
     slideItem();
     dotSwitch();
     startQuestion(currentItem);
+    resetAnswerButtons()
+    textDelete();
+
+
 }); //when clicking on a dot put the item shown to the right index
 dotSwitch(); //initialize the dots
 
 
 // **************************Quiz****************************
 
-const questions = [{
-    question: "Quelle est cette ville ?",
-    answers: [
-        { text: 'Lyon', correct: true },
-        { text: 'Marseille', correct: false },
-        { text: 'Paris', correct: false },
-        { text: 'Bordeaux', correct: false }]
-},
-{
-    question: "Laquelle de ces spécialités culinaires est originaire de cette région?",
-    answers: [
-        { text: 'Les galettes de froment', correct: false },
-        { text: 'La bouillabaisse', correct: false },
-        { text: 'Les quenelles', correct: true },
-        { text: 'Les trippes', correct: false }],
-},
-{
-    question: "Dans quelle ville d'Auvergne-Rhone-Alpes peut on célebrer la fête du roi de l'Oiseau?",
-    answers: [
-        { text: 'Lyon', correct: false },
-        { text: 'Clermont Ferrand', correct: false },
-        { text: 'Oyonnax', correct: false },
-        { text: 'Le Puy en Velay', correct: true }]
-}]
+
 
 
 const startButton = document.getElementById('start-btn');
@@ -152,20 +236,35 @@ const questionElement = document.getElementById('question');
 
 let curentQuestionIndex = 0;
 
-
-startButton.addEventListener('click', startGame);
-nextButton.addEventListener('click', function () {
+const resetAnswerButtons = function () {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].classList.remove('good-answer');
         answerButtons[i].classList.remove('wrong-answer');
-    }
-    currentItem++;
 
+    }
+}
+
+
+
+
+
+startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', function () {
+    resetAnswerButtons()
+    if (currentItem === maxItem) {
+        currentItem = 0
+    } //if the item is the last, goes back to the first
+    else {
+        currentItem++;
+    };
     nextButton.classList.add('hide')
 
 
     startQuestion(currentItem);
     slideItem();
+    textDelete();
+    dotSwitch();
+
 });
 
 function startGame() {
@@ -175,7 +274,7 @@ function startGame() {
     startQuestion(currentItem)
 }
 function startQuestion(questionIndex) {
-    const questionObject = questions[questionIndex];
+    const questionObject = question[questionIndex]; //here question is questions[i], with the index being the index of the region clicked in links
     // showQuestion({
     //     question: "Quelle est cette ville ?",
     //     answers: [
@@ -210,7 +309,6 @@ function checkAnswer(questionAnswers) {
                 console.log("try again")
                 answerButtons[i].classList.remove('good-answer')
                 answerButtons[i].classList.add('wrong-answer')
-
             }
         });
     }
@@ -265,25 +363,6 @@ listRegion.forEach((liste) => {
 
 const quiz = document.querySelector(".quiz");
 
-const images = [["assets/Lyon.jpg", "https://source.unsplash.com/random?landscape,night", "https://source.unsplash.com/random?landscape,city"],
-["assets/bourgogne1.jpg", "assets/bourgogne2.jpg", "assets/bourgogne3.jpg"], ["assets/grandEst1.png", "assets/grandEst2.jpg", "assets/grandEst3.jpg"],
-["assets/nouvelleAquitaine.png", "assets/nouvelleAquitaine2.jpg", "assets/nouvelleAquitaine3.jpg"]]
-
-
-
-const links = document.querySelectorAll(".link");
-const image1 = document.getElementById("image1");
-const image2 = document.getElementById("image2");
-const image3 = document.getElementById("image3");
-
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function () {
-        image1.src = images[i][0];
-        image2.src = images[i][1];
-        image3.src = images[i][2];
-    }
-    )
-}
 
 const logo = document.querySelector('.logo');
 
