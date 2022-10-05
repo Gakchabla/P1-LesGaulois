@@ -627,7 +627,7 @@ form .foot-form button:active {
 }
 
 /* If screen width < 575px, apply properties, else no apply on form */
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 900px) {
     form .body-form .right-form {
         margin-left: 0px;
     }
