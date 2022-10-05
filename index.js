@@ -13,18 +13,16 @@ let isStarted = false; //check if the game is started or not to modify some func
 const images = [["assets/Images/Carousel/Lyon.jpg", "assets/Images/Carousel/Lyon2.jpg", "assets/Images/Carousel/Lyon3.jpg"],
 ["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
 ["assets/Images/Carousel/bretagne1.jpg", "assets/Images/Carousel/bretagne2.jpg", "assets/Images/Carousel/bretagne3.png"],
-["assets/Images/Carousel/centre-val-de-loire1.jpg", "assets/Images/Carousel/centre-val-de-loire12.jpg", "assets/Images/Carousel/centre-val-de-loire13.jpg"],
+["assets/Images/Carousel/centre-val-de-loire1.jpeg", "assets/Images/Carousel/centre-val-de-loire2.jpeg", "assets/Images/Carousel/centre-val-de-loire3.jpeg"],
 ["assets/Images/Carousel/corse1.jpg", "assets/Images/Carousel/corse2.jpg", "assets/Images/Carousel/corse3.jpg"],
-["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
-["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
-["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
-["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
-["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
-["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
-["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
-["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
-["assets/Images/Carousel/grandEst1.png", "assets/Images/Carousel/grandEst2.jpg", "assets/Images/Carousel/grandEst3.jpg"],
-["assets/Images/Carousel/nouvelleAquitaine.png", "assets/Images/Carousel/nouvelleAquitaine2.jpg", "assets/Images/Carousel/nouvelleAquitaine3.jpg"]]
+["assets/Images/Carousel/grandEst1.jpg", "assets/Images/Carousel/grandEst2.jpg", "assets/Images/Carousel/grandEst3.jpg"],
+["assets/Images/Carousel/hdf1.jpg", "assets/Images/Carousel/hdf2.jpg", "assets/Images/Carousel/hdf3.jpg"],
+["assets/Images/Carousel/idf1.jpg", "assets/Images/Carousel/idf2.jpg", "assets/Images/Carousel/idf3.jpg"],
+["assets/Images/Carousel/normandie1.jpg", "assets/Images/Carousel/normandie2.jpg", "assets/Images/Carousel/normandie3.jpg"],
+["assets/Images/Carousel/nouvelleAquitaine1.jpg", "assets/Images/Carousel/nouvelleAquitaine2.jpg", "assets/Images/Carousel/nouvelleAquitaine3.jpg"],
+["assets/Images/Carousel/occitanie1.jpg", "assets/Images/Carousel/occitanie2.jpg", "assets/Images/Carousel/occitanie3.jpg"],
+["assets/Images/Carousel/pdl1.jpg", "assets/Images/Carousel/pdl2.jpg", "assets/Images/Carousel/pdl3.jpg"],
+["assets/Images/Carousel/paca1.jpg", "assets/Images/Carousel/paca2.jpg", "assets/Images/Carousel/paca3.jpg"],]
 
 //**********************Talbeau questions******************************
 // Toutes les questions sont indexées dans ce tableau
@@ -83,9 +81,9 @@ const questions = [[{
     question: "Comment s'appelle la boisson traditionnelle bretonne à base de miel fermenté ?",
     answers: [
         { text: 'L’hydromiel', correct: false },
-        { text: 'le chouchen', correct: true },
-        { text: 'la cervoise', correct: false },
-        { text: 'la propolis', correct: false }]
+        { text: 'Le chouchen', correct: true },
+        { text: 'La cervoise', correct: false },
+        { text: 'La propolis', correct: false }]
 }, {
     question: "Quelle est la devise de la Bretagne ?",
     answers: [
@@ -103,17 +101,17 @@ const questions = [[{
 }, {
     question: "Quelle est la spécialité du Limousin ?",
     answers: [
-        { text: 'De la buche', correct: false },
-        { text: 'de la charlotte', correct: false },
-        { text: 'du clafoutis', correct: true },
-        { text: 'de la tarte', correct: false }]
+        { text: 'La buche', correct: false },
+        { text: 'La charlotte', correct: false },
+        { text: 'Leclafoutis', correct: true },
+        { text: 'La tarte', correct: false }]
 }, {
-    question: "",
+    question: "Quelle célèbre femme ayant marqué l'histoire francaise est née dans cette région?",
     answers: [
-        { text: '1', correct: false },
-        { text: '2', correct: false },
-        { text: '3', correct: true },
-        { text: '4', correct: false }]
+        { text: 'Catherine de Medicis', correct: false },
+        { text: 'Marie Curie', correct: false },
+        { text: 'Marie-Antoinette', correct: false },
+        { text: "Jeanne d'Arc", correct: true }]
 }], [{
     question: "Quelle ville est la préfecture de la Région Corse ?",
     answers: [
@@ -145,17 +143,17 @@ const questions = [[{
 }, {
     question: "Parmi ces fromages, lequel est alsacien ?",
     answers: [
-        { text: 'le Babybel', correct: false },
-        { text: 'le Cabécou', correct: false },
-        { text: 'L’Ortolan', correct: false },
-        { text: 'le Munster', correct: true }]
+        { text: 'Le Babybel', correct: false },
+        { text: 'Le Cabécou', correct: false },
+        { text: "L’Ortolan", correct: false },
+        { text: 'Le Munster', correct: true }]
 }, {
-    question: "",
+    question: "Quel célèbre poête français est né à Metz ",
     answers: [
-        { text: '1', correct: false },
-        { text: '2', correct: false },
-        { text: '3', correct: true },
-        { text: '4', correct: false }]
+        { text: 'Charles Baudelaire', correct: false },
+        { text: 'Arthur Rimbaud', correct: false },
+        { text: 'Paul Verlaine', correct: true },
+        { text: 'Joachim Du Bellay', correct: false }]
 }], [{
     question: "Quelle est la capitale de la région Hauts-de-France ?",
     answers: [
@@ -171,12 +169,12 @@ const questions = [[{
         { text: "L'aubergine", correct: false },
         { text: 'la mojette', correct: false }]
 }, {
-    question: "",
+    question: "Ou se termine la fameuse course cycliste qui commence a Paris?",
     answers: [
-        { text: '1', correct: false },
-        { text: '2', correct: false },
-        { text: '3', correct: true },
-        { text: '4', correct: false }]
+        { text: 'Roubaix', correct: true },
+        { text: 'Douai', correct: false },
+        { text: 'Lille', correct: true },
+        { text: 'Tourcoing', correct: false }]
 }], [{
     question: "Quelle est la capitale de la région Ile de France ?",
     answers: [
@@ -189,7 +187,7 @@ const questions = [[{
     answers: [
         { text: 'L’Oise', correct: false },
         { text: 'L’Yonne', correct: false },
-        { text: 'La Marne (514km)', correct: true },
+        { text: 'La Marne', correct: true },
         { text: 'Le grand Morin', correct: false }]
 }, {
     question: "Combien y-a-t-il d'habitants en Île-de-France ?",
@@ -213,12 +211,12 @@ const questions = [[{
         { text: 'Les rognons', correct: false },
         { text: 'Les tripes', correct: true }]
 }, {
-    question: "",
+    question: "Laquelle de ces plages se trouve en Normandie?",
     answers: [
-        { text: '1', correct: false },
-        { text: '2', correct: false },
-        { text: '3', correct: true },
-        { text: '4', correct: false }]
+        { text: 'La plage de la Pointe de Saint-Hernot', correct: false },
+        { text: 'Omaha Beach', correct: true },
+        { text: 'La plage de Keremma', correct: false },
+        { text: 'Venice Beach', correct: false }]
 }], [{
     question: "Quelle est la ville principale de la région Nouvelle-Aquitaine ?",
     answers: [
@@ -253,14 +251,14 @@ const questions = [[{
         { text: 'Rocamadour', correct: false },
         { text: 'Pélardon', correct: false },
         { text: 'Laguiole', correct: false },
-        { text: 'Roquefort', correct: true }]
+        { text: 'Colioure', correct: true }]
 }, {
-    question: "",
+    question: 'Comment dit-on "Bonjour, comment vas-tu? en langue occitane ?',
     answers: [
-        { text: '1', correct: false },
-        { text: '2', correct: false },
-        { text: '3', correct: true },
-        { text: '4', correct: false }]
+        { text: 'Adissiatz, va plan?', correct: false },
+        { text: 'Adiu, ont vas? ', correct: false },
+        { text: '"Adiu, va plan?"', correct: true },
+        { text: 'Adissiatz, ont vas?', correct: false }]
 }], [{
     question: "Quelle est le chef-lieu de la région Pays de la Loire ?",
     answers: [
@@ -276,12 +274,12 @@ const questions = [[{
         { text: 'La biscuiterie LU', correct: true },
         { text: 'Les pates Lustucru', correct: false }]
 }, {
-    question: "",
+    question: "Comment s'appelle l'espace d'exposition habritant d'impressionantes machines?",
     answers: [
-        { text: '', correct: false },
-        { text: '', correct: false },
-        { text: '', correct: true },
-        { text: '', correct: false }]
+        { text: 'Les Machines de Nantes', correct: false },
+        { text: "Les Machines de l'Île", correct: true },
+        { text: 'Les Animaux Imaginaires', correct: false },
+        { text: 'Les Animaux de Nantes', correct: false }]
 }], [{
     question: "Quelle est le chef-lieu de la région Provence-Alpes-Côte d’Azur ?",
     answers: [
@@ -297,12 +295,12 @@ const questions = [[{
         { text: 'Le pot au feu', correct: false },
         { text: 'La bouillabaisse', correct: true }]
 }, {
-    question: "",
+    question: "Dans quelle ville voit on défiler des chars couverts de citron une fois par an ?",
     answers: [
-        { text: '1', correct: false },
-        { text: '2', correct: false },
-        { text: '3', correct: true },
-        { text: '4', correct: false }]
+        { text: 'Ayguiers', correct: false },
+        { text: 'Aix-En-Provence', correct: false },
+        { text: 'Avignon', correct: false },
+        { text: 'Menton', correct: true }]
 }]]
 let question = questions[0];
 
@@ -311,7 +309,20 @@ let question = questions[0];
 // Toutes les explications sont indexées dans ce tableau
 
 
-const explanations = [["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "]]
+const explanations = [["Se trouvant à la jonction entre la Saone et le Rhone, Lyon, ancienne capitale des gaules, est le chef lieu de la région Rhônes-Alpes.", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay."],
+["Dijon, aussi appellé la cité des Ducs, est la capitale de la Bourgogne, l'un des principaux territoires viticoles du pays.", "L'escargot de Bourgogne est traditionellement consommé préparé en coquille avec un beurre persillé.", "Club emblématique de la région, l'AJ Auxerre a connu ses grandes heures entre 1995 et 2005 sous la direction de Guy Roux."],
+["Rennes, chef lieu de la région Bretagne, est connue pour ses nombreux espaces verts et sa qualité de vie.", `Le chouchen (en breton : chouchenn ou mez), est un breuvage liquoreux issu de la fermentation d'un mélange d'eau et de miel. 
+<br/>"Y a du chouchen à volonté, viens donc faire un tour à Lambé" `, ` En breton "kentoc'h mervel eget em zaotra", la devise aurait été prononcée par Alain Barbe Torte après qu'il ait vu une hermine blanche préférer mourrir sous les coups des chasseurs que tomber dans la boue.`],
+["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "],
+["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "],
+["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "],
+["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "],
+["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "],
+["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "],
+["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "],
+["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "],
+["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "],
+["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "]]
 let explanation = explanations[0]; // la valeur qui va determiner quelle explication est a l'écran
 
 
@@ -359,6 +370,28 @@ for (let i = 0; i < links.length; i++) {
     }
     )
 } // créer le liens entre le clique sur un lien et le contenu qui correspond dans les tableaux images/question/explication et reset le jeu
+
+const listRegion = document.querySelectorAll(".linkQuestion")
+
+for (let i = 0; i < listRegion.length; i++) {
+    listRegion[i].addEventListener('click', function () {
+        image1.src = images[i][0];
+        image2.src = images[i][1];
+        image3.src = images[i][2];
+        question = questions[i];
+        explanation = explanations[i];
+        currentItem = 0;
+        nextButton.classList.add('hide');
+        resetStartButton();
+        removeAnswer();
+        textDelete();
+        resetAnswerButtons();
+        slideItem();
+        dotSwitch();
+
+    }
+    )
+}
 
 //**********************Carousel******************************
 
@@ -607,7 +640,6 @@ const burgermenu = document.querySelector(".burgermenu");
 const menuAside = document.querySelector(".left")
 const body = document.querySelector("body")
 const rightElements = document.querySelector(".right")
-const listRegion = document.querySelectorAll(".linkQuestion")
 const mapRegion = document.querySelectorAll(".mapQuestion")
 
 burgermenu.addEventListener("click", () => {
@@ -633,12 +665,6 @@ rightElements.addEventListener("click", () => {
         menuAside.style.translate = ("-2000px");
         body.style.backgroundColor = "#dddddd";
     }
-})
-
-listRegion.forEach((liste) => {
-    liste.addEventListener("click", () => {
-        startGame();
-    })
 })
 
 const quiz = document.querySelector(".quiz");
