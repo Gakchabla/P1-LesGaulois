@@ -51,7 +51,7 @@
     </aside>
     <main>
         <div class="elements right">
-            <section class="carte">
+            <section id="map" class="carte">
                 <h1>CHOISIS UNE REGION POUR JOUER !</h1>
             </section>
             <section class="caroussel">
@@ -113,10 +113,28 @@
             </section>
             <section class="description">
                 <div class="history">
-                    <h1>Connaissez-vous vos régions de France ?</h1>
-                    <br>
-                    <div class="bloctexte">
-                        <p> Depuis la réforme territoriale, la nouvelle carte de France comporte 13
+                    <div id="presentation">Vous êtes vous déjà perdu dans les sentiers du grand jardin
+                        qu’est la
+                        France
+                        ?
+                        Avez-vous déjà entrepris de flâner le long des côtes roussies du Languedoc ?
+                        De soulever les branches touffus du maquis Corse pour y découvrir ses détours escarpés ?
+                        De braver la météo de Bretagne pour mieux voir la mer, lasse et régulière , s’étirer au rhythm
+                        des marées.
+                        Ou peut-être oserez vous boire l’été comme un vin doux pour mieux accueillir le soleil souverain
+                        de Marseille qui déjà s’élève à l’horizon ?
+                        <br>
+                        <br>
+                        Toutes ces régions aux contours irréguliers et tracés par les aléas de l’histoire, toutes ces
+                        villes aux frontières vieillîtes par le temps offrent des opportunités sans fin de savourer un
+                        patrimoine aussi familier qu’inconnu.
+                        C’est ce que propose notre quiz, de passer de fêtes de village en spécialités culinaires
+                        pour tenter d’appréhender cette diversité depuis vos écrans, qui dès lors que vous commencerez,
+                        deviendront pareil à des fenêtres ouvertes sur ce pay qui malgré les sévices de la modernité
+                        conserve l’essentiel de sa poésie sauvage et de son charme bucolique..
+                    </div>
+                    <div class="bloctexte hide">
+                        <p id="ancreInfo"> Depuis la réforme territoriale, la nouvelle carte de France comporte 13
                             régions métropolitaines, 5 régions d'outre mer, et 101 départements.
                             Parmi les 5 départements et régions d'outre-mer, on retrouve : </p>
                         <br>
@@ -146,7 +164,7 @@
                         </ul>
                         <br>
                     </div>
-                </div>
+
             </section>
 
             <!--------------------------------------Carousel---------------------------------------->
@@ -194,7 +212,8 @@
             <!---------------------------------- Formulaire ---------------------------------------------------->
 
 
-            <form action="traitement.php" method="post" id="myForm" class="">
+            <form action="traitement.php" method="post" id="myForm" class="hide">
+                <button class="exitForm">X</button>
                 <h1>Contactez-nous !</h1>
                 <div class="separator"></div>
                 <p>Une remarque ? Une suggestion ? N'hésitez pas à nous écrire </p>
@@ -237,8 +256,8 @@
         </div>
     </main>
     <footer>
-        <div id="contact">Contactez-nous</div>
-        <div id="informations">Informations</div>
+        <li id="information" class="infoBtn"><a href="#ancreInfo">Informations</li></a>
+        <li id="contact" class="infoBtn">Contact us</li>
     </footer>
     <script src=" index.js"></script>
 </body>

@@ -63,6 +63,12 @@ main {
     text-align: center;
 }
 
+#presentation {
+    font-size: 1.2rem;
+    margin-inline: 50px;
+    line-height: 30px;
+}
+
 .history ul li {
     list-style: none;
 }
@@ -94,6 +100,7 @@ main h1 {
 footer {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     background-color: #2F4558;
     gap: 30px;
     padding: 10px;
@@ -312,6 +319,20 @@ svg {
 
 }
 
+.infoBtn {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    list-style: none;
+    align-items: center;
+    color: #F6B12D;
+}
+
 .btn:hover {
     border: 5px solid rgba(233, 187, 101, 0.25);
     background: radial-gradient(circle, rgba(246, 177, 45, 1) 0%, rgba(246, 177, 45, 1) 20%, rgba(255, 208, 118, 1) 100%);
@@ -324,6 +345,10 @@ svg {
 
 }
 
+a {
+    text-decoration: none;
+    color: #F6B12D;
+}
 
 #question-container {
     display: flex;
@@ -412,6 +437,7 @@ svg {
     display: flex;
     justify-content: center;
 
+
 }
 
 .carousel {
@@ -423,6 +449,8 @@ svg {
     justify-content: center;
     align-items: flex-end;
     z-index: 8;
+    border-radius: 25px;
+    border-width: 10px;
 }
 
 .carouselItem {
@@ -591,10 +619,19 @@ form .foot-form button:active {
     transform: scale(1.5);
 }
 
+/* If screen width < 575px, apply properties, else no apply /*
 @media screen and (max-width: 575px) {
     form .body-form .right-form {
         margin-left: 0px;
     }
 }
 
-/* If screen width < 575px, apply properties, else no apply /*
+.exitForm {
+    float: right;
+    margin-top: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
