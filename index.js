@@ -775,13 +775,39 @@ const contactButton = document.getElementById('contact');
 const contactForm = document.getElementById('myForm');
 const exitButton = document.querySelector('.exitForm')
 
-contactButton.addEventListener('click', function () {
-    contactForm.classList.remove('hide');
+contactButton.addEventListener('click', () => {
+    if (getComputedStyle(contactForm).display != "none") {
+        contactForm.classList.add('hide');
+    } else {
+        contactForm.classList.remove('hide');
+    }
 })
+
+// Autre façon d'écrire l'évent précédent
+
+// contactButton.addEventListener('click', () => {
+//     if (getComputedStyle(formulaire).display != "none") {
+//         formulaire.style.display = 'none';
+//     } else {
+//         formulaire.style.display = "block";
+//     }
+// })
 
 exitButton.addEventListener('click', function () {
     contactForm.classList.add('hide');
 })
+
+const modal = document.querySelector(".modal");
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
 
 // const contactButton = document.getElementById('contact');
 // const contactForm = document.getElementById('myForm');
@@ -792,10 +818,30 @@ exitButton.addEventListener('click', function () {
 //     contactButton.classList.toggle('active');
 //     contactForm.classList.toggle('active');
 // }
-const modal = document.querySelector(".modal");
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+
+// const infoBouton = document.getElementById('information');
+// const present = document.getElementById('presentation');
+// const inform = document.querySelector('.bloctexte');
+
+// infoBouton.addEventListener('click', function () {
+//     present.classList.add('hide');
+//     inform.classList.remove('hide');
+// })
+
+// const contactButton = document.getElementById('contact');
+// const formulaire = document.getElementById('myForm');
+// const exitButton = document.querySelector('.exitForm')
+
+
+// contactButton.addEventListener('click', () => {
+//     if (getComputedStyle(formulaire).display != "none") {
+//         formulaire.classList.add('hide');
+//     } else {
+//         formulaire.classList.remove('hide');
+//     }
+// })
+
+// exitButton.addEventListener('click', function () {
+//     formulaire.classList.add('hide');
+// })
