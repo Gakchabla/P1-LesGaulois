@@ -619,13 +619,6 @@ form .foot-form button:active {
     transform: scale(1.5);
 }
 
-/* If screen width < 575px, apply properties, else no apply /*
-@media screen and (max-width: 575px) {
-    form .body-form .right-form {
-        margin-left: 0px;
-    }
-}
-
 .exitForm {
     float: right;
     margin-top: 0;
@@ -635,3 +628,49 @@ form .foot-form button:active {
     font-size: 15px;
     font-weight: bold;
 }
+
+/* If screen width < 575px, apply properties, else no apply /*
+@media screen and (max-width: 620px) {
+    form .body-form .right-form {
+        margin-left: 0px;
+    }
+
+     .carte h1 {
+        color: #2F4558;
+        font-weight:bolder;
+        margin-bottom: 25px;
+    }
+
+}
+
+/* If screen width < 920px, apply properties, else no apply */
+
+@media screen and (min-width:621px) {
+    .carte h1 {
+        color: #2F4558;
+        font-weight:bolder;
+        margin-bottom: 30px;
+        width: auto;
+        font-size: 1.9em;
+    }
+
+    .container {
+        width: 600px;
+        max-width: 80%;
+    }
+
+    .buttons-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    #myForm{
+        max-width: 1000px;
+        margin-inline: auto;
+    }
+
+    form .body-form .right-form {
+        margin-left: 0px;
+    }
