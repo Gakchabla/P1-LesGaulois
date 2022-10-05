@@ -76,7 +76,7 @@ main {
 
 .carte h1 {
     color: #2F4558;
-    font-weight:bolder;
+    font-weight: bolder;
     font-size: 1.5rem;
     text-align: center;
     margin-inline: auto;
@@ -191,9 +191,9 @@ li a:visited {
 }
 
 
-.linkQuestion::before{
+.linkQuestion::before {
     position: absolute;
-    content:"";
+    content: "";
     display: inline-block;
     translate: 0 30px;
     height: 1px;
@@ -203,8 +203,8 @@ li a:visited {
     transition-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
-.linkQuestion:hover::before{
-    content:"";
+.linkQuestion:hover::before {
+    content: "";
     display: inline-block;
     translate: 0 30px;
     height: 1px;
@@ -325,14 +325,14 @@ svg {
 
 .btn:hover {
     border: 5px solid rgba(233, 187, 101, 0.25);
-    background: radial-gradient(circle, rgba(246,177,45,1) 0%, rgba(246,177,45,1) 20%, rgba(255,208,118,1) 100%);
-    -webkit-box-shadow: 0px 0px 26px 3px rgba(255,208,118,0.3); 
-    box-shadow: 0px 0px 26px 3px rgba(255,208,118,0.3);
+    background: radial-gradient(circle, rgba(246, 177, 45, 1) 0%, rgba(246, 177, 45, 1) 20%, rgba(255, 208, 118, 1) 100%);
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(255, 208, 118, 0.3);
+    box-shadow: 0px 0px 26px 3px rgba(255, 208, 118, 0.3);
 }
 
 .btn:active {
     transform: scale(1.1);
-    
+
 }
 
 a {
@@ -353,7 +353,7 @@ a {
     margin-bottom: 15px;
 }
 
-.start-btn{
+.start-btn {
     font-size: 1.5rem;
     color: #2F4558;
     font-weight: bold;
@@ -378,7 +378,7 @@ a {
 .wrong-answer:hover {
     border: 5px solid rgba(187, 95, 95, 0.25);
     background: radial-gradient(circle, rgb(184, 2, 2) 0%, rgb(184, 2, 2)0%, rgb(184, 2, 2) 100%);
-    -webkit-box-shadow: 0px 0px 26px 3px rgba(134, 0, 0, 0.3); 
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(134, 0, 0, 0.3);
     box-shadow: 0px 0px 26px 3px rgba(134, 0, 0, 0.3);
 }
 
@@ -386,14 +386,14 @@ a {
     color: #dddddd;
     border: 5px solid rgba(233, 187, 101, 0.25);
     background: radial-gradient(circle, rgb(2, 184, 38) 0%, rgba(2, 184, 38) 20%, rgba(2, 184, 38) 100%);
- 
+
 }
 
 .good-answer:hover {
     border: 5px solid rgba(233, 187, 101, 0.25);
     background: radial-gradient(circle, rgb(2, 184, 38) 0%, rgba(2, 184, 38) 20%, rgba(2, 184, 38) 100%);
-    -webkit-box-shadow: 0px 0px 26px 3px rgba(2,184,38,0.30); 
-    box-shadow: 0px 0px 26px 3px rgba(0,186,73,0.30);
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(2, 184, 38, 0.30);
+    box-shadow: 0px 0px 26px 3px rgba(0, 186, 73, 0.30);
 }
 
 .reset-btn {
@@ -427,6 +427,7 @@ a {
     display: flex;
     justify-content: center;
 
+
 }
 
 .carousel {
@@ -437,6 +438,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    border-radius: 25px;
+    border-width: 10px;
 }
 
 .carouselItem {
@@ -625,4 +628,3 @@ form .foot-form button:active {
 }
 
 /* If screen width < 920px, apply properties, else no apply /*
-
