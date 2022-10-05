@@ -17,7 +17,7 @@ header {
     align-items: center;
     position: sticky;
     top: 0px;
-    z-index: 12;
+    z-index: 13;
 }
 
 .logo {
@@ -63,6 +63,12 @@ main {
     text-align: center;
 }
 
+#presentation {
+    font-size: 1.2rem;
+    margin-inline: 50px;
+    line-height: 30px;
+}
+
 .history ul li {
     list-style: none;
 }
@@ -70,7 +76,7 @@ main {
 
 .carte h1 {
     color: #2F4558;
-    font-weight:bolder;
+    font-weight: bolder;
     font-size: 1.5rem;
     text-align: center;
     margin-inline: auto;
@@ -92,10 +98,23 @@ main h1 {
 }
 
 footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background-color: #2F4558;
-    gap: 10px;
-    padding: 30px;
+    gap: 30px;
+    padding: 10px;
     top: 0px;
+    color: white;
+    font-size: 20px;
+}
+
+#contact {
+    cursor: pointer;
+}
+
+#informations {
+    cursor: pointer;
 }
 
 /****************** Burger Menu ***********************/
@@ -182,9 +201,9 @@ li a:visited {
 }
 
 
-.linkQuestion::before{
+.linkQuestion::before {
     position: absolute;
-    content:"";
+    content: "";
     display: inline-block;
     translate: 0 30px;
     height: 1px;
@@ -194,8 +213,8 @@ li a:visited {
     transition-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
-.linkQuestion:hover::before{
-    content:"";
+.linkQuestion:hover::before {
+    content: "";
     display: inline-block;
     translate: 0 30px;
     height: 1px;
@@ -300,18 +319,36 @@ svg {
 
 }
 
+.infoBtn {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    list-style: none;
+    align-items: center;
+    color: #F6B12D;
+}
+
 .btn:hover {
     border: 5px solid rgba(233, 187, 101, 0.25);
-    background: radial-gradient(circle, rgba(246,177,45,1) 0%, rgba(246,177,45,1) 20%, rgba(255,208,118,1) 100%);
-    -webkit-box-shadow: 0px 0px 26px 3px rgba(255,208,118,0.3); 
-    box-shadow: 0px 0px 26px 3px rgba(255,208,118,0.3);
+    background: radial-gradient(circle, rgba(246, 177, 45, 1) 0%, rgba(246, 177, 45, 1) 20%, rgba(255, 208, 118, 1) 100%);
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(255, 208, 118, 0.3);
+    box-shadow: 0px 0px 26px 3px rgba(255, 208, 118, 0.3);
 }
 
 .btn:active {
     transform: scale(1.1);
-    
+
 }
 
+a {
+    text-decoration: none;
+    color: #F6B12D;
+}
 
 #question-container {
     display: flex;
@@ -326,7 +363,7 @@ svg {
     margin-bottom: 15px;
 }
 
-.start-btn{
+.start-btn {
     font-size: 1.5rem;
     color: #2F4558;
     font-weight: bold;
@@ -351,7 +388,7 @@ svg {
 .wrong-answer:hover {
     border: 5px solid rgba(187, 95, 95, 0.25);
     background: radial-gradient(circle, rgb(184, 2, 2) 0%, rgb(184, 2, 2)0%, rgb(184, 2, 2) 100%);
-    -webkit-box-shadow: 0px 0px 26px 3px rgba(134, 0, 0, 0.3); 
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(134, 0, 0, 0.3);
     box-shadow: 0px 0px 26px 3px rgba(134, 0, 0, 0.3);
 }
 
@@ -359,14 +396,14 @@ svg {
     color: #dddddd;
     border: 5px solid rgba(233, 187, 101, 0.25);
     background: radial-gradient(circle, rgb(2, 184, 38) 0%, rgba(2, 184, 38) 20%, rgba(2, 184, 38) 100%);
- 
+
 }
 
 .good-answer:hover {
     border: 5px solid rgba(233, 187, 101, 0.25);
     background: radial-gradient(circle, rgb(2, 184, 38) 0%, rgba(2, 184, 38) 20%, rgba(2, 184, 38) 100%);
-    -webkit-box-shadow: 0px 0px 26px 3px rgba(2,184,38,0.30); 
-    box-shadow: 0px 0px 26px 3px rgba(0,186,73,0.30);
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(2, 184, 38, 0.30);
+    box-shadow: 0px 0px 26px 3px rgba(0, 186, 73, 0.30);
 }
 
 .reset-btn {
@@ -400,6 +437,7 @@ svg {
     display: flex;
     justify-content: center;
 
+
 }
 
 .carousel {
@@ -410,6 +448,9 @@ svg {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    z-index: 8;
+    border-radius: 25px;
+    border-width: 10px;
 }
 
 .carouselItem {
@@ -425,7 +466,6 @@ svg {
     height: 30px;
     padding: 0px;
     border-radius: 50%;
-    z-index: 10;
     cursor: pointer;
     background-color: rgba(131, 131, 131, 0.479);
     font-size: 18px;
@@ -487,7 +527,6 @@ form {
     padding: 30px;
     border-radius: 10px;
     text-align: center;
-
 }
 
 form h1 {
@@ -499,7 +538,6 @@ form .separator {
     width: 100%;
     height: 1px;
     background-color: black;
-    z-index: 25;
 }
 
 form p {
@@ -581,10 +619,58 @@ form .foot-form button:active {
     transform: scale(1.5);
 }
 
-@media screen and (max-width: 575px) {
+.exitForm {
+    float: right;
+    margin-top: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* If screen width < 575px, apply properties, else no apply /*
+@media screen and (max-width: 620px) {
     form .body-form .right-form {
         margin-left: 0px;
     }
+
+     .carte h1 {
+        color: #2F4558;
+        font-weight:bolder;
+        margin-bottom: 25px;
+    }
+
 }
 
-/* If screen width < 920px, apply properties, else no apply /*
+/* If screen width < 920px, apply properties, else no apply */
+
+@media screen and (min-width:621px) {
+    .carte h1 {
+        color: #2F4558;
+        font-weight:bolder;
+        margin-bottom: 30px;
+        width: auto;
+        font-size: 1.9em;
+    }
+
+    .container {
+        width: 600px;
+        max-width: 80%;
+    }
+
+    .buttons-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    #myForm{
+        max-width: 1000px;
+        margin-inline: auto;
+    }
+
+    form .body-form .right-form {
+        margin-left: 0px;
+    }
