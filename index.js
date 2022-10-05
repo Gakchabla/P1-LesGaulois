@@ -792,3 +792,10 @@ exitButton.addEventListener('click', function () {
 //     contactButton.classList.toggle('active');
 //     contactForm.classList.toggle('active');
 // }
+const modal = document.querySelector(".modal");
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
