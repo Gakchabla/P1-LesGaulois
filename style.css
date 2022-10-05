@@ -636,9 +636,9 @@ form .foot-form button:active {
         margin-left: 0px;
     }
 
-     .carte h1 {
+    .carte h1 {
         color: #2F4558;
-        font-weight:bolder;
+        font-weight: bolder;
         margin-bottom: 25px;
     }
 
@@ -649,7 +649,7 @@ form .foot-form button:active {
 @media screen and (min-width:621px) {
     .carte h1 {
         color: #2F4558;
-        font-weight:bolder;
+        font-weight: bolder;
         margin-bottom: 30px;
         width: auto;
         font-size: 1.9em;
@@ -661,12 +661,12 @@ form .foot-form button:active {
 
     #answer-buttons {
         display: grid;
-        grid-template-columns: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
         grid-column-gap: 20px;
         grid-row-gap: 20px;
     }
 
-    #myForm{
+    #myForm {
         max-width: 1000px;
         margin-inline: auto;
     }
@@ -680,3 +680,4 @@ form .foot-form button:active {
         min-width: 100vw;
         filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     }
+}
