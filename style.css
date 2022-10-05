@@ -48,26 +48,30 @@ main {
 
 .history {
     background-color: #2F4558;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     color: white;
-    text-align: center;
     width: 80%;
+    text-align: center;
     border-radius: 20px;
 }
 
 .bloctexte {
-    font-size: 1.2rem;
-    margin-inline: 50px;
+    font-size: 1rem;
+    margin-inline: 15px;
     line-height: 30px;
+    text-align: center;
 }
 
 
 .carte h1 {
-    color: black;
-    padding-top: 15px;
-    padding-bottom: 5px;
-    font-size: 1.1rem;
+    color: #2F4558;
+    font-weight:bolder;
+    font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 0px;
+    margin-inline: auto;
+    margin-top: 50px;
+    width: 20ch;
 }
 
 body {
@@ -76,6 +80,9 @@ body {
 }
 
 main h1 {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     color: #F6B12D;
     font-size: 2rem;
 }
@@ -161,11 +168,13 @@ li a:visited {
     text-decoration: none;
 }
 
+
 .linkQuestion::before{
     position: absolute;
     content:"";
-    translate: 0 26px;
-    height: 2px;
+    display: inline-block;
+    translate: 0 30px;
+    height: 1px;
     background-color: rgb(255, 255, 255);
     width: 0;
     transition-duration: 0.4s;
@@ -174,8 +183,9 @@ li a:visited {
 
 .linkQuestion:hover::before{
     content:"";
-    translate: 0 26px;
-    height: 2px;
+    display: inline-block;
+    translate: 0 30px;
+    height: 1px;
     background-color: rgb(255, 255, 255);
     border-radius: 2px;
     position: absolute;
@@ -217,7 +227,6 @@ li a:visited {
 }
 
 svg {
-    padding-top: 30px;
     min-height: 300px;
     min-width: 100vw;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
@@ -238,6 +247,7 @@ svg {
 .container {
     display: flex;
     align-items: center;
+    margin-top: 10px;
     justify-content: center;
     width: 300px;
     max-width: 80%;
@@ -248,8 +258,8 @@ svg {
 }
 
 .buttons-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     margin: 50px 0;
 }
@@ -260,17 +270,22 @@ svg {
 
 .btn {
     background-color: #F6B12D;
-    border: 1px solid black;
+    border: 5px solid rgba(233, 187, 101, 0.25);
     border-radius: 5px;
     padding: 5px 10px;
     outline: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2F4558;
     cursor: pointer;
 
 }
 
 .btn:hover {
-    border-color: black;
+    border: 5px solid rgba(233, 187, 101, 0.25);
     background: radial-gradient(circle, rgba(246,177,45,1) 0%, rgba(246,177,45,1) 20%, rgba(255,208,118,1) 100%);
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(255,208,118,0.3); 
+    box-shadow: 0px 0px 26px 3px rgba(255,208,118,0.3);
 }
 
 .btn:active {
@@ -287,23 +302,52 @@ svg {
 }
 
 #question {
-    font-size: 30px;
+    font-size: 1.3rem;
     color: white;
+    margin-bottom: 15px;
 }
 
-.start-btn,
-.next-btn {
+.start-btn{
     font-size: 1.5rem;
+    color: #2F4558;
     font-weight: bold;
-    padding: 10 px 20px;
+    padding: 10px 20px;
+}
+
+.next-btn {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 8x;
+    color: #2F4558;
+    padding: 5px 30px;
 }
 
 .wrong-answer {
-    background: radial-gradient(circle, rgba(246,45,45,1) 0%, rgba(246,45,45,1) 20%, rgba(255,73,73,1) 100%);
+    color: #dddddd;
+    border: 5px solid rgba(177, 14, 14, 0.25);
+    background: radial-gradient(circle, rgb(184, 2, 2) 0%, rgb(184, 2, 2)0%, rgb(184, 2, 2) 100%);
+}
+
+.wrong-answer:hover {
+    border: 5px solid rgba(187, 95, 95, 0.25);
+    background: radial-gradient(circle, rgb(184, 2, 2) 0%, rgb(184, 2, 2)0%, rgb(184, 2, 2) 100%);
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(134, 0, 0, 0.3); 
+    box-shadow: 0px 0px 26px 3px rgba(134, 0, 0, 0.3);
 }
 
 .good-answer {
-    background: radial-gradient(circle, rgba(0,255,50,1) 0%, rgba(0,255,50,1) 20%, rgba(61,255,99,1) 100%);
+    color: #dddddd;
+    border: 5px solid rgba(233, 187, 101, 0.25);
+    background: radial-gradient(circle, rgb(2, 184, 38) 0%, rgba(2, 184, 38) 20%, rgba(2, 184, 38) 100%);
+ 
+}
+
+.good-answer:hover {
+    border: 5px solid rgba(233, 187, 101, 0.25);
+    background: radial-gradient(circle, rgb(2, 184, 38) 0%, rgba(2, 184, 38) 20%, rgba(2, 184, 38) 100%);
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(2,184,38,0.30); 
+    box-shadow: 0px 0px 26px 3px rgba(0,186,73,0.30);
 }
 
 .reset-btn {
@@ -403,4 +447,5 @@ svg {
 
 .explication {
     color: white;
+    margin-top: 10px;
 }
