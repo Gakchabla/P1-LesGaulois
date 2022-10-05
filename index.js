@@ -8,7 +8,7 @@ const answerButtons = document.querySelectorAll('.answerButton');
 
 
 //**********************Tableau Images******************************
-const images = [["assets/Images/Carousel/Lyon", "assets/Images/Carousel/Lyon2.jpg", "assets/Images/Carousel/Lyon3.jpg"],
+const images = [["assets/Images/Carousel/Lyon.jpg", "assets/Images/Carousel/Lyon2.jpg", "assets/Images/Carousel/Lyon3.jpg"],
 ["assets/Images/Carousel/bourgogne1.jpg", "assets/Images/Carousel/bourgogne2.jpg", "assets/Images/Carousel/bourgogne3.jpg"],
 ["assets/Images/Carousel/grandEst1.png", "assets/Images/Carousel/grandEst2.jpg", "assets/Images/Carousel/grandEst3.jpg"],
 ["assets/Images/Carousel/nouvelleAquitaine.png", "assets/Images/Carousel/nouvelleAquitaine2.jpg", "assets/Images/Carousel/nouvelleAquitaine3.jpg"]]
