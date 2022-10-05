@@ -39,21 +39,252 @@ const questions = [[{
         { text: 'Oyonnax', correct: false },
         { text: 'Le Puy en Velay', correct: true }]
 }], [{
-    question: "Bourgogne1 ?",
+    question: "Quelle est la ville principale de la Bourgogne-Franche Comté ?",
     answers: [
-        { text: '1', correct: true },
-        { text: '2', correct: false },
-        { text: '3', correct: false },
-        { text: '4', correct: false }]
+        { text: 'Troyes', correct: false },
+        { text: 'Macon', correct: false },
+        { text: 'Dijon', correct: true },
+        { text: 'Besançon', correct: false }]
 }, {
-    question: "Bourgogne 2?",
+    question: "Quel ingrédient est indispensable pour réaliser la recette des escargots de Bourgogne ?",
+    answers: [
+        { text: 'Du romarin', correct: false },
+        { text: 'Du persil', correct: true },
+        { text: 'Du basilic', correct: false },
+        { text: 'Du citron', correct: false }]
+}, {
+    question: "Quel club de foot est une des fiertés de la Bourgogne ?",
+    answers: [
+        { text: 'Villefranche-Beaujolais', correct: false },
+        { text: 'La Berrichonne de Chateauroux', correct: false },
+        { text: 'AJ Auxerre  ', correct: true },
+        { text: 'SC Sedan', correct: false }]
+}], [{
+    question: "Quelle est le chef-lieu de la Bretagne ?",
+    answers: [
+        { text: 'Rennes', correct: true },
+        { text: 'Saint-Malo', correct: false },
+        { text: 'Brest', correct: false },
+        { text: 'Lorient', correct: false }]
+}, {
+    question: "Comment s'appelle la boisson traditionnelle bretonne à base de miel fermenté ?",
+    answers: [
+        { text: 'L’hydromiel', correct: false },
+        { text: 'le chouchen', correct: true },
+        { text: 'la cervoise', correct: false },
+        { text: 'la propolis', correct: false }]
+}, {
+    question: "Quelle est la devise de la Bretagne ?",
+    answers: [
+        { text: 'Sans peur et sans reproche', correct: false },
+        { text: 'Toujours vaincra, jamais ne cèdera', correct: false },
+        { text: 'Plutot la mort que la souillure', correct: true },
+        { text: 'Une bonne sieste et au lit', correct: false }]
+}], [{
+    question: "Quelle est le chef-lieu du Centre Val de Loire ?",
+    answers: [
+        { text: 'Tours', correct: false },
+        { text: 'Orléans', correct: true },
+        { text: 'Bourges', correct: false },
+        { text: 'Chateauroux', correct: false }]
+}, {
+    question: "Quelle est la spécialité du Limousin ?",
+    answers: [
+        { text: 'De la buche', correct: false },
+        { text: 'de la charlotte', correct: false },
+        { text: 'du clafoutis', correct: true },
+        { text: 'de la tarte', correct: false }]
+}, {
+    question: "",
     answers: [
         { text: '1', correct: false },
-        { text: '2', correct: true },
-        { text: '3', correct: false },
+        { text: '2', correct: false },
+        { text: '3', correct: true },
         { text: '4', correct: false }]
+}], [{
+    question: "Quelle ville est la préfecture de la Région Corse ?",
+    answers: [
+        { text: 'Bonifacio', correct: false },
+        { text: 'Calvi', correct: false },
+        { text: 'Bastia', correct: false },
+        { text: 'Ajaccio', correct: true }]
 }, {
-    question: "Bourgogne 3",
+    question: "Quel est le surnom donné à La Corse ?",
+    answers: [
+        { text: 'L’ile Papillon', correct: false },
+        { text: 'L’ile du Levant', correct: false },
+        { text: 'L’ile aux mimosas', correct: false },
+        { text: 'L’ile de Beauté', correct: true }]
+}, {
+    question: "Quelle est la population de la Corse ?",
+    answers: [
+        { text: '180 000', correct: false },
+        { text: '260 000', correct: false },
+        { text: '340 000', correct: true },
+        { text: '490 000', correct: false }]
+}], [{
+    question: "Quelle est la capitale de la région Grand Est ?",
+    answers: [
+        { text: 'Metz', correct: false },
+        { text: 'Strasbourg', correct: true },
+        { text: 'Nancy', correct: false },
+        { text: 'Mulhouse', correct: false }]
+}, {
+    question: "Parmi ces fromages, lequel est alsacien ?",
+    answers: [
+        { text: 'le Babybel', correct: false },
+        { text: 'le Cabécou', correct: false },
+        { text: 'L’Ortolan', correct: false },
+        { text: 'le Munster', correct: true }]
+}, {
+    question: "",
+    answers: [
+        { text: '1', correct: false },
+        { text: '2', correct: false },
+        { text: '3', correct: true },
+        { text: '4', correct: false }]
+}], [{
+    question: "Quelle est la capitale de la région Hauts-de-France ?",
+    answers: [
+        { text: 'Dunkerque', correct: false },
+        { text: 'Lille', correct: true },
+        { text: 'Calais', correct: false },
+        { text: 'Amiens', correct: false }]
+}, {
+    question: "Quel est le légume emblématique de la région Nord Pas de Calais ?",
+    answers: [
+        { text: 'Le chicon', correct: true },
+        { text: 'le fenouil', correct: false },
+        { text: "L'aubergine", correct: false },
+        { text: 'la mojette', correct: false }]
+}, {
+    question: "",
+    answers: [
+        { text: '1', correct: false },
+        { text: '2', correct: false },
+        { text: '3', correct: true },
+        { text: '4', correct: false }]
+}], [{
+    question: "Quelle est la capitale de la région Ile de France ?",
+    answers: [
+        { text: 'Montreuil', correct: false },
+        { text: 'Créteil', correct: false },
+        { text: 'Versailles', correct: false },
+        { text: 'Paris', correct: true }]
+}, {
+    question: "Parmi ces rivières d'Ile-de-France, laquelle est la plus longue?",
+    answers: [
+        { text: 'L’Oise', correct: false },
+        { text: 'L’Yonne', correct: false },
+        { text: 'La Marne (514km)', correct: true },
+        { text: 'Le grand Morin', correct: false }]
+}, {
+    question: "Combien y-a-t-il d'habitants en Île-de-France ?",
+    answers: [
+        { text: '5 Millions', correct: false },
+        { text: '8 Millions', correct: false },
+        { text: '12 Millions', correct: true },
+        { text: '15 Millions', correct: false }]
+}], [{
+    question: "Quelle est la ville principale de la région Normandie ?",
+    answers: [
+        { text: 'Rouen', correct: true },
+        { text: 'Caen', correct: false },
+        { text: 'Le Havre', correct: false },
+        { text: 'Deauville', correct: false }]
+}, {
+    question: "Que cuisine-t-on à la mode de Caen ?",
+    answers: [
+        { text: 'Le fromage de tête', correct: false },
+        { text: 'Les pieds de porc', correct: false },
+        { text: 'Les rognons', correct: false },
+        { text: 'Les tripes', correct: true }]
+}, {
+    question: "",
+    answers: [
+        { text: '1', correct: false },
+        { text: '2', correct: false },
+        { text: '3', correct: true },
+        { text: '4', correct: false }]
+}], [{
+    question: "Quelle est la ville principale de la région Nouvelle-Aquitaine ?",
+    answers: [
+        { text: 'La rochelle', correct: false },
+        { text: 'Poitiers', correct: false },
+        { text: 'Bordeaux', correct: true },
+        { text: 'Limoges', correct: false }]
+}, {
+    question: "Que retrouve-t-on dans la recette des célèbres canelés? ",
+    answers: [
+        { text: 'Du cognac et de la pate d’amande', correct: false },
+        { text: 'Du rhum et de la vanille', correct: true },
+        { text: 'De la bière et de la vanille', correct: false },
+        { text: 'Du Cidre et du Miel', correct: false }]
+}, {
+    question: "Dans quelle ville d'Aquitaine sont fabriquées les pièces de notre monnaie?",
+    answers: [
+        { text: 'Arcachon', correct: false },
+        { text: 'Cadillac', correct: false },
+        { text: 'Pessac', correct: true },
+        { text: 'Bayonne', correct: false }]
+}], [{
+    question: "Quelle est la ville principale de la région Occitanie ?",
+    answers: [
+        { text: 'Nimes', correct: false },
+        { text: 'Montpellier', correct: false },
+        { text: 'Toulouse', correct: true },
+        { text: 'Perpignan', correct: false }]
+}, {
+    question: "Lequel de ces villages d’Occitanie n’a pas donné son nom à un fromage ?",
+    answers: [
+        { text: 'Rocamadour', correct: false },
+        { text: 'Pélardon', correct: false },
+        { text: 'Laguiole', correct: false },
+        { text: 'Roquefort', correct: true }]
+}, {
+    question: "",
+    answers: [
+        { text: '1', correct: false },
+        { text: '2', correct: false },
+        { text: '3', correct: true },
+        { text: '4', correct: false }]
+}], [{
+    question: "Quelle est le chef-lieu de la région Pays de la Loire ?",
+    answers: [
+        { text: 'Nantes', correct: true },
+        { text: 'Angers', correct: false },
+        { text: 'Saint-Nazaire', correct: false },
+        { text: 'Guérande', correct: false }]
+}, {
+    question: "Quelle marque célèbre est née à Nantes ?",
+    answers: [
+        { text: 'La Vache qui Rit', correct: false },
+        { text: 'Les cachous Lajaunie', correct: false },
+        { text: 'La biscuiterie LU', correct: true },
+        { text: 'Les pates Lustucru', correct: false }]
+}, {
+    question: "",
+    answers: [
+        { text: '', correct: false },
+        { text: '', correct: false },
+        { text: '', correct: true },
+        { text: '', correct: false }]
+}], [{
+    question: "Quelle est le chef-lieu de la région Provence-Alpes-Côte d’Azur ?",
+    answers: [
+        { text: 'Nice', correct: false },
+        { text: 'Marseille', correct: true },
+        { text: 'Toulon', correct: false },
+        { text: 'Avignon', correct: false }]
+}, {
+    question: "Quelle est la spécialité culinaire la plus connue de Marseille ?",
+    answers: [
+        { text: 'les huitres', correct: false },
+        { text: 'L’aligot', correct: false },
+        { text: 'Le pot au feu', correct: false },
+        { text: 'La bouillabaisse', correct: true }]
+}, {
+    question: "",
     answers: [
         { text: '1', correct: false },
         { text: '2', correct: false },
@@ -62,7 +293,9 @@ const questions = [[{
 }]]
 let question = questions[0];
 
+
 //**********************Talbeau explications******************************
+
 
 const explanations = [["La ville de Lyon est la meilleure ville de france en plus d'être la capitale de sa région", "La quenelle est un plat typique de Lyon, traditionellement au brochet, elle est servie avec une sauce Nantua (une autre ville de la région).", "La fête du Roi de l'Oiseau est un festival de la renaissance qui se déroule la troisième semaine du mois de septembre au Puy-en-Velay "]]
 let explanation = explanations[0];
@@ -198,9 +431,6 @@ dotUn.addEventListener("click", function () {
 
 const dotDeux = document.getElementById("dot2")
 
-
-
-
 dotDeux.addEventListener("click", function () {
     currentItem = 1;
     slideItem()
@@ -246,10 +476,6 @@ const resetAnswerButtons = function () {
 
     }
 }
-
-
-
-
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', function () {
@@ -476,7 +702,7 @@ myForm.addEventListener('submit', function (event) {
     let myInput = document.getElementById('message');
     let myRegex = /^[a-zA-Z0-9]+$/;
 
-    if (myInput.value.trim() == "") {
+    if (myInput.value.trim() == "") {           // trim permet d'inclure les espaces également en + du champ vide
         let myError = document.getElementById('errorMessage');
         myError.innerHTML = "Veuillez écrire votre message";
         myError.style.color = 'red';
