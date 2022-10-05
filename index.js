@@ -366,7 +366,7 @@ myForm.addEventListener('submit', function (event) {
     let myInput = document.getElementById('message');
     let myRegex = /^[a-zA-Z0-9]+$/;
 
-    if (myInput.value.trim() == "") {
+    if (myInput.value.trim() == "") {           // trim permet d'inclure les espaces également en + du champ vide
         let myError = document.getElementById('errorMessage');
         myError.innerHTML = "Veuillez écrire votre message";
         myError.style.color = 'red';
