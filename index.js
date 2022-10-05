@@ -1,4 +1,3 @@
-"use strict";
 //**********************Quiz description******************************/
 
 
@@ -486,3 +485,26 @@ myForm.addEventListener('submit', function (event) {
 
 
 });
+
+//**********************Text présentaion et information***************/
+
+const infoButton = document.getElementById('information');
+const infoText = document.querySelector('.bloctexte');
+const presentationText = document.getElementById('presentation');
+
+infoButton.addEventListener('click', function () {
+    presentationText.classList.add('hide');
+    infoText.classList.remove('hide');
+})
+
+const contactButton = document.getElementById('contact');
+const contactForm = document.getElementById('myForm');
+const exitButton = document.querySelector('.exitForm')
+
+contactButton.addEventListener('click', function () {
+    contactForm.classList.remove('hide');
+})
+
+exitButton.addEventListener('click', function () {
+    contactForm.classList.add('hide');
+})

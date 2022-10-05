@@ -63,6 +63,12 @@ main {
     text-align: center;
 }
 
+#presentation {
+    font-size: 1.2rem;
+    margin-inline: 50px;
+    line-height: 30px;
+}
+
 .history ul li {
     list-style: none;
 }
@@ -92,6 +98,9 @@ main h1 {
 }
 
 footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: #2F4558;
     gap: 10px;
     padding: 30px;
@@ -300,6 +309,20 @@ svg {
 
 }
 
+.infoBtn {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    list-style: none;
+    align-items: center;
+    color: #F6B12D;
+}
+
 .btn:hover {
     border: 5px solid rgba(233, 187, 101, 0.25);
     background: radial-gradient(circle, rgba(246,177,45,1) 0%, rgba(246,177,45,1) 20%, rgba(255,208,118,1) 100%);
@@ -312,6 +335,10 @@ svg {
     
 }
 
+a {
+    text-decoration: none;
+    color: #F6B12D;
+}
 
 #question-container {
     display: flex;
@@ -587,4 +614,15 @@ form .foot-form button:active {
     }
 }
 
+.exitForm {
+    float: right;
+    margin-top: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
 /* If screen width < 920px, apply properties, else no apply /*
+
