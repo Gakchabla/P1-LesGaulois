@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Permet d'importer sa bibliotheque d'icones -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,37 +102,53 @@
             </section>
             <section class="description">
                 <div class="history">
-                    <h1>Connaissez-vous vos régions ?</h1>
+                    <h1>Connaissez-vous vos régions de France ?</h1>
                     <br>
-                    <div class="bloctexte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
-                        voluptate eveniet sequi autem
-                        adipisci et omnis ipsam veniam temporibus velit sit recusandae perferendis consequuntur beatae,
-                        iusto
-                        eligendi rerum aliquid commodi?
-                        Eius animi est possimus sint porro dicta unde amet voluptatem fuga illum voluptatibus dolore
-                        tempore
-                        error libero voluptas facere veritatis delectus, explicabo, temporibus odit beatae! Dignissimos
-                        facilis
-                        fuga numquam dolor!
-                        Velit nihil autem quaerat voluptas ex, fuga exercitationem non odit facere! Numquam molestiae
-                        provident
-                        enim exercitationem nostrum maiores et nisi omnis dolor dolore est eligendi ipsa consectetur,
-                        sed
-                        asperiores fugit!>
+                    <div class="bloctexte">
+                        <p> Depuis la réforme territoriale, la nouvelle carte de France comporte 13
+                            régions métropolitaines, 5 régions d'outre mer, et 101 départements.
+                            Parmi les 5 départements et régions d'outre-mer, on retrouve : </p>
+                        <br>
+                        <ul class="dom-tom">
+                            <li>la Guadeloupe,</li>
+                            <li>la Guyane,</li>
+                            <li>la Martinique,</li>
+                            <li>Mayotte</li>
+                            <li>et la Réunion.</li>
+                        </ul>
+                        <br>
+
+                        <p>Nouveau découpage, effectif depuis le 1er janvier 2016, a entrainé la fusion de plusieurs
+                            régions et nous sommes passé de 27 régions en 2015 à 18 actuellement.</p>
+                        <br>
+                        <p> En plus des 96 départements situés sur le continent européen et des 5 départements
+                            d'outre-mer, la France compte aussi des collectivités d'outre-mer (COM) : </p>
+                        <br>
+                        <ul class="collectivités">
+                            <li>Nouvelle-Calédonie (statut particulier)</li>
+                            <li>Polynésie Française (Île de Tahiti)</li>
+                            <li>Saint-Bathélemy</li>
+                            <li>Saint-Martin</li>
+                            <li>Saint-Pierre et Miquelon</li>
+                            <li>Terres australes et antarctiques françaises</li>
+                            <li>Wallis-et-Futuna</li>
+                        </ul>
+                        <br>
                     </div>
                 </div>
             </section>
+
+            <!--------------------------------------Carousel---------------------------------------->
             <section class="carouselContainer">
                 <div class="carousel">
-                    <div class="carouselTitle">Région</div>
                     <div class="carouselItem">
-                        <img id="image1" src="assets/Lyon.jpg" />
+                        <img id="image1" src="assets/Images/Carousel/Lyon.jpg" />
                     </div>
                     <div class="carouselItem">
-                        <img id="image2" src="https://source.unsplash.com/random?landscape,night" />
+                        <img id="image2" src="assets/Images/Carousel/Lyon2.jpg" />
                     </div>
                     <div class="carouselItem">
-                        <img id="image3" src="https://source.unsplash.com/random?landscape,city" />
+                        <img id="image3" src="assets/Images/Carousel/Lyon3.jpg" />
                     </div>
                     <button class="button buttonNext">></button>
                     <button class="button buttonPrev">&lt;</button>
@@ -139,15 +159,17 @@
                     </div>
                 </div>
             </section>
+
+            <!----------------------------------Quiz ---------------------------------------------------->
             <section class="quiz">
                 <div class="container">
                     <div id="question-container">
                         <div id="question" class="hide">Question</div>
                         <div id="answer-buttons" class="buttons-grid hide">
-                            <button class="btn btn1 answerButton">Answer 1</button>
+                            <!-- <button class="btn btn1 answerButton">Answer 1</button>
                             <button class="btn btn2 answerButton">Answer 2</button>
                             <button class="btn btn3 answerButton">Answer 3</button>
-                            <button class="btn btn4 answerButton">Answer 4</button>
+                            <button class="btn btn4 answerButton">Answer 4</button> -->
                         </div>
                         <div class="control-quiz">
                             <button id="start-btn" class="start-btn btn">Start Quiz</button>
@@ -155,13 +177,56 @@
                             <button id="reset-btn" class="reset-btn btn hide ">Reset</button>
                         </div>
                     </div>
-
                 </div>
             </section>
+
+            <!---------------------------------- Formulaire ---------------------------------------------------->
+
+
+            <form action="traitement.php" method="post" id="myForm">
+                <h1>Contactez-nous !</h1>
+                <div class="separator"></div>
+                <p>Une remarque ? Une suggestion ? N'hésitez pas à nous écrire</p>
+                <div class="body-form">
+                    <div class="left-form">
+                        <div class="group">
+                            <label for="username">Nom et Prénom</label>
+                            <input type="text" id="username" name="username">
+                            <span id="errorUsername"></span>
+                            <i class="fa-solid fa-user"></i>
+                            <!--icone récupéré -->
+                        </div>
+                        <div class="group">
+                            <label>Adresse e-mail</label>
+                            <input type="email" id="email">
+                            <span id="errorMail"></span>
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="group">
+                            <label>Numéro de téléphone</label>
+                            <input type="text" id="number">
+                            <span id="errorNumber"></span>
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                    </div>
+
+                    <div class="right-form">
+                        <div class="group">
+                            <label>Message</label>
+                            <textarea placeholder="Saisissez votre message ici..." id="message"></textarea>
+                            <span id="errorMessage"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-form">
+                    <button type='submit' id="submit">Envoyer le message</button>
+                    <p id="erreur"></p>
+                </div>
+            </form>
         </div>
     </main>
     <footer></footer>
-    <script src="index.js"></script>
+    <script src=" index.js"></script>
 </body>
 
 </html>
