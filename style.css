@@ -74,6 +74,7 @@ main {
     color: whitesmoke;
     margin: 15% auto;
     padding-top: 15px;
+    padding: 20px;
     width: 80%;
     font-size: 1rem;
     margin-inline: 20px;
@@ -517,7 +518,7 @@ a {
 
 .dotButton {
     position: absolute;
-    z-index: 10;
+    z-index: auto;
     display: flex;
     justify-content: space-between;
     width: 5rem;
@@ -665,6 +666,12 @@ form .foot-form button:active {
 @media screen and (max-width: 620px) {
     form .body-form .right-form {
         margin-left: 0px;
+    }
+
+    #presentation {
+        height: 80vh;
+        overflow-y: auto;
+        margin-bottom: 10%;
     }
 
     .carte h1 {
