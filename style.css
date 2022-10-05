@@ -41,7 +41,7 @@ main {
 .description {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     margin-top: 50px;
 }
 
@@ -66,10 +66,10 @@ main {
     background-color: #2F4558;
     color: whitesmoke;
     margin: 15% auto;
-    padding: 20px;
+    padding-top: 15px;
     width: 80%;
-    font-size: 1.2rem;
-    margin-inline: 50px;
+    font-size: 1rem;
+    margin-inline: 20px;
     line-height: 30px;
     position: fixed;
     z-index: 1;
@@ -117,9 +117,6 @@ main h1 {
 }
 
 footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     background-color: #2F4558;
     gap: 30px;
     padding: 10px;
@@ -282,7 +279,7 @@ li a:visited {
 
 svg {
     min-height: 300px;
-    min-width: 100vw;
+    min-width: 100%;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -544,6 +541,7 @@ form {
     padding: 30px;
     border-radius: 10px;
     text-align: center;
+    transition: all 0.3s;
 }
 
 form h1 {
@@ -636,6 +634,10 @@ form .foot-form button:active {
     transform: scale(1.5);
 }
 
+#message{
+    margin-left: 40px;
+}
+
 .exitForm {
     float: right;
     margin-top: 0;
@@ -646,11 +648,16 @@ form .foot-form button:active {
     font-weight: bold;
 }
 
+.footerList{
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
 
 
 /* If screen width < 575px, apply properties, else no apply */
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 660px) {
     form .body-form .right-form {
         margin-left: 0px;
     }
@@ -696,9 +703,32 @@ form .foot-form button:active {
 
     svg {
         min-height: 600px;
-        min-width: 100vw;
+        min-width: 100%;
+        max-width: 100%;
         filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+        overflow: hidden;
     }
+
+    .carousel {
+        width: 80%;
+
+    }
+        
+}
+
+@media screen and (min-width:1200px) {
+
+    .carousel {
+        min-width: 60%;
+        max-width: 1000px;
+
+    }
+
+    .history {
+        min-width: 60%;
+        max-width: 1000px;
+
+}
 }
 
 .modal {
