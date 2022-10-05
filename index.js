@@ -1,8 +1,9 @@
 //**********************Quiz description******************************/
 
-const answerButtons = document.querySelectorAll('.answerButton');
 
 
+let currentItem = 0; // a value that will modify the item shown by it's value
+let answerButtons = document.querySelectorAll('.answerButton')
 
 
 
@@ -99,13 +100,17 @@ for (let i = 0; i < links.length; i++) {
         image3.src = images[i][2];
         question = questions[i];
         explanation = explanations[i];
+        currentItem = 0;
+        nextButton.classList.add('hide');
+        resetStartButton();
+        textDelete();
+        resetAnswerButtons();
+        slideItem();
+        dotSwitch();
     }
     )
 }
-
-
-
-
+// resetAnswerButtons();
 
 //**********************Carousel******************************
 
@@ -117,7 +122,6 @@ carouselItem.forEach((item, indx) => {
 
 const nextItem = document.querySelector(".buttonNext");
 
-let currentItem = 0; // a value that will modify the item shown by it's value
 let maxItem = carouselItem.length - 1
 
 const dotSwitch = function () {
@@ -156,7 +160,7 @@ nextItem.addEventListener("click", function () {
     slideItem();
     dotSwitch();
     startQuestion(currentItem);
-    resetAnswerButtons()
+    resetAnswerButtons();
     textDelete();
 
 
@@ -272,6 +276,12 @@ function startGame() {
     button.classList.remove('hide')
     startQuestion(currentItem)
 }
+
+function resetStartButton() {
+    startButton.classList.remove('hide');
+    questionElement.classList.add('hide')
+    button.classList.add('hide')
+}
 function startQuestion(questionIndex) {
     const questionObject = question[questionIndex]; //here question is questions[i], with the index being the index of the region clicked in links
     // showQuestion({
@@ -288,6 +298,7 @@ function startQuestion(questionIndex) {
     //     { text: 'Marseille', correct: false },
     //     { text: 'Paris', correct: false },
     //     { text: 'Bordeaux', correct: false }])
+    removeAnswer()
     showAnswer(questionObject.answers);
     checkAnswer(questionObject.answers);
 }
@@ -305,7 +316,6 @@ function checkAnswer(questionAnswers) {
                 answerButtons[i].classList.add('good-answer')
             }
             else if (questionAnswers[i].correct === false) {
-                console.log("try again")
                 answerButtons[i].classList.remove('good-answer')
                 answerButtons[i].classList.add('wrong-answer')
             }
@@ -313,10 +323,32 @@ function checkAnswer(questionAnswers) {
     }
 }
 
+const buttonContainer = document.getElementById("answer-buttons")
+
 function showAnswer(questionAnswers) {
-    for (let i = 0; i < answerButtons.length; i++) {
-        answerButtons[i].innerText = questionAnswers[i].text;
+    for (let i = 0; i < 4; i++) {
+        const answerButton = document.createElement("button")
+        answerButton.classList.add("btn");
+        answerButton.classList.add("answerButton");
+        answerButton.innerText = questionAnswers[i].text;
+        buttonContainer.appendChild(answerButton);
     }
+    answerButtons = document.querySelectorAll('.answerButton');
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].addEventListener('click', function () {
+            textDelete();
+            textReponse();
+        });
+    }
+    return answerButtons;
+}
+
+function removeAnswer() {
+    const answers = document.querySelectorAll('.answerButton')
+    for (let i = 0; i < answers.length; i++) {
+        buttonContainer.removeChild(answers[i]);
+    }
+
 }
 
 // **************************Sidebar****************************
@@ -342,7 +374,7 @@ burgermenu.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
         body.style.backgroundColor = "rgba(0,0,0,0.6)";
     } else {
-        body.style.backgroundColor = "#B6CDE8";
+        body.style.backgroundColor = "#dddddd";
     }
     event.preventDefault();
 })
@@ -350,7 +382,7 @@ burgermenu.addEventListener("click", () => {
 rightElements.addEventListener("click", () => {
     if (menuAside.style.translate == ("2000px")) {
         menuAside.style.translate = ("-2000px");
-        body.style.backgroundColor = "#B6CDE8";
+        body.style.backgroundColor = "#dddddd";
     }
 })
 
