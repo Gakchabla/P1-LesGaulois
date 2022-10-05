@@ -486,7 +486,7 @@ myForm.addEventListener('submit', function (event) {
 
 });
 
-//**********************Text présentaion et information***************/
+//**********************Text presentaion ans informations***************/
 
 const infoButton = document.getElementById('information');
 const infoText = document.querySelector('.bloctexte');
@@ -508,3 +508,13 @@ contactButton.addEventListener('click', function () {
 exitButton.addEventListener('click', function () {
     contactForm.classList.add('hide');
 })
+
+// const contactButton = document.getElementById('contact');
+// const contactForm = document.getElementById('myForm');
+
+// contactButton.addEventListener('click', toggleForm);
+
+// function toggleForm() {
+//     contactButton.classList.toggle('active');
+//     contactForm.classList.toggle('active');
+// }
