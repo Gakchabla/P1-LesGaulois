@@ -765,15 +765,18 @@ myForm.addEventListener('submit', function (event) {
 const infoButton = document.getElementById('information');
 const infoText = document.querySelector('.bloctexte');
 const presentationText = document.getElementById('presentation');
+const description = document.getElementById('description');
 
 infoButton.addEventListener('click', function () {
-    presentationText.classList.add('hide');
+    description.classList.remove('hide');
     infoText.classList.remove('hide');
 })
 
 const contactButton = document.getElementById('contact');
 const contactForm = document.getElementById('myForm');
 const exitButton = document.querySelector('.exitForm')
+const exitDescription = document.querySelector('.exitDescription')
+
 
 contactButton.addEventListener('click', () => {
     if (getComputedStyle(contactForm).display != "none") {
@@ -796,6 +799,12 @@ contactButton.addEventListener('click', () => {
 exitButton.addEventListener('click', function () {
     contactForm.classList.add('hide');
 })
+
+exitDescription.addEventListener('click', function () {
+    description.classList.add('hide');
+})
+
+
 
 const modal = document.querySelector(".modal");
 

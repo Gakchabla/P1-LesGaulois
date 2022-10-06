@@ -40,26 +40,17 @@ main {
 
 .description {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 50px;
-}
-
-.history {
+    justify-content: end;
     background-color: #2F4558;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    color: white;
-    width: 80%;
-    text-align: center;
     border-radius: 20px;
-}
+    list-style: none;
+    color: whitesmoke;
+    margin-inline: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 80vw;
+    position: relative;
 
-.bloctexte {
-    font-size: 1rem;
-    margin-inline: 15px;
-    line-height: 30px;
-    text-align: center;
 }
 
 .bloctexte ul li:hover {
@@ -182,6 +173,14 @@ footer {
     position: relative;
     top: 7px;
 
+}
+
+.dom-tom li {
+    list-style-type: none;
+}
+
+.collectivités li {
+    list-style-type: none;
 }
 
 .elements.left {
@@ -653,6 +652,20 @@ form .foot-form button:active {
     border-radius: 5px;
     font-size: 15px;
     font-weight: bold;
+}
+
+.exitDescription {
+    float: right;
+    position: absolute;
+    margin-top: 1px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    background-color: #2F4558;
+    color: #F6B12D;
 }
 
 .footerList {
