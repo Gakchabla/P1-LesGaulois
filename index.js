@@ -5,7 +5,11 @@
 let currentItem = 0; // a value that will modify the item shown by it's value
 let answerButtons = document.querySelectorAll('.answerButton')
 let isStarted = false; //check if the game is started or not to modify some function
+const nextButton = document.getElementById('next-btn');
 
+
+//Fonctionnement du quizz : les éléments du quizz sont rangé dans des tableaux qui sont indexé dans le même ordre que les liens regroupé dans l'array links,
+//ce qui permet de les liés grace à l'index de links.
 
 //**********************Tableau Images******************************
 // Toutes les images sont indexées dans ce tableau
@@ -441,6 +445,7 @@ nextItem.addEventListener("click", function () {
     startQuestion(currentItem);
     resetAnswerButtons();
     textDelete();
+    nextButton.classList.add('hide')
     if (isStarted === true) {
         startAnswer(currentItem)
     };
@@ -461,6 +466,7 @@ prevItem.addEventListener("click", function () {
     startQuestion(currentItem);
     resetAnswerButtons()
     textDelete();
+    nextButton.classList.add('hide')
     if (isStarted === true) {
         startAnswer(currentItem)
     };
@@ -475,6 +481,7 @@ dotUn.addEventListener("click", function () {
     dotSwitch();
     startQuestion(currentItem);
     resetAnswerButtons()
+    nextButton.classList.add('hide')
     textDelete();
     if (isStarted === true) {
         startAnswer(currentItem)
@@ -491,6 +498,7 @@ dotDeux.addEventListener("click", function () {
     dotSwitch();
     startQuestion(currentItem);
     resetAnswerButtons()
+    nextButton.classList.add('hide')
     textDelete();
     if (isStarted === true) {
         startAnswer(currentItem)
@@ -507,6 +515,7 @@ dotTrois.addEventListener("click", function () {
     dotSwitch();
     startQuestion(currentItem);
     resetAnswerButtons()
+    nextButton.classList.add('hide')
     textDelete();
     if (isStarted === true) {
         startAnswer(currentItem)
@@ -523,7 +532,6 @@ dotSwitch(); //initialize the dots
 
 
 const startButton = document.getElementById('start-btn');
-const nextButton = document.getElementById('next-btn');
 const button = document.querySelector('.buttons-grid');
 const questionElement = document.getElementById('question');
 
@@ -765,23 +773,58 @@ myForm.addEventListener('submit', function (event) {
 const infoButton = document.getElementById('information');
 const infoText = document.querySelector('.bloctexte');
 const presentationText = document.getElementById('presentation');
+const description = document.getElementById('description');
 
 infoButton.addEventListener('click', function () {
-    presentationText.classList.add('hide');
+    description.classList.remove('hide');
     infoText.classList.remove('hide');
 })
 
 const contactButton = document.getElementById('contact');
 const contactForm = document.getElementById('myForm');
 const exitButton = document.querySelector('.exitForm')
+const exitDescription = document.querySelector('.exitDescription')
 
-contactButton.addEventListener('click', function () {
-    contactForm.classList.remove('hide');
+
+contactButton.addEventListener('click', () => {
+    if (getComputedStyle(contactForm).display != "none") {
+        contactForm.classList.add('hide');
+    } else {
+        contactForm.classList.remove('hide');
+    }
 })
+
+// Autre façon d'écrire l'évent précédent
+
+// contactButton.addEventListener('click', () => {
+//     if (getComputedStyle(formulaire).display != "none") {
+//         formulaire.style.display = 'none';
+//     } else {
+//         formulaire.style.display = "block";
+//     }
+// })
 
 exitButton.addEventListener('click', function () {
     contactForm.classList.add('hide');
 })
+
+exitDescription.addEventListener('click', function () {
+    description.classList.add('hide');
+})
+
+
+
+const modal = document.querySelector(".modal");
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
 
 // const contactButton = document.getElementById('contact');
 // const contactForm = document.getElementById('myForm');
@@ -792,10 +835,30 @@ exitButton.addEventListener('click', function () {
 //     contactButton.classList.toggle('active');
 //     contactForm.classList.toggle('active');
 // }
-const modal = document.querySelector(".modal");
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+
+// const infoBouton = document.getElementById('information');
+// const present = document.getElementById('presentation');
+// const inform = document.querySelector('.bloctexte');
+
+// infoBouton.addEventListener('click', function () {
+//     present.classList.add('hide');
+//     inform.classList.remove('hide');
+// })
+
+// const contactButton = document.getElementById('contact');
+// const formulaire = document.getElementById('myForm');
+// const exitButton = document.querySelector('.exitForm')
+
+
+// contactButton.addEventListener('click', () => {
+//     if (getComputedStyle(formulaire).display != "none") {
+//         formulaire.classList.add('hide');
+//     } else {
+//         formulaire.classList.remove('hide');
+//     }
+// })
+
+// exitButton.addEventListener('click', function () {
+//     formulaire.classList.add('hide');
+// })
