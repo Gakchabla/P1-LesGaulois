@@ -148,7 +148,7 @@ footer {
     top: 80px;
     left: 10px;
     position: fixed;
-    z-index: 12;
+    z-index: 7;
 }
 
 .burgermenu span:nth-child(1) {
