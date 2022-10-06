@@ -73,7 +73,7 @@ main {
     margin-inline: 20px;
     line-height: 30px;
     position: fixed;
-    z-index: 1;
+    z-index: 30;
     border-radius: 20px;
 }
 
@@ -388,13 +388,25 @@ a {
     padding: 10px 20px;
 }
 
-.next-btn {
+#next-btn {
     font-size: 1.3rem;
+    border: 5px solid rgba(221, 221, 221, 0.25);
+    background: radial-gradient(circle, rgb(221, 221, 221) 0%, rgba(221, 221, 221, 1) 20%, rgba(221, 221, 221, 1) 100%);
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(177, 177, 177, 0.3);
+    box-shadow: 0px 0px 26px 3px rgba(177, 177, 177, 0.3);
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 8x;
     color: #2F4558;
+    background-color: #dddddd;
     padding: 5px 30px;
+}
+
+#next-btn:hover {
+    border: 5px solid rgba(221, 221, 221, 0.25);
+    background: radial-gradient(circle, rgb(221, 221, 221) 0%, rgba(221, 221, 221, 1) 20%, rgba(221, 221, 221, 1) 100%);
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(219, 219, 219, 0.3);
+    box-shadow: 0px 0px 26px 3px rgba(219, 219, 219, 0.3);
 }
 
 .wrong-answer {
@@ -664,9 +676,10 @@ form .foot-form button:active {
     }
 
     #presentation {
-        height: 80vh;
+        height: 75vh;
         overflow-y: auto;
         margin-bottom: 10%;
+        margin-top: 28%;
     }
 
     .carte h1 {
