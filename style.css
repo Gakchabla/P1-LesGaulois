@@ -129,6 +129,7 @@ footer {
     gap: 30px;
     padding: 10px;
     top: 0px;
+    color: white;
     font-size: 20px;
 }
 
@@ -661,9 +662,9 @@ form .foot-form button:active {
 }
 
 
-/* If screen width <= 620px, apply properties, else no apply */
+/* If screen width < 575px, apply properties, else no apply */
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 660px) {
     form .body-form .right-form {
         margin-left: 0px;
     }
@@ -682,7 +683,7 @@ form .foot-form button:active {
 
 }
 
-/* If screen width >= 621px, apply properties, else no apply */
+/* If screen width < 920px, apply properties, else no apply */
 
 @media screen and (min-width:621px) {
     .carte h1 {
