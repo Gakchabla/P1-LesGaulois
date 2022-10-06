@@ -40,27 +40,17 @@ main {
 
 .description {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.history {
+    justify-content: end;
     background-color: #2F4558;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    color: white;
-    width: 80%;
-    text-align: center;
     border-radius: 20px;
-}
+    list-style: none;
+    color: whitesmoke;
+    margin-inline: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 80vw;
+    position: relative;
 
-.bloctexte {
-    font-size: 1rem;
-    margin-inline: 15px;
-    line-height: 30px;
-    text-align: center;
 }
 
 .bloctexte ul li:hover {
@@ -130,6 +120,7 @@ footer {
     gap: 30px;
     padding: 10px;
     top: 0px;
+    color: white;
     font-size: 20px;
 }
 
@@ -182,6 +173,14 @@ footer {
     position: relative;
     top: 7px;
 
+}
+
+.dom-tom li {
+    list-style-type: none;
+}
+
+.collectivités li {
+    list-style-type: none;
 }
 
 .elements.left {
@@ -655,6 +654,20 @@ form .foot-form button:active {
     font-weight: bold;
 }
 
+.exitDescription {
+    float: right;
+    position: absolute;
+    margin-top: 1px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    background-color: #2F4558;
+    color: #F6B12D;
+}
+
 .footerList {
     display: flex;
     justify-content: center;
@@ -662,9 +675,9 @@ form .foot-form button:active {
 }
 
 
-/* If screen width <= 620px, apply properties, else no apply */
+/* If screen width < 575px, apply properties, else no apply */
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 660px) {
     form .body-form .right-form {
         margin-left: 0px;
     }
@@ -683,7 +696,7 @@ form .foot-form button:active {
 
 }
 
-/* If screen width >= 621px, apply properties, else no apply */
+/* If screen width < 920px, apply properties, else no apply */
 
 @media screen and (min-width:621px) {
     .carte h1 {
