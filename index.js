@@ -5,7 +5,11 @@
 let currentItem = 0; // a value that will modify the item shown by it's value
 let answerButtons = document.querySelectorAll('.answerButton')
 let isStarted = false; //check if the game is started or not to modify some function
+const nextButton = document.getElementById('next-btn');
 
+
+//Fonctionnement du quizz : les éléments du quizz sont rangé dans des tableaux qui sont indexé dans le même ordre que les liens regroupé dans l'array links,
+//ce qui permet de les liés grace à l'index de links.
 
 //**********************Tableau Images******************************
 // Toutes les images sont indexées dans ce tableau
@@ -441,6 +445,7 @@ nextItem.addEventListener("click", function () {
     startQuestion(currentItem);
     resetAnswerButtons();
     textDelete();
+    nextButton.classList.add('hide')
     if (isStarted === true) {
         startAnswer(currentItem)
     };
@@ -461,6 +466,7 @@ prevItem.addEventListener("click", function () {
     startQuestion(currentItem);
     resetAnswerButtons()
     textDelete();
+    nextButton.classList.add('hide')
     if (isStarted === true) {
         startAnswer(currentItem)
     };
@@ -475,6 +481,7 @@ dotUn.addEventListener("click", function () {
     dotSwitch();
     startQuestion(currentItem);
     resetAnswerButtons()
+    nextButton.classList.add('hide')
     textDelete();
     if (isStarted === true) {
         startAnswer(currentItem)
@@ -491,6 +498,7 @@ dotDeux.addEventListener("click", function () {
     dotSwitch();
     startQuestion(currentItem);
     resetAnswerButtons()
+    nextButton.classList.add('hide')
     textDelete();
     if (isStarted === true) {
         startAnswer(currentItem)
@@ -507,6 +515,7 @@ dotTrois.addEventListener("click", function () {
     dotSwitch();
     startQuestion(currentItem);
     resetAnswerButtons()
+    nextButton.classList.add('hide')
     textDelete();
     if (isStarted === true) {
         startAnswer(currentItem)
@@ -523,7 +532,6 @@ dotSwitch(); //initialize the dots
 
 
 const startButton = document.getElementById('start-btn');
-const nextButton = document.getElementById('next-btn');
 const button = document.querySelector('.buttons-grid');
 const questionElement = document.getElementById('question');
 
