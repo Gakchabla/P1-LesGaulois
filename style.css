@@ -53,17 +53,21 @@ main {
 
 }
 
-.bloctexte ul li:hover {
+.bloctexte ul li {
     color: #F6B12D;
-    transition: transform 0.5s;
-    transform: scale(1.05);
     cursor: pointer;
+}
+
+.bloctexte ul li:hover {
+    transition: 0.3s;
+    transform: translateX(5px);
+    /* transform: scale(1.2) */
 }
 
 #presentation {
     background-color: #2F4558;
     color: whitesmoke;
-    margin: 15% auto;
+    margin: 30% auto;
     padding-top: 15px;
     padding: 20px;
     width: 80%;
