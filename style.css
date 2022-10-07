@@ -283,7 +283,7 @@ li a:visited {
 .land:hover {
     fill: #2F4558;
     fill-opacity: 1;
-    stroke: #ffffff;
+    stroke: #2F4558;
     stroke-opacity: 1;
     stroke-width: 2;
 }
@@ -337,8 +337,8 @@ svg {
 .btn {
     background-color: #F6B12D;
     border: 5px solid rgba(233, 187, 101, 0.25);
-    border-radius: 5px;
-    padding: 5px 10px;
+    border-radius: 999px;
+    padding: 10px 15px;
     outline: none;
     font-size: 1.2rem;
     font-weight: 600;
@@ -691,6 +691,10 @@ form .foot-form button:active {
     gap: 3em;
 }
 
+.infoBtn a:hover {
+    color: #dddddd;
+}
+
 .modal {
     display: flex;
     justify-content: center;
@@ -790,6 +794,14 @@ form .foot-form button:active {
 
     }
 
+}
+
+@media screen and (min-width:1500px) {
+
+    main{
+        margin-left: 315px;
+    }
+
     .burgermenu {
         visibility: hidden;
 
@@ -807,6 +819,16 @@ form .foot-form button:active {
         transform: translate(0px);
 
     }
-}
 
-@media screen and (min-width:1200px) {}
+    #presentation {
+        margin-left: 315px;
+    }
+
+    .footerList {
+        display: flex;
+        justify-content: end;
+        gap: 3em;
+    }
+
+
+}
