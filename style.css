@@ -49,21 +49,22 @@ main {
     margin-inline: auto;
     margin-bottom: 30px;
     padding: 10px;
-    width: 80vw;
+    width: 65ch;
     position: relative;
-
+    text-align: center;
 }
 
 .bloctexte ul li {
+    display: flex;
+    justify-content: center;
     color: #F6B12D;
-    cursor: pointer;
 }
 
-.bloctexte ul li:hover {
+/* .bloctexte ul li:hover {
     transition: 0.3s;
     transform: translateX(5px);
-    /* transform: scale(1.2) */
-}
+    /* transform: scale(1.2) 
+} */
 
 #presentation {
     background-color: #2F4558;
@@ -713,7 +714,7 @@ form .foot-form button:active {
 
 /* If screen width < 575px, apply properties, else no apply */
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 622px) {
     form .body-form .right-form {
         margin-left: 0px;
     }
@@ -732,6 +733,9 @@ form .foot-form button:active {
         margin-bottom: 25px;
     }
 
+    .description {
+        width: 80%;
+    }
 }
 
 /* If screen width < 920px, apply properties, else no apply */
@@ -798,7 +802,7 @@ form .foot-form button:active {
 
 @media screen and (min-width:1500px) {
 
-    main{
+    main {
         margin-left: 315px;
     }
 
