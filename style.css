@@ -478,7 +478,7 @@ a {
 }
 
 .carousel {
-    width: 400px;
+    width: 98vw;
     height: 400px;
     position: relative;
     overflow: hidden;
@@ -486,6 +486,7 @@ a {
     justify-content: center;
     align-items: flex-end;
     border-radius: 25px;
+    margin-bottom: 100px;
 
 }
 
@@ -831,4 +832,3 @@ form .foot-form button:active {
 
 
 }
-
