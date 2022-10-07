@@ -54,25 +54,29 @@ main {
 
 }
 
-.bloctexte ul li:hover {
+.bloctexte ul li {
     color: #F6B12D;
-    transition: transform 0.5s;
-    transform: scale(1.05);
     cursor: pointer;
+}
+
+.bloctexte ul li:hover {
+    transition: 0.3s;
+    transform: translateX(5px);
+    /* transform: scale(1.2) */
 }
 
 #presentation {
     background-color: #2F4558;
     color: whitesmoke;
-    margin: 15% auto;
+    margin: 30% auto;
     padding-top: 15px;
     padding: 20px;
-    width: 80%;
+    width: 65ch;
     font-size: 1rem;
     margin-inline: 20px;
     line-height: 30px;
     position: fixed;
-    z-index: 30;
+    z-index: 20;
     border-radius: 20px;
 }
 
@@ -301,7 +305,7 @@ svg {
     height: fit-content;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     margin-bottom: 50px;
 }
 
@@ -475,7 +479,7 @@ a {
 
 .carousel {
     width: 400px;
-    height: 500px;
+    height: 400px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -529,8 +533,8 @@ a {
 }
 
 .dotButton {
-    position: absolute;
-    z-index: auto;
+    /* position: absolute; */
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     width: 5rem;
@@ -710,7 +714,8 @@ form .foot-form button:active {
     }
 
     #presentation {
-        height: 75vh;
+        height: 80vh;
+        width: 80%;
         overflow-y: auto;
         margin-bottom: 10%;
         margin-top: 28%;

@@ -862,3 +862,244 @@ window.onclick = function (event) {
 // exitButton.addEventListener('click', function () {
 //     formulaire.classList.add('hide');
 // })
+
+
+/********************************* Light zone on map from region list in sidebar ***************************************/
+
+/******************** ARA *********************/
+const territoireARA = document.getElementById('FRARA');
+const lienARA = document.querySelector('.linkQuestion1');
+
+lienARA.addEventListener('mouseover', () => {
+    territoireARA.style.fill = '#2F4558';
+})
+lienARA.addEventListener('mouseout', () => {
+    territoireARA.style.fill = '#F6B12D';
+})
+
+territoireARA.addEventListener('mouseover', () => {
+    territoireARA.style.fill = '#2F4558';
+})
+
+territoireARA.addEventListener('mouseout', () => {
+    territoireARA.style.fill = '#F6B12D';
+})
+
+/******************** BFC *********************/
+const territoireBFC = document.getElementById('FRBFC');
+const lienBFC = document.querySelector('.linkQuestion2');
+
+lienBFC.addEventListener('mouseover', () => {
+    territoireBFC.style.fill = '#2F4558';
+})
+lienBFC.addEventListener('mouseout', () => {
+    territoireBFC.style.fill = '#F6B12D';
+})
+
+territoireBFC.addEventListener('mouseover', () => {
+    territoireBFC.style.fill = '#2F4558';
+})
+
+territoireBFC.addEventListener('mouseout', () => {
+    territoireBFC.style.fill = '#F6B12D';
+})
+/******************** BRE *********************/
+const territoireBRE = document.getElementById('FRBRE');
+const lienBRE = document.querySelector('.linkQuestion3');
+
+lienBRE.addEventListener('mouseover', () => {
+    territoireBRE.style.fill = '#2F4558';
+})
+lienBRE.addEventListener('mouseout', () => {
+    territoireBRE.style.fill = '#F6B12D';
+})
+
+territoireBRE.addEventListener('mouseover', () => {
+    territoireBRE.style.fill = '#2F4558';
+})
+
+territoireBRE.addEventListener('mouseout', () => {
+    territoireBRE.style.fill = '#F6B12D';
+})
+/******************** CVL *********************/
+const territoireCVL = document.getElementById('FRCVL');
+const lienCVL = document.querySelector('.linkQuestion4');
+
+lienCVL.addEventListener('mouseover', () => {
+    territoireCVL.style.fill = '#2F4558';
+})
+lienCVL.addEventListener('mouseout', () => {
+    territoireCVL.style.fill = '#F6B12D';
+})
+
+territoireCVL.addEventListener('mouseover', () => {
+    territoireCVL.style.fill = '#2F4558';
+})
+
+territoireCVL.addEventListener('mouseout', () => {
+    territoireCVL.style.fill = '#F6B12D';
+})
+
+/******************** GES *********************/
+const territoireGES = document.getElementById('FRGES');
+const lienGES = document.querySelector('.linkQuestion5');
+
+lienGES.addEventListener('mouseover', () => {
+    territoireGES.style.fill = '#2F4558';
+})
+lienGES.addEventListener('mouseout', () => {
+    territoireGES.style.fill = '#F6B12D';
+})
+
+territoireGES.addEventListener('mouseover', () => {
+    territoireGES.style.fill = '#2F4558';
+})
+
+territoireGES.addEventListener('mouseout', () => {
+    territoireGES.style.fill = '#F6B12D';
+})
+/******************** HDF *********************/
+const territoireHDF = document.getElementById('FRHDF');
+const lienHDF = document.querySelector('.linkQuestion6');
+
+lienHDF.addEventListener('mouseover', () => {
+    territoireHDF.style.fill = '#2F4558';
+})
+lienHDF.addEventListener('mouseout', () => {
+    territoireHDF.style.fill = '#F6B12D';
+})
+
+territoireHDF.addEventListener('mouseover', () => {
+    territoireHDF.style.fill = '#2F4558';
+})
+
+territoireHDF.addEventListener('mouseout', () => {
+    territoireHDF.style.fill = '#F6B12D';
+})
+/******************** IDF *********************/
+const territoireIDF = document.getElementById('FRIDF');
+const lienIDF = document.querySelector('.linkQuestion7');
+
+lienIDF.addEventListener('mouseover', () => {
+    territoireIDF.style.fill = '#2F4558';
+})
+lienIDF.addEventListener('mouseout', () => {
+    territoireIDF.style.fill = '#F6B12D';
+})
+
+territoireIDF.addEventListener('mouseover', () => {
+    territoireIDF.style.fill = '#2F4558';
+})
+
+territoireIDF.addEventListener('mouseout', () => {
+    territoireIDF.style.fill = '#F6B12D';
+})
+/******************** NOR *********************/
+const territoireNOR = document.getElementById('FRNOR');
+const lienNOR = document.querySelector('.linkQuestion8');
+
+lienNOR.addEventListener('mouseover', () => {
+    territoireNOR.style.fill = '#2F4558';
+})
+lienNOR.addEventListener('mouseout', () => {
+    territoireNOR.style.fill = '#F6B12D';
+})
+
+territoireNOR.addEventListener('mouseover', () => {
+    territoireNOR.style.fill = '#2F4558';
+})
+
+territoireNOR.addEventListener('mouseout', () => {
+    territoireNOR.style.fill = '#F6B12D';
+})
+/******************** NAQ *********************/
+const territoireNAQ = document.getElementById('FRNAQ');
+const lienNAQ = document.querySelector('.linkQuestion9');
+
+lienNAQ.addEventListener('mouseover', () => {
+    territoireNAQ.style.fill = '#2F4558';
+})
+lienNAQ.addEventListener('mouseout', () => {
+    territoireNAQ.style.fill = '#F6B12D';
+})
+
+territoireNAQ.addEventListener('mouseover', () => {
+    territoireNAQ.style.fill = '#2F4558';
+})
+
+territoireNAQ.addEventListener('mouseout', () => {
+    territoireNAQ.style.fill = '#F6B12D';
+})
+/******************** OCC *********************/
+const territoireOCC = document.getElementById('FROCC');
+const lienOCC = document.querySelector('.linkQuestion10');
+
+lienOCC.addEventListener('mouseover', () => {
+    territoireOCC.style.fill = '#2F4558';
+})
+lienOCC.addEventListener('mouseout', () => {
+    territoireOCC.style.fill = '#F6B12D';
+})
+
+territoireOCC.addEventListener('mouseover', () => {
+    territoireOCC.style.fill = '#2F4558';
+})
+
+territoireOCC.addEventListener('mouseout', () => {
+    territoireOCC.style.fill = '#F6B12D';
+})
+/******************** PDL *********************/
+const territoirePDL = document.getElementById('FRPDL');
+const lienPDL = document.querySelector('.linkQuestion11');
+
+lienPDL.addEventListener('mouseover', () => {
+    territoirePDL.style.fill = '#2F4558';
+})
+lienPDL.addEventListener('mouseout', () => {
+    territoirePDL.style.fill = '#F6B12D';
+})
+
+territoirePDL.addEventListener('mouseover', () => {
+    territoirePDL.style.fill = '#2F4558';
+})
+
+territoirePDL.addEventListener('mouseout', () => {
+    territoirePDL.style.fill = '#F6B12D';
+})
+/******************** PAC *********************/
+const territoirePAC = document.getElementById('FRPAC');
+const lienPAC = document.querySelector('.linkQuestion12');
+
+lienPAC.addEventListener('mouseover', () => {
+    territoirePAC.style.fill = '#2F4558';
+})
+lienPAC.addEventListener('mouseout', () => {
+    territoirePAC.style.fill = '#F6B12D';
+})
+
+territoirePAC.addEventListener('mouseover', () => {
+    territoirePAC.style.fill = '#2F4558';
+})
+
+territoirePAC.addEventListener('mouseout', () => {
+    territoirePAC.style.fill = '#F6B12D';
+})
+
+/******************** COR *********************/
+const territoireCOR = document.getElementById('FRCOR');
+const lienCOR = document.querySelector('.linkQuestion13');
+
+lienCOR.addEventListener('mouseover', () => {
+    territoireCOR.style.fill = '#2F4558';
+})
+lienCOR.addEventListener('mouseout', () => {
+    territoireCOR.style.fill = '#F6B12D';
+})
+
+territoireCOR.addEventListener('mouseover', () => {
+    territoireCOR.style.fill = '#2F4558';
+})
+
+territoireCOR.addEventListener('mouseout', () => {
+    territoireCOR.style.fill = '#F6B12D';
+})
