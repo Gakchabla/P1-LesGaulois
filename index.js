@@ -6,6 +6,8 @@ let currentItem = 0; // a value that will modify the item shown by it's value
 let answerButtons = document.querySelectorAll('.answerButton')
 let isStarted = false; //check if the game is started or not to modify some function
 const nextButton = document.getElementById('next-btn');
+const quiz = document.querySelector(".quiz");
+
 
 
 //Fonctionnement du quizz : les éléments du quizz sont rangé dans des tableaux qui sont indexé dans le même ordre que les liens regroupé dans l'array links,
@@ -353,6 +355,7 @@ const links = document.querySelectorAll(".link"); // crée le tableau des élém
 const image1 = document.getElementById("image1");
 const image2 = document.getElementById("image2");
 const image3 = document.getElementById("image3");
+const carousel = document.querySelector(".carousel")
 
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function () {
@@ -369,7 +372,8 @@ for (let i = 0; i < links.length; i++) {
         resetAnswerButtons();
         slideItem();
         dotSwitch();
-
+        quiz.classList.remove("hide");
+        carousel.style.marginBottom = "0px"
     }
     )
 } // créer le liens entre le clique sur un lien et le contenu qui correspond dans les tableaux images/question/explication et reset le jeu
@@ -391,6 +395,8 @@ for (let i = 0; i < listRegion.length; i++) {
         resetAnswerButtons();
         slideItem();
         dotSwitch();
+        quiz.classList.remove("hide");
+        carousel.style.marginBottom = "0px"
 
     }
     )
@@ -674,7 +680,6 @@ rightElements.addEventListener("click", () => {
     }
 })
 
-const quiz = document.querySelector(".quiz");
 
 
 const logo = document.querySelector('.logo');
