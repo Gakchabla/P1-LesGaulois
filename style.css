@@ -48,21 +48,25 @@ main {
     margin-inline: auto;
     margin-bottom: 30px;
     padding: 10px;
-    width: 80vw;
+    width: 65ch;
+    /* Réglage largeur en fonction du nombre de caractères*/
     position: relative;
 
 }
 
 .bloctexte ul li {
+    display: flex;
+    justify-content: center;
     color: #F6B12D;
     cursor: pointer;
 }
 
-.bloctexte ul li:hover {
+
+
+/* .bloctexte ul li:hover {
     transition: 0.3s;
     transform: translateX(5px);
     /* transform: scale(1.2) */
-}
 
 #presentation {
     background-color: #2F4558;
@@ -70,7 +74,7 @@ main {
     margin: 30% auto;
     padding-top: 15px;
     padding: 20px;
-    width: 80%;
+    width: 65ch;
     font-size: 1rem;
     margin-inline: 20px;
     line-height: 30px;
@@ -679,9 +683,9 @@ form .foot-form button:active {
 }
 
 
-/* If screen width < 575px, apply properties, else no apply */
+/* If screen width < 620px, apply properties, else no apply */
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 622px) {
     form .body-form .right-form {
         margin-left: 0px;
     }
@@ -690,12 +694,17 @@ form .foot-form button:active {
         height: 80vh;
         overflow-y: auto;
         margin-bottom: 10%;
+        width: 80%;
     }
 
     .carte h1 {
         color: #2F4558;
         font-weight: bolder;
         margin-bottom: 25px;
+    }
+
+    .description {
+        width: 80%;
     }
 
 }
@@ -741,9 +750,7 @@ form .foot-form button:active {
 
     .carousel {
         width: 80%;
-
     }
-
 }
 
 @media screen and (min-width:1200px) {
@@ -751,14 +758,13 @@ form .foot-form button:active {
     .carousel {
         min-width: 60%;
         max-width: 1000px;
-
     }
 
-    .history {
+    /* .history {
         min-width: 60%;
         max-width: 1000px;
 
-    }
+    } */
 }
 
 .modal {
@@ -772,6 +778,7 @@ form .foot-form button:active {
     width: 100%;
     height: 100%;
     overflow: auto;
+    /* Permet de supprimer tout le contenu qui dépasse du parent */
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.8);
 }
